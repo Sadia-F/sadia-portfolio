@@ -3,6 +3,7 @@
 import { personalInfo, stats } from "./data";
 import Bitmoji3D from "./components/Bitmoji3D";
 import MovingGradient from "./components/MovingGradient";
+import FloatingBackground from "./components/FloatingBackground";
 import About from "./components/About";
 import Photography from "./components/Photography";
 import Experience from "./components/Experience";
@@ -20,6 +21,7 @@ import { motion } from "framer-motion";
 export default function Home() {
   return (
     <div>
+      <FloatingBackground />
       <ScrollProgress />
       <Navbar />
       <MovingGradient />

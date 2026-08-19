@@ -1,6 +1,13 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --color-cream: #FDF6EE;
+  --color-deep-slate: #1A1A2E;
+  --color-dark-brown: #2D1B0F;
+  --color-warm-brown: #8B6914;
+  --color-terracotta: #C07C40;
+  --color-sunset: #E8741A;
+}
 
 html {
   scroll-behavior: smooth;
