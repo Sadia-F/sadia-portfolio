@@ -1,8 +1,10 @@
+
 {
   "name": "sadia-portfolio",
   "version": "0.1.0",
   "private": true,
   "homepage": "https://sadia-f.github.io/sadia-portfolio",
+
   "scripts": {
     "dev": "next dev",
     "build": "next build",
