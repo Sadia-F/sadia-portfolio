@@ -5,8 +5,6 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: "/sadia-portfolio",
-  assetPrefix: "/sadia-portfolio",
 };
 
 export default nextConfig;
