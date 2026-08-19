@@ -1,2 +1,2 @@
-:HL["/sadia-portfolio/_next/static/chunks/0hiswydhp2p1l.css","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"/_not-found","param":null,"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}},"staleTime":300,"buildId":"4bLo3oAnO_27m3l8IkKnn"}
+:HL["/_next/static/chunks/3fra04silc-ti.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"/_not-found","param":null,"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}},"staleTime":300,"buildId":"ouAUBJI3G-zTxYxfig9Oh"}
