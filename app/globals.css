@@ -60,18 +60,3 @@ html {
     outline-offset: 0px;
   }
 }
-
-.dark @keyframes tourPulse {
-  0% {
-    outline-color: rgba(192, 124, 64, 0);
-    outline-offset: 0px;
-  }
-  50% {
-    outline-color: rgba(192, 124, 64, 0.8);
-    outline-offset: 12px;
-  }
-  100% {
-    outline-color: rgba(192, 124, 64, 0);
-    outline-offset: 0px;
-  }
-}

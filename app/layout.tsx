@@ -1,5 +1,18 @@
 import type { Metadata } from "next";
+import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+});
+
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-playfair",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "Sadia Ferdous | Portfolio",
@@ -12,8 +25,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className="bg-cream dark:bg-deep-slate text-dark-brown dark:text-cream transition-colors">
+    <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
+      <body className="bg-cream dark:bg-deep-slate text-dark-brown dark:text-cream transition-colors font-sans">
         {children}
       </body>
     </html>

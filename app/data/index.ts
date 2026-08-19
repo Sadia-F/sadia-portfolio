@@ -1,37 +1,3 @@
-
-// Add timelineEvents
-export const timelineEvents = [
-  {
-    year: "2021",
-    title: "First Coding Workshop",
-    description: "Volunteered as a student teacher, facilitating beginner-level programming lessons for elementary, middle, and high school students.",
-  },
-  {
-    year: "2023",
-    title: "Started at NYIT",
-    description: "Began Computer Science degree with a concentration in Artificial Intelligence.",
-  },
-  {
-    year: "2024",
-    title: "First Major Project",
-    description: "Built Restaurant Reservation System using 5 different data structures in Java.",
-  },
-  {
-    year: "2025",
-    title: "Dean's Honor List",
-    description: "Recognized for academic excellence in Spring 2025.",
-  },
-  {
-    year: "2026",
-    title: "First Internship",
-    description: "Started as Backend/AI Engineer at NutriScan and Software Sales at IQVentory.",
-  },
-  {
-    year: "2027",
-    title: "Graduation",
-    description: "B.S. in Computer Science with AI concentration.",
-  },
-];
 // ============================================================
 // PERSONAL INFORMATION
 // ============================================================
@@ -47,6 +13,7 @@ export const personalInfo = {
   resume: "/resume.pdf",
   summary: "Computer Science student at NYIT concentrating in AI with hands-on backend development experience building REST APIs and AI-integrated data pipelines. I love solving problems and making everyday life easier.",
   valueProposition: "I build technology that turns everyday friction into flow.",
+  personalStory: "I discovered my passion for coding when I realized I could build tools that make people's lives easier. From automating school workflows to building my first web app, I've always been drawn to solving real problems with technology. When I'm not coding, I'm capturing sunsets through my camera — both require patience, attention to detail, and a love for creating something meaningful.",
   funFacts: [
     "📸 I love photography — especially sunsets",
     "🧩 I'm always looking for problems to solve",
@@ -62,6 +29,20 @@ export const stats = {
   leadershipRoles: "5+",
   technologies: "10+",
   studentsReached: "600+"
+};
+
+// ============================================================
+// "NOW" SECTION
+// ============================================================
+export const now = {
+  title: "Currently",
+  items: [
+    "🎓 Pursuing BS in Computer Science at NYIT (graduating May 2027)",
+    "💼 Interning as Backend/AI Engineer at NutriScan",
+    "📸 Capturing sunsets and building my photography portfolio",
+    "🚀 Exploring advanced AI/ML concepts and system design",
+    "🔍 Actively seeking Summer 2027 internships"
+  ]
 };
 
 // ============================================================
@@ -85,6 +66,16 @@ export const education = [
       "Peer Health Educator",
       "Web Developer, Campus Slate",
       "Co-Founder, Badminton Team"
+    ],
+    coursework: [
+      "Data Structures",
+      "Design & Analysis of Algorithms",
+      "Operating Systems",
+      "Theory of Computation",
+      "Computer Networks",
+      "Database Management",
+      "Artificial Intelligence",
+      "Software Engineering"
     ]
   }
 ];
@@ -142,12 +133,37 @@ export const experience = [
 ];
 
 // ============================================================
-// PROJECTS
+// PROJECTS (with Problem-Solution and Metrics)
 // ============================================================
 export const projects = [
   {
+    title: "Campus Slate CMS",
+    description: "Custom CMS replacing Wix for student publication",
+    problem: "The Campus Slate was paying $200+ annually for a Wix website that limited content control and made publishing slow and difficult.",
+    solution: "Built a custom Flask web app with Supabase and Vercel, giving the team full content control.",
+    metrics: [
+      "💰 Saved $200+ annually by replacing Wix",
+      "⚡ Cut publishing time from days to minutes",
+      "📈 100% team adoption rate"
+    ],
+    technologies: ["Python", "Flask", "Supabase", "PostgreSQL", "Vercel"],
+    github: "https://github.com/Sadia-F/The-Campus-Slate",
+    date: "September 2024 - Present",
+    highlights: [
+      "Built Flask web app with Supabase and Vercel, replacing Wix to save $200+ annually",
+      "Created password-protected admin dashboard, cutting publishing time from days to minutes"
+    ]
+  },
+  {
     title: "Online Store Management System",
-    description: "Full-stack desktop application with three-tier role-based access control (Customer, Employee, Admin) to manage inventory, user accounts, orders, and coupons.",
+    description: "Full-stack desktop application with three-tier role-based access control",
+    problem: "Small businesses needed a simple, affordable way to manage inventory, users, orders, and coupons without expensive SaaS solutions.",
+    solution: "Built a Java desktop application with MySQL backend and role-based access control.",
+    metrics: [
+      "👥 3 role tiers: Customer, Employee, Admin",
+      "🔄 Real-time inventory management",
+      "💳 Integrated coupon system"
+    ],
     technologies: ["Java", "MySQL", "Swing", "JDBC"],
     github: "https://github.com/Sadia-F/OnlineStore",
     date: "May 2026",
@@ -159,7 +175,14 @@ export const projects = [
   },
   {
     title: "Restaurant Reservation System",
-    description: "Reservation management system applying multiple data structures to solve real-world scheduling challenges including waitlist fairness, duplicate prevention, and fast phone lookup.",
+    description: "Reservation management system with 5 data structures",
+    problem: "Restaurants struggled with booking conflicts, waitlist fairness, and slow customer lookup.",
+    solution: "Built a Java application using 5 different data structures to solve scheduling challenges.",
+    metrics: [
+      "📊 5 data structures implemented",
+      "⏱️ Fast customer phone lookup",
+      "✅ Fair waitlist system"
+    ],
     technologies: ["Java", "LinkedList", "TreeMap", "Queue", "HashSet", "BST"],
     github: "https://github.com/Sadia-F/Restaurant-Reservation-system",
     date: "December 2024",
@@ -182,14 +205,6 @@ export const projects = [
     description: "A Python-based website project.",
     technologies: ["Python"],
     github: "https://github.com/Sadia-F/mishti-website",
-    date: "August 2026",
-    highlights: []
-  },
-  {
-    title: "The Campus Slate",
-    description: "Student publication website built with HTML.",
-    technologies: ["HTML"],
-    github: "https://github.com/Sadia-F/The-Campus-Slate",
     date: "August 2026",
     highlights: []
   }
@@ -338,6 +353,54 @@ export const photography = {
     "/images/7.jpg"
   ]
 };
+
+// ============================================================
+// TIMELINE
+// ============================================================
+export const timelineEvents = [
+  {
+    year: "2021",
+    title: "First Coding Workshop",
+    description: "Volunteered as a student teacher, facilitating beginner-level programming lessons for elementary, middle, and high school students.",
+    icon: "💻"
+  },
+  {
+    year: "2023",
+    title: "Started at NYIT",
+    description: "Began Computer Science degree with a concentration in Artificial Intelligence.",
+    icon: "🎓"
+  },
+  {
+    year: "2024",
+    title: "First Major Project",
+    description: "Built Restaurant Reservation System using 5 different data structures in Java.",
+    icon: "📊"
+  },
+  {
+    year: "2025",
+    title: "Dean's Honor List",
+    description: "Recognized for academic excellence in Spring 2025.",
+    icon: "📚"
+  },
+  {
+    year: "2026",
+    title: "First Internship",
+    description: "Started as Backend/AI Engineer at NutriScan and Software Sales at IQVentory.",
+    icon: "💼"
+  },
+  {
+    year: "2026",
+    title: "Presidential Honor List & Award",
+    description: "Received Presidential Honor List and Zennabelle Sewell Heart Award.",
+    icon: "🏆"
+  },
+  {
+    year: "2027",
+    title: "Graduation",
+    description: "B.S. in Computer Science with AI concentration.",
+    icon: "🚀"
+  }
+];
 
 // ============================================================
 // CHATBOT DATA

@@ -71,9 +71,34 @@ export default function Projects() {
                   <h3 className="text-xl font-bold text-dark-brown dark:text-cream mb-2">
                     {project.title}
                   </h3>
-                  <p className="text-gray-600 dark:text-gray-400 text-sm flex-1">
-                    {project.description}
-                  </p>
+
+                  {/* Problem-Solution */}
+                  {project.problem && (
+                    <div className="mb-2">
+                      <p className="text-sm text-gray-600 dark:text-gray-400">
+                        <span className="font-medium text-warm-brown dark:text-terracotta">Problem:</span> {project.problem}
+                      </p>
+                    </div>
+                  )}
+                  {project.solution && (
+                    <div className="mb-2">
+                      <p className="text-sm text-gray-600 dark:text-gray-400">
+                        <span className="font-medium text-warm-brown dark:text-terracotta">Solution:</span> {project.solution}
+                      </p>
+                    </div>
+                  )}
+
+                  {/* Metrics */}
+                  {project.metrics && project.metrics.length > 0 && (
+                    <div className="mt-2 space-y-1">
+                      {project.metrics.map((metric, i) => (
+                        <p key={i} className="text-sm text-gray-700 dark:text-gray-300 flex items-start gap-2">
+                          <span className="text-warm-brown dark:text-terracotta">✦</span>
+                          {metric}
+                        </p>
+                      ))}
+                    </div>
+                  )}
 
                   <div className="mt-4 flex flex-wrap gap-2">
                     {project.technologies.map((tech) => (

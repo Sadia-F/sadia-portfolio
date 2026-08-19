@@ -37,6 +37,18 @@ export default function About() {
             or capturing the perfect sunset through my lens.
           </p>
 
+          {/* Personal Story */}
+          {personalInfo.personalStory && (
+            <div className="mt-6 p-4 bg-cream dark:bg-deep-slate rounded-lg">
+              <h3 className="text-md font-bold text-warm-brown dark:text-terracotta mb-2">
+                My Story
+              </h3>
+              <p className="text-gray-700 dark:text-gray-300 italic">
+                {personalInfo.personalStory}
+              </p>
+            </div>
+          )}
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
             {personalInfo.funFacts.map((fact, index) => (
               <motion.div

@@ -1,7 +1,7 @@
 "use client";
 
 import { personalInfo, stats } from "./data";
-import Bitmoji3D from "./components/Bitmoji3D";
+import Bitmoji2D from "./components/Bitmoji2D";
 import MovingGradient from "./components/MovingGradient";
 import FloatingBackground from "./components/FloatingBackground";
 import About from "./components/About";
@@ -11,7 +11,6 @@ import Projects from "./components/Projects";
 import Leadership from "./components/Leadership";
 import Skills from "./components/Skills";
 import Education from "./components/Education";
-import Chatbot from "./components/Chatbot";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import ScrollProgress from "./components/ScrollProgress";
@@ -24,6 +23,9 @@ import Testimonials from "./components/Testimonials";
 import CommandPalette from "./components/CommandPalette";
 import CommandHint from "./components/CommandHint";
 import TourGuide from "./components/TourGuide";
+import Now from "./components/Now";
+import VisitorCounter from "./components/VisitorCounter";
+import FloatingChat from "./components/FloatingChat";
 import { motion } from "framer-motion";
 import Typewriter from "typewriter-effect";
 
@@ -58,7 +60,7 @@ export default function Home() {
 
               {/* Strong Opening Line */}
               <p className="text-xl md:text-2xl font-medium text-warm-brown dark:text-terracotta mb-2">
-                I build technology that turns everyday friction into flow.
+                {personalInfo.valueProposition}
               </p>
 
               {/* Typing Effect */}
@@ -124,9 +126,47 @@ export default function Home() {
                   Resume
                 </a>
               </div>
+
+              {/* Visitor Counter */}
+              <div className="mt-6 flex justify-center md:justify-start">
+                <VisitorCounter />
+              </div>
+
+              {/* Stats Section — Left Aligned */}
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+                className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mt-8"
+              >
+                <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm p-4 rounded-lg shadow-lg text-center">
+                  <p className="text-2xl font-bold text-warm-brown dark:text-terracotta">
+                    {stats.projects}
+                  </p>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">Projects</p>
+                </div>
+                <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm p-4 rounded-lg shadow-lg text-center">
+                  <p className="text-2xl font-bold text-warm-brown dark:text-terracotta">
+                    {stats.leadershipRoles}
+                  </p>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">Leadership Roles</p>
+                </div>
+                <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm p-4 rounded-lg shadow-lg text-center">
+                  <p className="text-2xl font-bold text-warm-brown dark:text-terracotta">
+                    {stats.technologies}
+                  </p>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">Technologies</p>
+                </div>
+                <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm p-4 rounded-lg shadow-lg text-center">
+                  <p className="text-2xl font-bold text-warm-brown dark:text-terracotta">
+                    {stats.studentsReached}
+                  </p>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">Students Reached</p>
+                </div>
+              </motion.div>
             </motion.div>
 
-            {/* Right Column — 3D Bitmoji */}
+            {/* Right Column — Your Bitmoji */}
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -134,43 +174,10 @@ export default function Home() {
               className="flex justify-center items-center"
             >
               <div className="w-full max-w-md aspect-square">
-                <Bitmoji3D />
+                <Bitmoji2D className="w-full h-full" />
               </div>
             </motion.div>
           </div>
-
-          {/* Stats Section */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto mt-12"
-          >
-            <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm p-4 rounded-lg shadow-lg text-center">
-              <p className="text-2xl font-bold text-warm-brown dark:text-terracotta">
-                {stats.projects}
-              </p>
-              <p className="text-sm text-gray-600 dark:text-gray-400">Projects</p>
-            </div>
-            <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm p-4 rounded-lg shadow-lg text-center">
-              <p className="text-2xl font-bold text-warm-brown dark:text-terracotta">
-                {stats.leadershipRoles}
-              </p>
-              <p className="text-sm text-gray-600 dark:text-gray-400">Leadership Roles</p>
-            </div>
-            <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm p-4 rounded-lg shadow-lg text-center">
-              <p className="text-2xl font-bold text-warm-brown dark:text-terracotta">
-                {stats.technologies}
-              </p>
-              <p className="text-sm text-gray-600 dark:text-gray-400">Technologies</p>
-            </div>
-            <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm p-4 rounded-lg shadow-lg text-center">
-              <p className="text-2xl font-bold text-warm-brown dark:text-terracotta">
-                {stats.studentsReached}
-              </p>
-              <p className="text-sm text-gray-600 dark:text-gray-400">Students Reached</p>
-            </div>
-          </motion.div>
 
           {/* Scroll indicator */}
           <motion.div
@@ -180,81 +187,70 @@ export default function Home() {
             className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-gray-400 dark:text-gray-500"
           >
             <span className="text-sm">Scroll to explore</span>
-            <svg className="w-5 h-5 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+            <svg
+              className="w-5 h-5 animate-bounce"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M19 14l-7 7m0 0l-7-7m7 7V3"
+              />
             </svg>
           </motion.div>
         </div>
       </section>
 
       {/* About Section */}
-      <section id="about">
-        <About />
-      </section>
+      <About />
 
       {/* Experience Section */}
-      <section id="experience">
-        <Experience />
-      </section>
+      <Experience />
 
       {/* Featured Project */}
-      <section id="featured">
-        <FeaturedProject />
-      </section>
+      <FeaturedProject />
 
       {/* Projects Section */}
-      <section id="projects">
-        <Projects />
-      </section>
+      <Projects />
 
       {/* Leadership Section */}
-      <section id="leadership">
-        <Leadership />
-      </section>
+      <Leadership />
 
       {/* Timeline Section */}
-      <section id="timeline">
-        <Timeline />
-      </section>
+      <Timeline />
+
+      {/* Now Section */}
+      <Now />
 
       {/* Tech Stack Section */}
-      <section id="techstack">
-        <TechStack />
-      </section>
+      <TechStack />
 
       {/* Skills Section */}
-      <section id="skills">
-        <Skills />
-      </section>
+      <Skills />
 
       {/* Education & Awards */}
-      <section id="education">
-        <Education />
-      </section>
+      <Education />
 
       {/* Testimonials */}
-      <section id="testimonials">
-        <Testimonials />
-      </section>
-
-      {/* Chatbot */}
-      <section id="chatbot">
-        <Chatbot />
-      </section>
+      <Testimonials />
 
       {/* Photography — moved to end */}
-      <section id="photography">
-        <Photography />
-      </section>
+      <Photography />
 
       {/* Connect */}
-      <section id="connect">
-        <Connect />
-      </section>
+      <Connect />
 
       {/* Footer */}
       <Footer />
+
+      {/* Back to Top */}
       <BackToTop />
+
+      {/* Floating Chat — Always accessible */}
+      <FloatingChat />
     </div>
   );
 }
