@@ -33,3 +33,45 @@ html {
 .dark ::-webkit-scrollbar-thumb {
   background: #C07C40;
 }
+
+/* Tour Highlight Effect */
+.tour-highlight {
+  animation: tourPulse 1.2s ease-in-out;
+  outline: 4px solid #8B6914;
+  outline-offset: 8px;
+  border-radius: 12px;
+}
+
+.dark .tour-highlight {
+  outline-color: #C07C40;
+}
+
+@keyframes tourPulse {
+  0% {
+    outline-color: rgba(139, 105, 20, 0);
+    outline-offset: 0px;
+  }
+  50% {
+    outline-color: rgba(139, 105, 20, 0.8);
+    outline-offset: 12px;
+  }
+  100% {
+    outline-color: rgba(139, 105, 20, 0);
+    outline-offset: 0px;
+  }
+}
+
+.dark @keyframes tourPulse {
+  0% {
+    outline-color: rgba(192, 124, 64, 0);
+    outline-offset: 0px;
+  }
+  50% {
+    outline-color: rgba(192, 124, 64, 0.8);
+    outline-offset: 12px;
+  }
+  100% {
+    outline-color: rgba(192, 124, 64, 0);
+    outline-offset: 0px;
+  }
+}

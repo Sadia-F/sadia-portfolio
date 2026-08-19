@@ -20,18 +20,17 @@ import Timeline from "./components/Timeline";
 import TechStack from "./components/TechStack";
 import FeaturedProject from "./components/FeaturedProject";
 import Connect from "./components/Connect";
-import ThreeScene from "./components/ThreeScene";
-import GitHubCalendar from "./components/GitHubCalendar";
 import Testimonials from "./components/Testimonials";
 import CommandPalette from "./components/CommandPalette";
 import CommandHint from "./components/CommandHint";
+import TourGuide from "./components/TourGuide";
 import { motion } from "framer-motion";
 import Typewriter from "typewriter-effect";
 
 export default function Home() {
   return (
     <div>
-      {/* Global Components */}
+      <TourGuide />
       <CommandPalette />
       <CommandHint />
       <FloatingBackground />
@@ -39,10 +38,8 @@ export default function Home() {
       <Navbar />
       <MovingGradient />
 
-      {/* ============================================================ */}
-      {/* HERO SECTION */}
-      {/* ============================================================ */}
-      <section className="min-h-screen flex items-center justify-center px-4 py-20 relative">
+      {/* Hero Section */}
+      <section id="hero" className="min-h-screen flex items-center justify-center px-4 py-20 relative">
         <div className="max-w-6xl mx-auto w-full">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             {/* Left Column */}
@@ -59,8 +56,13 @@ export default function Home() {
                 </span>
               </h1>
 
+              {/* Strong Opening Line */}
+              <p className="text-xl md:text-2xl font-medium text-warm-brown dark:text-terracotta mb-2">
+                I build technology that turns everyday friction into flow.
+              </p>
+
               {/* Typing Effect */}
-              <div className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-2 h-12">
+              <div className="text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-4 h-10">
                 <Typewriter
                   options={{
                     strings: [
@@ -77,12 +79,6 @@ export default function Home() {
                   }}
                 />
               </div>
-
-              {/* Value Proposition */}
-              <p className="text-md text-warm-brown dark:text-terracotta font-medium mb-4 italic">
-                {personalInfo.valueProposition ||
-                  "I build technology that turns everyday friction into flow."}
-              </p>
 
               {/* CTA Buttons */}
               <div className="flex flex-wrap gap-4 justify-center md:justify-start">
@@ -160,25 +156,19 @@ export default function Home() {
               <p className="text-2xl font-bold text-warm-brown dark:text-terracotta">
                 {stats.leadershipRoles}
               </p>
-              <p className="text-sm text-gray-600 dark:text-gray-400">
-                Leadership Roles
-              </p>
+              <p className="text-sm text-gray-600 dark:text-gray-400">Leadership Roles</p>
             </div>
             <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm p-4 rounded-lg shadow-lg text-center">
               <p className="text-2xl font-bold text-warm-brown dark:text-terracotta">
                 {stats.technologies}
               </p>
-              <p className="text-sm text-gray-600 dark:text-gray-400">
-                Technologies
-              </p>
+              <p className="text-sm text-gray-600 dark:text-gray-400">Technologies</p>
             </div>
             <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm p-4 rounded-lg shadow-lg text-center">
               <p className="text-2xl font-bold text-warm-brown dark:text-terracotta">
                 {stats.studentsReached}
               </p>
-              <p className="text-sm text-gray-600 dark:text-gray-400">
-                Students Reached
-              </p>
+              <p className="text-sm text-gray-600 dark:text-gray-400">Students Reached</p>
             </div>
           </motion.div>
 
@@ -190,134 +180,79 @@ export default function Home() {
             className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-gray-400 dark:text-gray-500"
           >
             <span className="text-sm">Scroll to explore</span>
-            <svg
-              className="w-5 h-5 animate-bounce"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M19 14l-7 7m0 0l-7-7m7 7V3"
-              />
+            <svg className="w-5 h-5 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
             </svg>
           </motion.div>
         </div>
       </section>
 
-      {/* ============================================================ */}
-      {/* ABOUT SECTION */}
-      {/* ============================================================ */}
-      <About />
-
-      {/* ============================================================ */}
-      {/* PHOTOGRAPHY SECTION */}
-      {/* ============================================================ */}
-      <Photography />
-
-      {/* ============================================================ */}
-      {/* FEATURED PROJECT */}
-      {/* ============================================================ */}
-      <FeaturedProject />
-
-      {/* ============================================================ */}
-      {/* EXPERIENCE SECTION */}
-      {/* ============================================================ */}
-      <Experience />
-
-      {/* ============================================================ */}
-      {/* PROJECTS SECTION (with filtering) */}
-      {/* ============================================================ */}
-      <Projects />
-
-      {/* ============================================================ */}
-      {/* LEADERSHIP SECTION */}
-      {/* ============================================================ */}
-      <Leadership />
-
-      {/* ============================================================ */}
-      {/* INTERACTIVE TIMELINE */}
-      {/* ============================================================ */}
-      <Timeline />
-
-      {/* ============================================================ */}
-      {/* TECH STACK VISUAL GRID */}
-      {/* ============================================================ */}
-      <TechStack />
-
-      {/* ============================================================ */}
-      {/* EDUCATION & AWARDS */}
-      {/* ============================================================ */}
-      <Education />
-
-      {/* ============================================================ */}
-      {/* 3D INTERACTIVE SCENE */}
-      {/* ============================================================ */}
-      <section className="py-20 px-4 bg-white dark:bg-gray-900">
-        <div className="max-w-6xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-4xl font-bold text-dark-brown dark:text-cream mb-4">
-              🎨 Interactive 3D Showcase
-            </h2>
-            <div className="w-16 h-1 bg-gradient-to-r from-warm-brown to-sunset mx-auto rounded-full" />
-            <p className="text-gray-600 dark:text-gray-400 mt-4 max-w-2xl mx-auto">
-              Move your mouse to interact with floating 3D objects — a camera, a sunset sun, and code symbols.
-            </p>
-          </motion.div>
-          <ThreeScene />
-        </div>
+      {/* About Section */}
+      <section id="about">
+        <About />
       </section>
 
-      {/* ============================================================ */}
-      {/* GITHUB ACTIVITY */}
-      {/* ============================================================ */}
-      <section className="py-20 px-4 bg-cream dark:bg-deep-slate">
-        <div className="max-w-4xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-4xl font-bold text-dark-brown dark:text-cream mb-4">
-              📊 GitHub Activity
-            </h2>
-            <div className="w-16 h-1 bg-gradient-to-r from-warm-brown to-sunset mx-auto rounded-full" />
-            <p className="text-gray-600 dark:text-gray-400 mt-4 max-w-2xl mx-auto">
-              My coding activity and recent contributions.
-            </p>
-          </motion.div>
-          <GitHubCalendar />
-        </div>
+      {/* Experience Section */}
+      <section id="experience">
+        <Experience />
       </section>
 
-      {/* ============================================================ */}
-      {/* TESTIMONIALS */}
-      {/* ============================================================ */}
-      <Testimonials />
+      {/* Featured Project */}
+      <section id="featured">
+        <FeaturedProject />
+      </section>
 
-      {/* ============================================================ */}
-      {/* AI CHATBOT */}
-      {/* ============================================================ */}
-      <Chatbot />
+      {/* Projects Section */}
+      <section id="projects">
+        <Projects />
+      </section>
 
-      {/* ============================================================ */}
-      {/* CONNECT SECTION */}
-      {/* ============================================================ */}
-      <Connect />
+      {/* Leadership Section */}
+      <section id="leadership">
+        <Leadership />
+      </section>
 
-      {/* ============================================================ */}
-      {/* FOOTER */}
-      {/* ============================================================ */}
+      {/* Timeline Section */}
+      <section id="timeline">
+        <Timeline />
+      </section>
+
+      {/* Tech Stack Section */}
+      <section id="techstack">
+        <TechStack />
+      </section>
+
+      {/* Skills Section */}
+      <section id="skills">
+        <Skills />
+      </section>
+
+      {/* Education & Awards */}
+      <section id="education">
+        <Education />
+      </section>
+
+      {/* Testimonials */}
+      <section id="testimonials">
+        <Testimonials />
+      </section>
+
+      {/* Chatbot */}
+      <section id="chatbot">
+        <Chatbot />
+      </section>
+
+      {/* Photography — moved to end */}
+      <section id="photography">
+        <Photography />
+      </section>
+
+      {/* Connect */}
+      <section id="connect">
+        <Connect />
+      </section>
+
+      {/* Footer */}
       <Footer />
       <BackToTop />
     </div>
