@@ -1,3 +1,37 @@
+
+// Add timelineEvents
+export const timelineEvents = [
+  {
+    year: "2021",
+    title: "First Coding Workshop",
+    description: "Volunteered as a student teacher, facilitating beginner-level programming lessons for elementary, middle, and high school students.",
+  },
+  {
+    year: "2023",
+    title: "Started at NYIT",
+    description: "Began Computer Science degree with a concentration in Artificial Intelligence.",
+  },
+  {
+    year: "2024",
+    title: "First Major Project",
+    description: "Built Restaurant Reservation System using 5 different data structures in Java.",
+  },
+  {
+    year: "2025",
+    title: "Dean's Honor List",
+    description: "Recognized for academic excellence in Spring 2025.",
+  },
+  {
+    year: "2026",
+    title: "First Internship",
+    description: "Started as Backend/AI Engineer at NutriScan and Software Sales at IQVentory.",
+  },
+  {
+    year: "2027",
+    title: "Graduation",
+    description: "B.S. in Computer Science with AI concentration.",
+  },
+];
 // ============================================================
 // PERSONAL INFORMATION
 // ============================================================
@@ -12,6 +46,7 @@ export const personalInfo = {
   linkedin: "https://linkedin.com/in/sadiaferdous",
   resume: "/resume.pdf",
   summary: "Computer Science student at NYIT concentrating in AI with hands-on backend development experience building REST APIs and AI-integrated data pipelines. I love solving problems and making everyday life easier.",
+  valueProposition: "I build technology that turns everyday friction into flow.",
   funFacts: [
     "📸 I love photography — especially sunsets",
     "🧩 I'm always looking for problems to solve",

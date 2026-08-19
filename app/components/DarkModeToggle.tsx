@@ -4,21 +4,23 @@ import { useEffect, useState } from "react";
 
 export default function DarkModeToggle() {
   const [isDark, setIsDark] = useState(false);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    setMounted(true);
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
     const saved = localStorage.getItem("theme");
-    if (saved === "dark") {
-      setIsDark(true);
-      document.documentElement.classList.add("dark");
-    } else if (saved === "light") {
-      setIsDark(false);
-      document.documentElement.classList.remove("dark");
+
+    if (saved) {
+      setIsDark(saved === "dark");
     } else {
-      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
       setIsDark(prefersDark);
-      if (prefersDark) {
-        document.documentElement.classList.add("dark");
-      }
+    }
+
+    if (saved === "dark" || (saved === null && prefersDark)) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
     }
   }, []);
 
@@ -34,6 +36,8 @@ export default function DarkModeToggle() {
       localStorage.setItem("theme", "light");
     }
   };
+
+  if (!mounted) return null;
 
   return (
     <button
