@@ -235,14 +235,14 @@ export default function TourGuide() {
         </motion.div>
       )}
 
-      {/* Replay Button */}
+      {/* Replay Button - Bottom Right, MIDDLE (below chat) */}
       {!isTourActive && hasSeenTour && !isOpen && (
         <motion.button
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1 }}
           onClick={replayTour}
-          className="fixed bottom-8 right-8 z-40 p-3 bg-warm-brown text-white rounded-full shadow-lg hover:bg-[#6B4F10] transition-colors"
+          className="fixed bottom-20 right-6 z-40 p-3 bg-warm-brown text-white rounded-full shadow-lg hover:bg-[#6B4F10] transition-colors"
           aria-label="Replay tour"
         >
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

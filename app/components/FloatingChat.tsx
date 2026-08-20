@@ -24,12 +24,10 @@ export default function FloatingChat() {
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
-  // Auto-scroll to bottom
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages]);
 
-  // Focus input when chat opens
   useEffect(() => {
     if (isOpen) {
       setTimeout(() => inputRef.current?.focus(), 300);
@@ -87,7 +85,7 @@ export default function FloatingChat() {
 
   return (
     <>
-      {/* Floating Button */}
+      {/* Floating Button - Bottom Right, TOP */}
       <motion.button
         onClick={toggleChat}
         className="fixed bottom-6 right-6 z-50 p-4 bg-warm-brown text-white rounded-full shadow-lg hover:bg-[#6B4F10] transition-colors flex items-center justify-center"
