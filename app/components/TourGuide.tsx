@@ -235,7 +235,7 @@ export default function TourGuide() {
         </motion.div>
       )}
 
-      {/* Replay Button - Bottom Right, MIDDLE (below chat) */}
+      {/* Replay Button - Bottom Right, MIDDLE */}
       {!isTourActive && hasSeenTour && !isOpen && (
         <motion.button
           initial={{ opacity: 0, y: 20 }}
