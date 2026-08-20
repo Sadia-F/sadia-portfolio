@@ -4,7 +4,7 @@ import { useState } from "react";
 import { projects } from "../data";
 import { motion, AnimatePresence } from "framer-motion";
 
-const categories = ["All", "Java", "Python", "Web"];
+const categories = ["All", "Java", "Python"];
 
 export default function Projects() {
   const [activeCategory, setActiveCategory] = useState("All");

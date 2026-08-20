@@ -17,7 +17,7 @@ export const personalInfo = {
   funFacts: [
     "📸 I love photography — especially sunsets",
     "🧩 I'm always looking for problems to solve",
-    "🌅 I believe in finding beauty in everyday things"
+    "🌅 I believe in finding solutions to things that matters"
   ]
 };
 
@@ -192,22 +192,28 @@ export const projects = [
       "Fast customer phone lookup"
     ]
   },
+
   {
-    title: "PizzaTracker",
-    description: "A simple HTML project.",
-    technologies: ["HTML"],
-    github: "https://github.com/Sadia-F/PizzaTracker",
-    date: "2026",
-    highlights: []
-  },
-  {
+      
     title: "mishti-website",
     description: "A Python-based website project.",
-    technologies: ["Python"],
+    problem: "A small business, where they sell amazing sweet, but unfortunately did not have a website",
+    solution: "Building them a website so that it can attract the right audience it deserves",
+    metrics: [
+      "showcase their product",
+      "AI chat bot"
+    ],
+    technologies: ["Python", "Neon PostgreSQL"],
     github: "https://github.com/Sadia-F/mishti-website",
-    date: "August 2026",
-    highlights: []
-  }
+ 
+    highlights: [
+     " First Python Project",
+      "Work in Progress",
+   
+    ]
+  },
+   
+  
 ];
 
 // ============================================================
