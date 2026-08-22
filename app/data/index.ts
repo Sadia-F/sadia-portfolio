@@ -216,25 +216,24 @@ export const projects = [
 ];
 
 // ============================================================
-// TECH STACK & SKILLS
+// TECH STACK & SKILLS — Official Logo Icons
 // ============================================================
 
-// TECH STACK — With professional percentage bars
 export const techStack = [
-  { name: "Python", icon: "🐍", level: 85 },
-  { name: "Java", icon: "☕", level: 80 },
-  { name: "TypeScript", icon: "🟦", level: 60 },
-  { name: "SQL", icon: "🗄️", level: 75 },
-  { name: "Flask", icon: "🌶️", level: 70 },
-  { name: "FastAPI", icon: "⚡", level: 60 },
-  { name: "MongoDB", icon: "🍃", level: 70 },
-  { name: "PostgreSQL", icon: "🐘", level: 65 },
-  { name: "Git", icon: "📦", level: 85 },
-  { name: "Docker", icon: "🐳", level: 50 },
-  { name: "Vercel", icon: "⚡", level: 70 },
+  { name: "Python", logo: "/logos/python.svg", level: 85 },
+  { name: "Java", logo: "/logos/java.svg", level: 80 },
+  { name: "TypeScript", logo: "/logos/typescript.svg", level: 60 },
+  { name: "SQL", logo: "/logos/sql.svg", level: 75 },
+  { name: "Flask", logo: "/logos/flask.svg", level: 70 },
+  { name: "FastAPI", logo: "/logos/fastapi.svg", level: 60 },
+  { name: "MongoDB", logo: "/logos/mongodb.svg", level: 70 },
+  { name: "PostgreSQL", logo: "/logos/postgresql.svg", level: 65 },
+  { name: "Git", logo: "/logos/git.svg", level: 85 },
+  { name: "Docker", logo: "/logos/docker.svg", level: 50 },
+  { name: "Vercel", logo: "/logos/vercel.svg", level: 70 },
 ];
 
-// SKILLS — Full list based on who you are (no percentages)
+// SKILLS — Full list
 export const skills = [
   "Backend Development",
   "REST API Design",
@@ -323,7 +322,7 @@ export const leadership = [
 ];
 
 // ============================================================
-// TIMELINE — Starts at First Coding Workshop
+// TIMELINE — Starts at First Coding Workshop, Merged High School Leadership
 // ============================================================
 export const timelineEvents = [
   {
@@ -334,21 +333,15 @@ export const timelineEvents = [
   },
   {
     year: "2021",
-    title: "Founder, Culture Club",
-    description: "Founded and led the Culture Club at Island Trees High School to foster an inclusive environment for diverse backgrounds.",
-    icon: "🌏"
+    title: "High School Leadership",
+    description: "Founded the Culture Club to foster inclusion across diverse backgrounds. Served as Lieutenant Governor for Key Club, overseeing 12 schools and organizing community service events across Long Island.",
+    icon: "🏛️"
   },
   {
     year: "2021",
     title: "Started Photography",
     description: "Discovered my love for photography — especially sunsets. It became my creative balance and a way to see the world differently.",
     icon: "📸"
-  },
-  {
-    year: "2021",
-    title: "Lieutenant Governor, Key Club",
-    description: "Oversaw and collaborated with 12 schools across Long Island, organizing community service events including food drives, clothing drives, and fundraisers.",
-    icon: "🏛️"
   },
   {
     year: "2022",
@@ -417,7 +410,6 @@ export const timelineEvents = [
     icon: "🚀"
   }
 ];
-
 // ============================================================
 // AWARDS
 // ============================================================

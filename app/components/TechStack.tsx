@@ -2,6 +2,7 @@
 
 import { techStack, skills } from "../data";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function TechStack() {
   return (
@@ -34,7 +35,15 @@ export default function TechStack() {
               viewport={{ once: true }}
               className="flex items-center gap-4"
             >
-              <span className="text-2xl w-10">{tech.icon}</span>
+              {/* Official Logo */}
+              <div className="w-8 h-8 relative flex-shrink-0">
+                <Image
+                  src={tech.logo}
+                  alt={tech.name}
+                  fill
+                  className="object-contain dark:invert"
+                />
+              </div>
               <span className="text-sm font-medium text-gray-700 dark:text-gray-300 w-24">
                 {tech.name}
               </span>
@@ -54,7 +63,7 @@ export default function TechStack() {
           ))}
         </div>
 
-        {/* Skills — No Percentages */}
+        {/* Skills */}
         <div>
           <h3 className="text-2xl font-bold text-dark-brown dark:text-cream mb-4 text-center">
             Skills
