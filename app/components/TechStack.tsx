@@ -1,45 +1,11 @@
 "use client";
 
-import { skills } from "../data";
+import { techStack } from "../data";
 import { motion } from "framer-motion";
-
-const iconMap: Record<string, string> = {
-  Python: "🐍",
-  Java: "☕",
-  TypeScript: "🟦",
-  HTML: "🌐",
-  CSS: "🎨",
-  SQL: "🗄️",
-  "REST APIs": "🔗",
-  Flask: "🌶️",
-  "Data Pipelines": "📊",
-  FastAPI: "⚡",
-  MySQL: "🐬",
-  MongoDB: "🍃",
-  PostgreSQL: "🐘",
-  Supabase: "🔥",
-  Git: "📦",
-  GitHub: "🐙",
-  Docker: "🐳",
-  Vercel: "⚡",
-  "VS Code": "💻",
-  LLMs: "🤖",
-  "Prompt Engineering": "✍️",
-  "Google Gemini": "🧠",
-  "Computer Vision": "👁️",
-};
-
-const categoryIcons: Record<string, string> = {
-  languages: "💻",
-  backend: "⚙️",
-  databases: "🗄️",
-  tools: "🛠️",
-  aiMl: "🤖",
-};
 
 export default function TechStack() {
   return (
-    <section id="techstack" className="py-20 px-4 bg-cream dark:bg-deep-slate">
+    <section id="techstack" className="py-20 px-4 bg-white dark:bg-gray-900">
       <div className="max-w-5xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -57,27 +23,27 @@ export default function TechStack() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
-          {Object.entries(skills).map(([category, items], categoryIndex) => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+          {Object.entries(techStack).map(([category, data], categoryIndex) => (
             <motion.div
               key={category}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: categoryIndex * 0.1 }}
               viewport={{ once: true }}
-              className="bg-white dark:bg-gray-800 rounded-xl p-4 shadow-md"
+              className="bg-cream dark:bg-deep-slate rounded-xl p-4 shadow-md"
             >
-              <h3 className="text-sm font-bold text-warm-brown dark:text-terracotta mb-3 text-center uppercase tracking-wide">
-                {categoryIcons[category]} {category}
+              <h3 className="text-sm font-bold text-warm-brown dark:text-terracotta mb-3 text-center uppercase tracking-wide flex items-center justify-center gap-2">
+                <span>{data.icon}</span> {category}
               </h3>
               <div className="flex flex-wrap justify-center gap-2">
-                {items.map((skill) => (
+                {data.skills.map((skill: { name: string; icon: string }) => (
                   <span
-                    key={skill}
-                    className="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-xs rounded-full border border-gray-200 dark:border-gray-600 hover:shadow-md transition-all flex items-center gap-1"
+                    key={skill.name}
+                    className="px-3 py-1 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 text-xs rounded-full border border-gray-200 dark:border-gray-600 hover:shadow-md transition-all flex items-center gap-1"
                   >
-                    {iconMap[skill] && <span>{iconMap[skill]}</span>}
-                    {skill}
+                    <span>{skill.icon}</span>
+                    {skill.name}
                   </span>
                 ))}
               </div>

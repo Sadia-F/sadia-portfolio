@@ -1,12 +1,13 @@
 "use client";
 
-import { personalInfo } from "../data";
+import { personalInfo, photography } from "../data";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
-export default function About() {
+export default function AboutSection() {
   return (
     <section id="about" className="py-20 px-4 bg-cream/50 dark:bg-deep-slate/50">
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -20,50 +21,59 @@ export default function About() {
           <div className="w-16 h-1 bg-gradient-to-r from-warm-brown to-sunset mx-auto rounded-full" />
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          viewport={{ once: true }}
-          className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg"
-        >
-          <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
-            {personalInfo.summary}
-          </p>
-
-          <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
-            I'm passionate about using technology to solve real-world problems —
-            whether that's building a CMS that saves my team money and time,
-            or capturing the perfect sunset through my lens.
-          </p>
-
-          {/* Personal Story */}
-          {personalInfo.personalStory && (
-            <div className="mt-6 p-4 bg-cream dark:bg-deep-slate rounded-lg">
-              <h3 className="text-md font-bold text-warm-brown dark:text-terracotta mb-2">
-                My Story
-              </h3>
-              <p className="text-gray-700 dark:text-gray-300 italic">
-                {personalInfo.personalStory}
-              </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          {/* Left: About Text */}
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true }}
+          >
+            <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+              {personalInfo.about}
+            </p>
+            <div className="mt-6 space-y-3">
+              {personalInfo.funFacts.map((fact, index) => (
+                <div key={index} className="flex items-center gap-3 text-gray-700 dark:text-gray-300">
+                  <span className="text-warm-brown dark:text-terracotta text-xl">{fact.slice(0, 2)}</span>
+                  <span>{fact.slice(3)}</span>
+                </div>
+              ))}
             </div>
-          )}
+          </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
-            {personalInfo.funFacts.map((fact, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-cream dark:bg-deep-slate p-4 rounded-lg text-center"
-              >
-                <p className="text-gray-700 dark:text-gray-300">{fact}</p>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
+          {/* Right: Photography */}
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            viewport={{ once: true }}
+            className="space-y-4"
+          >
+            <div className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg">
+              <div className="flex items-center gap-3 mb-4">
+                <span className="text-3xl">📸</span>
+                <h3 className="text-xl font-bold text-dark-brown dark:text-cream">
+                  Why Photography Matters to Me
+                </h3>
+              </div>
+              <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+                {personalInfo.photographyIntro}
+              </p>
+              <div className="mt-4 grid grid-cols-2 gap-2">
+                {photography.photos.slice(0, 2).map((photo, index) => (
+                  <div key={index} className="rounded-lg overflow-hidden aspect-square">
+                    <img
+                      src={photo}
+                      alt={`Sunset ${index + 1}`}
+                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </motion.div>
+        </div>
       </div>
     </section>
   );

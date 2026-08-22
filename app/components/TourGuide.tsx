@@ -16,10 +16,11 @@ export default function TourGuide() {
   const [hasSeenTour, setHasSeenTour] = useState(false);
   const [isSpeaking, setIsSpeaking] = useState(false);
 
+  // SHORTER TOUR — 6 key sections only
   const tourSteps: Omit<TourStep, "element">[] = [
     {
       id: "hero",
-      text: "Hi! I'm Sadia, a Computer Science student at New York Institute of Technology with a concentration in Artificial Intelligence. I build backend systems and AI-powered tools that make everyday life easier."
+      text: "Hi! I'm Sadia, a Computer Science student at NYIT with an AI concentration. I build backend systems and AI-powered tools that make everyday life easier."
     },
     {
       id: "about",
@@ -27,51 +28,19 @@ export default function TourGuide() {
     },
     {
       id: "experience",
-      text: "I've worked as a Backend and AI Engineer at NutriScan, a Tech Coach at NYIT, and I built the Campus Slate CMS from scratch, saving my team over two hundred dollars a year."
-    },
-    {
-      id: "featured",
-      text: "My favorite project is Campus Slate — I replaced a costly Wix website with a custom Flask app, cutting publishing time from days to minutes."
+      text: "I've worked as a Backend and AI Engineer at NutriScan, a Tech Coach at NYIT, and built the Campus Slate CMS from scratch — saving my team over $200 a year."
     },
     {
       id: "projects",
-      text: "Here are some projects I've built — from a full-stack online store to a restaurant reservation system that uses five different data structures."
-    },
-    {
-      id: "leadership",
-      text: "Beyond coding, I lead as Vice President of the Bengali Student Association and Treasurer of the Society of Women Engineers."
-    },
-    {
-      id: "timeline",
-      text: "This is my Computer Science journey — from my first coding workshop in high school to graduating next year."
+      text: "Here are some of the projects I've built, from full-stack applications to AI-powered tools. Each one solves a real problem."
     },
     {
       id: "techstack",
-      text: "Here's my tech toolkit — Python, Java, TypeScript, SQL, and more."
-    },
-    {
-      id: "skills",
-      text: "My core skills include backend development, REST APIs, AI integration, and system design."
-    },
-    {
-      id: "education",
-      text: "I'm pursuing my Bachelor's in Computer Science at NYIT with a concentration in AI, graduating in May 2027."
-    },
-    {
-      id: "testimonials",
-      text: "Here's what people have said about my work."
-    },
-    {
-      id: "chat-section",
-      text: "Feel free to ask me anything using the chatbot below — I'm here to help!"
-    },
-    {
-      id: "photography",
-      text: "I love capturing moments — especially sunsets. Photography taught me patience and attention to detail, just like coding."
+      text: "I work with Python, Java, TypeScript, and more — always learning and expanding my toolkit."
     },
     {
       id: "connect",
-      text: "That's all! If you'd like to work together, have a question, or just want to say hi, connect with me. Thanks for stopping by!"
+      text: "That's all! If you'd like to work together or just connect, I'd love to hear from you. Thanks for stopping by!"
     }
   ];
 
@@ -84,7 +53,7 @@ export default function TourGuide() {
 
     const timer = setTimeout(() => {
       setIsOpen(true);
-    }, 2500);
+    }, 2000); // Faster: 2 seconds instead of 2.5
 
     return () => clearTimeout(timer);
   }, []);
@@ -110,12 +79,12 @@ export default function TourGuide() {
       element.classList.add("tour-highlight");
       setTimeout(() => {
         element.classList.remove("tour-highlight");
-      }, 1500);
+      }, 1200);
     }
 
     setIsSpeaking(true);
     const utterance = new SpeechSynthesisUtterance(step.text);
-    utterance.rate = 0.9;
+    utterance.rate = 1.0; // Faster: 1.0 instead of 0.9
     utterance.pitch = 1;
     utterance.lang = "en-US";
 
@@ -124,7 +93,7 @@ export default function TourGuide() {
       setTimeout(() => {
         setCurrentStep((prev) => prev + 1);
         speakStep(index + 1);
-      }, 800);
+      }, 600); // Shorter pause
     };
 
     window.speechSynthesis.speak(utterance);
@@ -136,9 +105,9 @@ export default function TourGuide() {
     localStorage.setItem("hasSeenTour", "true");
 
     const finalUtterance = new SpeechSynthesisUtterance(
-      "Thanks for exploring my portfolio! Feel free to look around and connect with me. Have a great day!"
+      "Thanks for stopping by! Feel free to explore more or reach out. Have a great day!"
     );
-    finalUtterance.rate = 0.9;
+    finalUtterance.rate = 1.0;
     window.speechSynthesis.speak(finalUtterance);
   };
 
@@ -166,21 +135,40 @@ export default function TourGuide() {
   return (
     <>
       <AnimatePresence>
-    {!isTourActive && hasSeenTour && !isOpen && (
-  <motion.button
-    initial={{ opacity: 0, y: 20 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{ delay: 1 }}
-    onClick={replayTour}
-    className="fixed bottom-20 right-6 z-40 w-12 h-12 bg-warm-brown text-white rounded-full shadow-lg hover:bg-[#6B4F10] transition-colors flex items-center justify-center"
-    aria-label="Replay tour"
-  >
-    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-    </svg>
-  </motion.button>
-)}
+        {isOpen && !hasSeenTour && (
+          <motion.div
+            initial={{ opacity: 0, y: 20, scale: 0.9 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: 20, scale: 0.9 }}
+            className="fixed bottom-8 right-8 z-50 max-w-sm bg-white dark:bg-gray-800 rounded-2xl shadow-2xl p-6 border border-gray-200 dark:border-gray-700"
+          >
+            <div className="flex items-start gap-4">
+              <div className="text-4xl">👋</div>
+              <div className="flex-1">
+                <h3 className="text-lg font-bold text-dark-brown dark:text-cream">
+                  Quick Tour?
+                </h3>
+                <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
+                  Take a 30-second tour of my portfolio.
+                </p>
+                <div className="flex gap-2 mt-4">
+                  <button
+                    onClick={startTour}
+                    className="px-4 py-2 bg-warm-brown text-white rounded-lg hover:bg-[#6B4F10] transition-colors text-sm font-medium"
+                  >
+                    Yes, show me!
+                  </button>
+                  <button
+                    onClick={skipTour}
+                    className="px-4 py-2 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors text-sm"
+                  >
+                    Skip
+                  </button>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        )}
       </AnimatePresence>
 
       {isTourActive && (

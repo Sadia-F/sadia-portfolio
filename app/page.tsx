@@ -4,19 +4,19 @@ import { personalInfo, stats } from "./data";
 import Bitmoji2D from "./components/Bitmoji2D";
 import MovingGradient from "./components/MovingGradient";
 import FloatingBackground from "./components/FloatingBackground";
-import About from "./components/About";
+import AboutSection from "./components/AboutSection";
 import Photography from "./components/Photography";
 import Experience from "./components/Experience";
 import Projects from "./components/Projects";
 import Leadership from "./components/Leadership";
-import Skills from "./components/Skills";
+import TechStack from "./components/TechStack";
 import Education from "./components/Education";
+import ChatSection from "./components/ChatSection";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import ScrollProgress from "./components/ScrollProgress";
 import BackToTop from "./components/BackToTop";
 import Timeline from "./components/Timeline";
-import TechStack from "./components/TechStack";
 import FeaturedProject from "./components/FeaturedProject";
 import Connect from "./components/Connect";
 import Testimonials from "./components/Testimonials";
@@ -24,9 +24,7 @@ import CommandPalette from "./components/CommandPalette";
 import CommandHint from "./components/CommandHint";
 import TourGuide from "./components/TourGuide";
 import Now from "./components/Now";
-import VisitorCounter from "./components/VisitorCounter";
 import FloatingChat from "./components/FloatingChat";
-import ChatSection from "./components/ChatSection";
 import { motion } from "framer-motion";
 import Typewriter from "typewriter-effect";
 
@@ -107,34 +105,6 @@ export default function Home() {
                   Resume
                 </a>
               </div>
-
-              <div className="mt-6 flex justify-center md:justify-start">
-                <VisitorCounter />
-              </div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
-                className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mt-8"
-              >
-                <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm p-4 rounded-lg shadow-lg text-center">
-                  <p className="text-2xl font-bold text-warm-brown dark:text-terracotta">{stats.projects}</p>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">Projects</p>
-                </div>
-                <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm p-4 rounded-lg shadow-lg text-center">
-                  <p className="text-2xl font-bold text-warm-brown dark:text-terracotta">{stats.leadershipRoles}</p>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">Leadership Roles</p>
-                </div>
-                <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm p-4 rounded-lg shadow-lg text-center">
-                  <p className="text-2xl font-bold text-warm-brown dark:text-terracotta">{stats.technologies}</p>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">Technologies</p>
-                </div>
-                <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm p-4 rounded-lg shadow-lg text-center">
-                  <p className="text-2xl font-bold text-warm-brown dark:text-terracotta">{stats.studentsReached}</p>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">Students Reached</p>
-                </div>
-              </motion.div>
             </motion.div>
 
             <motion.div
@@ -149,6 +119,32 @@ export default function Home() {
             </motion.div>
           </div>
 
+          {/* Stats Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto mt-12"
+          >
+            <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm p-4 rounded-lg shadow-lg text-center">
+              <p className="text-2xl font-bold text-warm-brown dark:text-terracotta">{stats.projects}</p>
+              <p className="text-sm text-gray-600 dark:text-gray-400">Projects</p>
+            </div>
+            <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm p-4 rounded-lg shadow-lg text-center">
+              <p className="text-2xl font-bold text-warm-brown dark:text-terracotta">{stats.leadershipRoles}</p>
+              <p className="text-sm text-gray-600 dark:text-gray-400">Leadership Roles</p>
+            </div>
+            <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm p-4 rounded-lg shadow-lg text-center">
+              <p className="text-2xl font-bold text-warm-brown dark:text-terracotta">{stats.technologies}</p>
+              <p className="text-sm text-gray-600 dark:text-gray-400">Technologies</p>
+            </div>
+            <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm p-4 rounded-lg shadow-lg text-center">
+              <p className="text-2xl font-bold text-warm-brown dark:text-terracotta">{stats.studentsReached}</p>
+              <p className="text-sm text-gray-600 dark:text-gray-400">Students Reached</p>
+            </div>
+          </motion.div>
+
+          {/* Scroll indicator */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -163,18 +159,17 @@ export default function Home() {
         </div>
       </section>
 
-      <About />
+      {/* New Section Order */}
+      <AboutSection />
+      <Now />
       <Experience />
       <FeaturedProject />
       <Projects />
       <Leadership />
       <Timeline />
-      <Now />
       <TechStack />
-      <Skills />
       <Education />
       <Testimonials />
-      <Photography />
       <ChatSection />
       <Connect />
       <Footer />
