@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 export default function Connect() {
   return (
-    <section id="connect" className="py-20 px-4 bg-white dark:bg-gray-900">
+    <section id="connect" className="py-20 px-4 bg-cream/50 dark:bg-deep-slate/50">
       <div className="max-w-4xl mx-auto text-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -14,7 +14,7 @@ export default function Connect() {
           viewport={{ once: true }}
         >
           <h2 className="text-4xl font-bold text-dark-brown dark:text-cream mb-4">
-            Let's Connect
+            Let's Build Something Meaningful
           </h2>
           <div className="w-16 h-1 bg-gradient-to-r from-warm-brown to-sunset mx-auto rounded-full mb-6" />
           <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-8">
@@ -24,31 +24,39 @@ export default function Connect() {
           <div className="flex flex-wrap justify-center gap-4">
             <a
               href={`mailto:${personalInfo.email}`}
-              className="px-6 py-3 bg-warm-brown text-white rounded-lg hover:bg-[#6B4F10] transition-colors"
+              className="group px-8 py-4 bg-warm-brown text-white rounded-xl hover:bg-[#6B4F10] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center gap-3"
             >
-              📧 Email
+              <span className="text-2xl">📧</span>
+              <div className="text-left">
+                <p className="font-medium">Email</p>
+                <p className="text-xs opacity-80">I reply within 24 hours</p>
+              </div>
             </a>
             <a
               href={personalInfo.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-6 py-3 bg-terracotta text-white rounded-lg hover:bg-[#A06030] transition-colors"
+              className="group px-8 py-4 bg-terracotta text-white rounded-xl hover:bg-[#A06030] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center gap-3"
             >
-              🔗 LinkedIn
+              <span className="text-2xl">🔗</span>
+              <div className="text-left">
+                <p className="font-medium">LinkedIn</p>
+                <p className="text-xs opacity-80">Connect professionally</p>
+              </div>
             </a>
             <a
               href={personalInfo.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-6 py-3 bg-gray-200 dark:bg-gray-700 text-dark-brown dark:text-cream rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
+              className="group px-8 py-4 bg-gray-200 dark:bg-gray-700 text-dark-brown dark:text-cream rounded-xl hover:bg-gray-300 dark:hover:bg-gray-600 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center gap-3"
             >
-              🐙 GitHub
+              <span className="text-2xl">🐙</span>
+              <div className="text-left">
+                <p className="font-medium">GitHub</p>
+                <p className="text-xs opacity-80">See my code</p>
+              </div>
             </a>
           </div>
-
-          <p className="text-sm text-gray-400 dark:text-gray-500 mt-6">
-            Or use the chat below to ask me anything! 💬
-          </p>
         </motion.div>
       </div>
     </section>

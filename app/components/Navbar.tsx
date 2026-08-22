@@ -67,10 +67,8 @@ export default function Navbar() {
               className="p-2 rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors flex items-center gap-2 text-gray-600 dark:text-gray-300"
               aria-label="Search"
             >
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-              </svg>
-              <span className="text-xs text-gray-400 dark:text-gray-500">⌘K</span>
+              <span className="text-sm">🔍</span>
+              <span className="text-sm">Search</span>
             </button>
             <DarkModeToggle />
           </div>
@@ -112,9 +110,7 @@ export default function Navbar() {
                 }}
                 className="text-gray-700 dark:text-gray-300 hover:text-[#8B6914] dark:hover:text-[#C07C40] transition-colors flex items-center gap-2"
               >
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                </svg>
+                <span>🔍</span>
                 Search
               </button>
               <DarkModeToggle />
