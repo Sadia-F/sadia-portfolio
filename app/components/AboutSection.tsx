@@ -1,10 +1,21 @@
 "use client";
 
-import { personalInfo, photography } from "../data";
+import { personalInfo } from "../data";
 import { motion } from "framer-motion";
-import Image from "next/image";
 
 export default function AboutSection() {
+  // Photography data is embedded directly since it's just for this section
+  const photographyIntro = "Photography taught me to see the world differently. It's not just about taking pictures — it's about patience, timing, and finding beauty in everyday moments. Just like coding, it's about attention to detail and creating something meaningful.";
+  
+  const photos = [
+    "/images/2.jpeg",
+    "/images/3.jpeg",
+    "/images/4.jpeg",
+    "/images/5.jpeg",
+    "/images/6.jpeg",
+    "/images/7.jpg"
+  ];
+
   return (
     <section id="about" className="py-20 px-4 bg-cream/50 dark:bg-deep-slate/50">
       <div className="max-w-6xl mx-auto">
@@ -58,10 +69,10 @@ export default function AboutSection() {
                 </h3>
               </div>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                {personalInfo.photographyIntro}
+                {photographyIntro}
               </p>
               <div className="mt-4 grid grid-cols-2 gap-2">
-                {photography.photos.slice(0, 2).map((photo, index) => (
+                {photos.slice(0, 2).map((photo, index) => (
                   <div key={index} className="rounded-lg overflow-hidden aspect-square">
                     <img
                       src={photo}
