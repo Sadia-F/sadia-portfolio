@@ -1,8 +1,21 @@
 "use client";
 
 import { useState } from "react";
-import { photography } from "../data";
 import { motion, AnimatePresence } from "framer-motion";
+
+// Photography data embedded directly
+const photography = {
+  title: "Photography",
+  intro: "I love capturing moments — especially sunsets. For me, photography is about patience, timing, and finding beauty in everyday things. It reminds me a lot of coding: attention to detail, problem-solving, and the joy of creating something meaningful.",
+  photos: [
+    "/images/2.jpeg",
+    "/images/3.jpeg",
+    "/images/4.jpeg",
+    "/images/5.jpeg",
+    "/images/6.jpeg",
+    "/images/7.jpg"
+  ]
+};
 
 export default function Photography() {
   const [selectedPhoto, setSelectedPhoto] = useState<string | null>(null);
@@ -38,7 +51,7 @@ export default function Photography() {
 
         {photography.photos.length > 0 ? (
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-            {photography.photos.map((photo, index) => (
+            {photography.photos.map((photo: string, index: number) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.9 }}

@@ -170,6 +170,7 @@ export default function Home() {
       <TechStack />
       <Education />
       <Testimonials />
+      <Photography />
       <ChatSection />
       <Connect />
       <Footer />
