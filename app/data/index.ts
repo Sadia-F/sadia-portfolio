@@ -558,10 +558,6 @@ export const chatbotData = {
       keywords: ["resume", "cv", "download resume", "see resume"],
       answer: "Yes! You can download my resume by clicking the 'Resume' button in the hero section at the top of this page. It's a PDF with all my experience, projects, education, and skills. If you have any questions about it, feel free to ask!"
     },
-    internships: {
-      keywords: ["looking for internships", "intern", "summer 2027", "2027 internships"],
-      answer: "Yes! I'm actively seeking Summer 2027 internships in backend engineering, AI engineering, and software engineering. I'm open to opportunities where I can build meaningful technology and grow as an engineer. If you know of any opportunities, I'd love to hear about them!"
-    },
     roles: {
       keywords: ["what roles", "what kind of roles", "job titles", "positions"],
       answer: "I'm looking for roles in backend engineering, AI engineering, and software engineering. I'm particularly interested in positions where I can work on AI-powered applications, build scalable systems, and solve real-world problems. I'm open to both startups and established companies. If you have a role in mind, let's chat!"
