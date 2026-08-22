@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 export default function Education() {
   return (
-    <section id="education" className="py-20 px-4 bg-white dark:bg-gray-900">
+    <section id="education" className="py-20 px-4 bg-cream dark:bg-deep-slate">
       <div className="max-w-5xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -28,7 +28,7 @@ export default function Education() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="bg-cream dark:bg-deep-slate rounded-xl p-6 shadow-lg"
+              className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg"
             >
               <h3 className="text-xl font-bold text-dark-brown dark:text-cream">
                 {edu.school}
@@ -39,12 +39,17 @@ export default function Education() {
               <p className="text-sm text-gray-500 dark:text-gray-400">
                 {edu.concentration}
               </p>
-              <p className="text-sm text-gray-500 dark:text-gray-400 mb-3">
+              <p className="text-sm text-gray-500 dark:text-gray-400">
                 Expected Graduation: {edu.expectedGraduation}
               </p>
+              {edu.gpa && (
+                <p className="text-sm text-gray-500 dark:text-gray-400">
+                  GPA: {edu.gpa}
+                </p>
+              )}
 
               {edu.honors && (
-                <div className="mb-3">
+                <div className="mb-3 mt-3">
                   <p className="text-sm font-medium text-dark-brown dark:text-cream">Honors:</p>
                   <ul className="list-disc list-inside text-sm text-gray-600 dark:text-gray-400">
                     {edu.honors.map((honor, i) => (
@@ -54,8 +59,35 @@ export default function Education() {
                 </div>
               )}
 
-              {edu.activities && (
+              {edu.certifications && (
+                <div className="mb-3">
+                  <p className="text-sm font-medium text-dark-brown dark:text-cream">Certifications:</p>
+                  <ul className="list-disc list-inside text-sm text-gray-600 dark:text-gray-400">
+                    {edu.certifications.map((cert, i) => (
+                      <li key={i}>{cert}</li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
+              {edu.coursework && (
                 <div>
+                  <p className="text-sm font-medium text-dark-brown dark:text-cream">Relevant Coursework:</p>
+                  <div className="flex flex-wrap gap-2 mt-1">
+                    {edu.coursework.map((course, i) => (
+                      <span
+                        key={i}
+                        className="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-xs rounded"
+                      >
+                        {course}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {edu.activities && (
+                <div className="mt-3">
                   <p className="text-sm font-medium text-dark-brown dark:text-cream">Activities:</p>
                   <ul className="list-disc list-inside text-sm text-gray-600 dark:text-gray-400">
                     {edu.activities.map((activity, i) => (
@@ -68,12 +100,13 @@ export default function Education() {
           ))}
         </div>
 
+        {/* Awards Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
           viewport={{ once: true }}
-          className="bg-cream dark:bg-deep-slate rounded-xl p-6 shadow-lg"
+          className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg"
         >
           <h3 className="text-xl font-bold text-dark-brown dark:text-cream mb-4 text-center">
             🏆 Awards & Recognitions
@@ -86,7 +119,7 @@ export default function Education() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3, delay: index * 0.05 }}
                 viewport={{ once: true }}
-                className="flex items-center gap-3 p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm hover:shadow-md transition-shadow"
+                className="flex items-center gap-3 p-4 bg-cream dark:bg-deep-slate rounded-lg shadow-sm hover:shadow-md transition-shadow"
               >
                 <span className="text-2xl">{award.icon}</span>
                 <div>

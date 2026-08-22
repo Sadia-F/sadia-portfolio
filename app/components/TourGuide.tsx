@@ -53,7 +53,7 @@ export default function TourGuide() {
 
     const timer = setTimeout(() => {
       setIsOpen(true);
-    }, 2000); // Faster: 2 seconds instead of 2.5
+    }, 2000);
 
     return () => clearTimeout(timer);
   }, []);
@@ -84,7 +84,7 @@ export default function TourGuide() {
 
     setIsSpeaking(true);
     const utterance = new SpeechSynthesisUtterance(step.text);
-    utterance.rate = 1.0; // Faster: 1.0 instead of 0.9
+    utterance.rate = 1.0;
     utterance.pitch = 1;
     utterance.lang = "en-US";
 
@@ -93,7 +93,7 @@ export default function TourGuide() {
       setTimeout(() => {
         setCurrentStep((prev) => prev + 1);
         speakStep(index + 1);
-      }, 600); // Shorter pause
+      }, 600);
     };
 
     window.speechSynthesis.speak(utterance);

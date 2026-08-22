@@ -1,6 +1,6 @@
 "use client";
 
-import { techStack } from "../data";
+import { techStack, skills } from "../data";
 import { motion } from "framer-motion";
 
 export default function TechStack() {
@@ -15,40 +15,64 @@ export default function TechStack() {
           className="text-center mb-12"
         >
           <h2 className="text-4xl font-bold text-dark-brown dark:text-cream mb-4">
-            🛠️ Tech Stack
+            🛠️ Tech Stack & Skills
           </h2>
           <div className="w-16 h-1 bg-gradient-to-r from-warm-brown to-sunset mx-auto rounded-full" />
           <p className="text-gray-600 dark:text-gray-400 mt-4 max-w-2xl mx-auto">
-            Technologies I work with — categorized by domain.
+            Technologies I work with — shown by proficiency level.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
-          {Object.entries(techStack).map(([category, data], categoryIndex) => (
+        {/* Tech Stack with Percentage Bars */}
+        <div className="space-y-4 mb-12">
+          {techStack.map((tech, index) => (
             <motion.div
-              key={category}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: categoryIndex * 0.1 }}
+              key={index}
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.4, delay: index * 0.05 }}
               viewport={{ once: true }}
-              className="bg-cream dark:bg-deep-slate rounded-xl p-4 shadow-md"
+              className="flex items-center gap-4"
             >
-              <h3 className="text-sm font-bold text-warm-brown dark:text-terracotta mb-3 text-center uppercase tracking-wide flex items-center justify-center gap-2">
-                <span>{data.icon}</span> {category}
-              </h3>
-              <div className="flex flex-wrap justify-center gap-2">
-                {data.skills.map((skill: { name: string; icon: string }) => (
-                  <span
-                    key={skill.name}
-                    className="px-3 py-1 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 text-xs rounded-full border border-gray-200 dark:border-gray-600 hover:shadow-md transition-all flex items-center gap-1"
-                  >
-                    <span>{skill.icon}</span>
-                    {skill.name}
-                  </span>
-                ))}
+              <span className="text-2xl w-10">{tech.icon}</span>
+              <span className="text-sm font-medium text-gray-700 dark:text-gray-300 w-24">
+                {tech.name}
+              </span>
+              <div className="flex-1 h-3 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+                <motion.div
+                  initial={{ width: 0 }}
+                  whileInView={{ width: `${tech.level}%` }}
+                  transition={{ duration: 1, delay: index * 0.05 }}
+                  viewport={{ once: true }}
+                  className="h-full bg-gradient-to-r from-warm-brown to-sunset rounded-full"
+                />
               </div>
+              <span className="text-sm font-medium text-gray-700 dark:text-gray-300 w-12 text-right">
+                {tech.level}%
+              </span>
             </motion.div>
           ))}
+        </div>
+
+        {/* Skills — No Percentages */}
+        <div>
+          <h3 className="text-2xl font-bold text-dark-brown dark:text-cream mb-4 text-center">
+            Skills
+          </h3>
+          <div className="flex flex-wrap justify-center gap-2">
+            {skills.map((skill, index) => (
+              <motion.span
+                key={index}
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.3, delay: index * 0.02 }}
+                viewport={{ once: true }}
+                className="px-4 py-2 bg-cream dark:bg-deep-slate text-gray-700 dark:text-gray-300 rounded-full border border-gray-200 dark:border-gray-700 text-sm font-medium hover:shadow-md transition-shadow"
+              >
+                {skill}
+              </motion.span>
+            ))}
+          </div>
         </div>
       </div>
     </section>

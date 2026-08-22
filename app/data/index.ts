@@ -1,4 +1,4 @@
- // ============================================================
+// ============================================================
 // PERSONAL INFORMATION
 // ============================================================
 export const personalInfo = {
@@ -32,7 +32,7 @@ export const stats = {
 };
 
 // ============================================================
-// "NOW" SECTION — Professional
+// "NOW" SECTION
 // ============================================================
 export const now = {
   title: "Currently",
@@ -54,9 +54,13 @@ export const education = [
     degree: "Bachelor of Computer Science",
     concentration: "Artificial Intelligence",
     expectedGraduation: "May 2027",
+    gpa: "3.91",
     honors: [
       "Dean's Honor List (Spring 2024 & Spring 2025)",
       "Presidential Honor List (Spring 2026)"
+    ],
+    certifications: [
+      "NASPA Peer Educator (June 2024)"
     ],
     activities: [
       "Vice President, Bengali Student Association",
@@ -73,8 +77,16 @@ export const education = [
       "Theory of Computation",
       "Computer Networks",
       "Database Management",
-      "Artificial Intelligence",
-      "Software Engineering"
+      "Programming for AI",
+      "Artificial Intelligence I",
+      "Intro to Software Engineering",
+      "Programming Language Concepts",
+      "Computer Programming I & II",
+      "Discrete Structures",
+      "Digital Logic Design",
+      "Computer Organization & Architecture",
+      "Calculus I & II",
+      "Linear Algebra"
     ]
   }
 ];
@@ -130,7 +142,7 @@ export const experience = [
 ];
 
 // ============================================================
-// PROJECTS — With Live Demos
+// PROJECTS
 // ============================================================
 export const projects = [
   {
@@ -204,85 +216,48 @@ export const projects = [
 ];
 
 // ============================================================
-// SKILLS & TECH STACK
+// TECH STACK & SKILLS
 // ============================================================
-export const techStack = {
-  languages: {
-    icon: "💻",
-    skills: [
-      { name: "Python", icon: "🐍" },
-      { name: "Java", icon: "☕" },
-      { name: "TypeScript", icon: "🟦" },
-      { name: "SQL", icon: "🗄️" }
-    ]
-  },
-  backend: {
-    icon: "⚙️",
-    skills: [
-      { name: "REST APIs", icon: "🔗" },
-      { name: "Flask", icon: "🌶️" },
-      { name: "FastAPI", icon: "⚡" },
-      { name: "Data Pipelines", icon: "📊" }
-    ]
-  },
-  databases: {
-    icon: "🗄️",
-    skills: [
-      { name: "MySQL", icon: "🐬" },
-      { name: "MongoDB", icon: "🍃" },
-      { name: "PostgreSQL", icon: "🐘" },
-      { name: "Supabase", icon: "🔥" }
-    ]
-  },
-  tools: {
-    icon: "🛠️",
-    skills: [
-      { name: "Git", icon: "📦" },
-      { name: "GitHub", icon: "🐙" },
-      { name: "Docker", icon: "🐳" },
-      { name: "Vercel", icon: "⚡" }
-    ]
-  },
-  aiMl: {
-    icon: "🤖",
-    skills: [
-      { name: "LLMs", icon: "🧠" },
-      { name: "Prompt Engineering", icon: "✍️" },
-      { name: "Google Gemini", icon: "🔮" },
-      { name: "Computer Vision", icon: "👁️" }
-    ]
-  }
-};
 
-// ============================================================
-// CORE SKILLS (for the separate skills section)
-// ============================================================
-export const coreSkills = {
-  backend: {
-    title: "Backend Development",
-    skills: ["REST APIs", "Flask", "FastAPI", "Data Pipelines"]
-  },
-  databases: {
-    title: "Databases",
-    skills: ["MySQL", "MongoDB", "PostgreSQL", "Supabase"]
-  },
-  languages: {
-    title: "Programming Languages",
-    skills: ["Python", "Java", "TypeScript", "SQL"]
-  },
-  tools: {
-    title: "Tools & Platforms",
-    skills: ["Git", "GitHub", "Docker", "Vercel"]
-  },
-  ai: {
-    title: "AI & ML",
-    skills: ["LLMs", "Prompt Engineering", "Google Gemini", "Computer Vision"]
-  },
-  learning: {
-    title: "Currently Learning",
-    skills: ["React", "Next.js", "Advanced AI/ML"]
-  }
-};
+// TECH STACK — With professional percentage bars
+export const techStack = [
+  { name: "Python", icon: "🐍", level: 85 },
+  { name: "Java", icon: "☕", level: 80 },
+  { name: "TypeScript", icon: "🟦", level: 60 },
+  { name: "SQL", icon: "🗄️", level: 75 },
+  { name: "Flask", icon: "🌶️", level: 70 },
+  { name: "FastAPI", icon: "⚡", level: 60 },
+  { name: "MongoDB", icon: "🍃", level: 70 },
+  { name: "PostgreSQL", icon: "🐘", level: 65 },
+  { name: "Git", icon: "📦", level: 85 },
+  { name: "Docker", icon: "🐳", level: 50 },
+  { name: "Vercel", icon: "⚡", level: 70 },
+];
+
+// SKILLS — Full list based on who you are (no percentages)
+export const skills = [
+  "Backend Development",
+  "REST API Design",
+  "AI Integration",
+  "Data Pipelines",
+  "System Design",
+  "Database Management",
+  "Prompt Engineering",
+  "Cloud Deployment",
+  "Version Control (Git/GitHub)",
+  "Leadership",
+  "Public Speaking",
+  "Project Management",
+  "Event Coordination",
+  "Peer Mentoring",
+  "Team Collaboration",
+  "Problem Solving",
+  "Critical Thinking",
+  "Communication",
+  "Adaptability",
+  "Photography",
+  "Writing & Editing"
+];
 
 // ============================================================
 // LEADERSHIP
@@ -336,60 +311,50 @@ export const leadership = [
       "Accomplished **$200+ annual savings**, as measured by **reduced hosting costs**, by building a custom Flask CMS to replace Wix."
     ]
   },
-  // High School Leadership
   {
-    role: "President",
-    organization: "Key Club, Island Trees High School",
-    duration: "September 2021 - June 2022",
+    role: "Culture Club Founder & Key Club Lieutenant Governor",
+    organization: "Island Trees High School",
+    duration: "2021 - 2023",
     achievements: [
-      "Led the school's Key Club chapter, organizing food drives, book drives, and clothing drives benefiting the local community."
-    ]
-  },
-  {
-    role: "Lieutenant Governor",
-    organization: "Key Club Division 6",
-    duration: "July 2022 - April 2023",
-    achievements: [
-      "Oversaw and collaborated with 12 schools across Long Island, organizing community service events including food drives, clothing drives, and fundraisers."
-    ]
-  },
-  {
-    role: "Founder & President",
-    organization: "Culture Club, Island Trees High School",
-    duration: "September 2021 - June 2023",
-    achievements: [
-      "Founded and led the Culture Club to foster an inclusive environment for diverse backgrounds, facilitating language and cultural understanding through organized events and initiatives."
+      "Founded and led the Culture Club to foster inclusion across diverse backgrounds through cultural events and initiatives.",
+      "Served as Lieutenant Governor for Key Club, overseeing 12 schools and organizing community service events across Long Island."
     ]
   }
 ];
 
 // ============================================================
-// TIMELINE — Personal + Professional
+// TIMELINE — Starts at First Coding Workshop
 // ============================================================
 export const timelineEvents = [
   {
-    year: "2005",
-    title: "Born in Bangladesh",
-    description: "Born in Bangladesh, later moved to Long Island, New York — a journey that shaped my perspective on culture, community, and resilience.",
-    icon: "🌍"
-  },
-  {
     year: "2021",
     title: "First Coding Workshop",
-    description: "Volunteered as a student teacher, facilitating beginner-level programming lessons for elementary, middle, and high school students.",
+    description: "Volunteered as a student teacher, facilitating beginner-level programming lessons for elementary, middle, and high school students. This sparked my love for teaching and technology.",
     icon: "💻"
   },
   {
     year: "2021",
-    title: "Founded Culture Club",
+    title: "Founder, Culture Club",
     description: "Founded and led the Culture Club at Island Trees High School to foster an inclusive environment for diverse backgrounds.",
     icon: "🌏"
   },
   {
-    year: "2022",
+    year: "2021",
+    title: "Started Photography",
+    description: "Discovered my love for photography — especially sunsets. It became my creative balance and a way to see the world differently.",
+    icon: "📸"
+  },
+  {
+    year: "2021",
     title: "Lieutenant Governor, Key Club",
     description: "Oversaw and collaborated with 12 schools across Long Island, organizing community service events including food drives, clothing drives, and fundraisers.",
     icon: "🏛️"
+  },
+  {
+    year: "2022",
+    title: "Girls Who Code",
+    description: "Completed the Girls Who Code program, building foundational skills in programming and problem-solving while connecting with a community of women in tech.",
+    icon: "💻"
   },
   {
     year: "2023",
@@ -399,39 +364,51 @@ export const timelineEvents = [
   },
   {
     year: "2024",
+    title: "Academic Excellence",
+    description: "Earned Dean's Honor List (Spring 2024 & Spring 2025) and Presidential Honor List (Spring 2026).",
+    icon: "📚"
+  },
+  {
+    year: "2024",
     title: "First Major Project",
     description: "Built Restaurant Reservation System using 5 different data structures in Java.",
     icon: "📊"
   },
   {
     year: "2024",
-    title: "Started Photography",
-    description: "Discovered my love for photography — especially sunsets. It became my creative balance and a way to see the world differently.",
-    icon: "📸"
-  },
-  {
-    year: "2024",
-    title: "Campus Involvement Begins",
-    description: "Became Web Developer for Campus Slate, Peer Advisor, and Community Outreach Coordinator for BSA.",
+    title: "Campus Leadership",
+    description: "Web Developer for Campus Slate (Flask CMS, $200+ annual savings), VP of BSA, Peer Advisor, Peer Health Educator, and Co-Founder of the Badminton Team.",
     icon: "🏫"
   },
   {
     year: "2025",
-    title: "Dean's Honor List",
-    description: "Recognized for academic excellence in Spring 2025.",
-    icon: "📚"
+    title: "Treasurer, SWE",
+    description: "Managing a $500/event budget and delivering 5+ engineering career events for 40+ members.",
+    icon: "👩‍💻"
   },
   {
     year: "2026",
-    title: "First Internship",
-    description: "Started as Backend/AI Engineer at NutriScan and Software Sales at IQVentory.",
+    title: "Zennabelle Sewell Heart Award",
+    description: "Received the Zennabelle Sewell Heart Award for leadership, service, and meaningful campus contributions.",
+    icon: "❤️"
+  },
+  {
+    year: "2026",
+    title: "Backend / AI Engineer Intern, NutriScan",
+    description: "Developed REST APIs, integrated Google Gemini Flash, Apple HealthKit, Dexcom, and FreeStyle Libre APIs for real-time health data sync.",
     icon: "💼"
   },
   {
     year: "2026",
-    title: "Presidential Honor List & Award",
-    description: "Received Presidential Honor List and Zennabelle Sewell Heart Award.",
-    icon: "🏆"
+    title: "Software Sales Intern, IQVentory",
+    description: "Qualified 16+ business prospects and maintained lead pipeline through targeted outbound outreach using proprietary CRM.",
+    icon: "📊"
+  },
+  {
+    year: "2026",
+    title: "Tech Coach, NYIT",
+    description: "Mentored 40 high school students across two intensive one-week programs, teaching Arduino, 3D printing, soldering, and circuit debugging.",
+    icon: "🔧"
   },
   {
     year: "2027",
@@ -524,7 +501,7 @@ export const chatbotData = {
     "What advice would you give to other CS students?"
   ],
   answers: {
-    // About You
+    // ABOUT YOU
     who: {
       keywords: ["who are you", "what do you do", "introduce yourself", "tell me about yourself"],
       answer: "I'm Sadia Ferdous, a Computer Science student at NYIT with an AI concentration. I build backend systems and AI-powered tools that make everyday life easier. I'm passionate about solving real problems through code, leadership, and creativity."
@@ -533,7 +510,8 @@ export const chatbotData = {
       keywords: ["where are you from", "born", "location", "hometown"],
       answer: "I was born in Bangladesh and raised on Long Island, New York. I love the mix of cultures and perspectives it's given me — it's shaped how I approach problems and work with people from all backgrounds."
     },
-    // Experience
+
+    // EXPERIENCE
     internships: {
       keywords: ["internships", "intern", "what internships", "internship experience", "worked as"],
       answer: "I've had some amazing experiences! 🚀 I'm currently a Backend/AI Engineer Intern at NutriScan working with Python, MongoDB, and Google Gemini Flash. I'm also a Software Sales Intern at IQVentory. I've worked as a Tech Coach at NYIT, mentoring 40 high school students. And I'm the Web Developer for The Campus Slate, where I built a Flask CMS. Scroll down to the Experience section to learn more about each role!"
@@ -554,7 +532,8 @@ export const chatbotData = {
       keywords: ["rewarding", "most rewarding", "best project", "favorite work"],
       answer: "The most rewarding project I've worked on is Campus Slate CMS. I saw a real problem — my team was paying $200+ annually for a Wix website that limited our control and made publishing slow. I built a custom Flask web app with Supabase and Vercel, replacing Wix entirely. Now we save $200+ a year and publishing time went from days to minutes. Knowing I solved a real problem that made people's work easier is incredibly satisfying."
     },
-    // Projects
+
+    // PROJECTS
     projectList: {
       keywords: ["projects", "built", "made", "created", "developed", "portfolio projects"],
       answer: "I've built 4 main projects! 🚀 My favorite is Campus Slate CMS because I solved a real problem — saving my team $200+ annually and cutting publishing time from days to minutes. I've also built an Online Store Management System (Java, MySQL), a Restaurant Reservation System (Java, Data Structures), and mishti-website (Python). Check out the Projects section below to see all the details and GitHub links!"
@@ -571,7 +550,8 @@ export const chatbotData = {
       keywords: ["restaurant reservation", "reservation system", "booking", "waitlist"],
       answer: "Restaurant Reservation System is a Java application I built to solve real scheduling challenges. I implemented 5 different data structures: LinkedList, TreeMap, Queue, HashSet, and a custom BST. It handles waitlist fairness, prevents duplicate bookings, and enables fast customer phone lookup. It was a great exercise in applying data structures to real-world problems."
     },
-    // Education
+
+    // EDUCATION
     school: {
       keywords: ["where do you go", "school", "university", "college", "nyit"],
       answer: "I'm a Computer Science student at New York Institute of Technology (NYIT) with a concentration in Artificial Intelligence. I'm graduating in May 2027. I've made the Dean's Honor List (Spring 2024 & 2025) and the Presidential Honor List (Spring 2026). I'm also very active on campus — Vice President of BSA, Treasurer of SWE, Peer Advisor, and more. Scroll to the Education section for all the details!"
@@ -580,7 +560,8 @@ export const chatbotData = {
       keywords: ["what are you studying", "major", "degree", "concentration", "ai", "artificial intelligence"],
       answer: "I'm pursuing a Bachelor's in Computer Science with a concentration in Artificial Intelligence. My coursework includes Data Structures, Algorithms, Operating Systems, Theory of Computation, Computer Networks, Database Management, AI, and Software Engineering. I love how AI is transforming every industry, and I want to be part of building that future."
     },
-    // Skills
+
+    // SKILLS
     languages: {
       keywords: ["programming languages", "languages", "what languages", "code in"],
       answer: "I work with Python, Java, TypeScript, HTML, CSS, and SQL. My strongest languages are Python and Java — I've built production-grade applications with both. I'm also actively improving my TypeScript and JavaScript skills as I build more web applications."
@@ -597,7 +578,8 @@ export const chatbotData = {
       keywords: ["strongest skills", "best at", "what are you good at", "strengths"],
       answer: "My strongest skills are backend development, REST API design, AI integration, and system design. I'm great at taking complex problems and breaking them down into manageable pieces. I also have strong communication and leadership skills from my campus involvement, which helps me work effectively in teams."
     },
-    // Leadership
+
+    // LEADERSHIP
     leadership: {
       keywords: ["leadership roles", "leader", "lead", "president", "vice president", "treasurer"],
       answer: "I love leadership! 🌟 I'm currently Treasurer of SWE, Vice President of BSA, and Co-Founder of the Badminton Team at NYIT. I'm also a Peer Advisor and Peer Health Educator. In high school, I was President of Key Club, Lieutenant Governor overseeing 12 schools, and Founder of the Culture Club. Check out the Leadership section to see all my roles!"
@@ -610,7 +592,8 @@ export const chatbotData = {
       keywords: ["bsa", "bengali student association", "bengali", "vice president"],
       answer: "As Vice President of the Bengali Student Association, I lead a 10-member executive board to plan and execute 20+ cultural, social, and academic events per semester. I revived the organization from dormancy and now we have 50+ members actively participating. I manage logistics, food planning, and activity curation to create a vibrant community on campus."
     },
-    // Career Goals
+
+    // CAREER GOALS
     goals: {
       keywords: ["career goals", "future", "aspire", "plan", "dream job"],
       answer: "My goal is to become a backend or AI engineer building systems that make a real difference in people's lives. I'm particularly interested in how AI can improve healthcare, education, and everyday workflows. I'm looking for Summer 2027 internships to gain more experience and grow as an engineer. Long-term, I want to lead teams that build meaningful, impactful technology."
@@ -619,7 +602,8 @@ export const chatbotData = {
       keywords: ["work in ai", "ai career", "artificial intelligence", "do you want to work in ai"],
       answer: "Yes! I'm deeply interested in AI and its potential to solve real-world problems. I'm pursuing a concentration in AI and have hands-on experience with LLMs, prompt engineering, and Google Gemini through my work at NutriScan. I believe AI will transform every industry, and I want to be part of building that future — ethically and responsibly."
     },
-    // Contact
+
+    // CONTACT
     contact: {
       keywords: ["contact", "email", "reach", "message", "connect", "linkedin"],
       answer: "I'd love to connect! 📬 You can reach me at sadiaferdous003@gmail.com or connect with me on LinkedIn at linkedin.com/in/sadiaaferdous. You can also check out my code on GitHub at github.com/Sadia-F. Scroll to the bottom of the page for my Contact section with all my links!"
@@ -632,7 +616,8 @@ export const chatbotData = {
       keywords: ["what roles", "what kind of roles", "job titles", "positions"],
       answer: "I'm looking for roles in backend engineering, AI engineering, and software engineering. I'm particularly interested in positions where I can work on AI-powered applications, build scalable systems, and solve real-world problems. I'm open to both startups and established companies. If you have a role in mind, let's chat!"
     },
-    // Technical
+
+    // TECHNICAL DEEP DIVE
     debugging: {
       keywords: ["debugging", "debug", "approach to debugging", "how do you debug"],
       answer: "I take a systematic approach to debugging: 1) Reproduce the bug consistently, 2) Read the error message carefully, 3) Use print statements or a debugger to trace the issue, 4) Isolate the problem area, 5) Fix and test thoroughly. I also believe in writing clean, readable code so bugs are easier to spot and prevent in the first place."
