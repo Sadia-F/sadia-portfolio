@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { projects, techStack } from "../data";
+import { projects, techStack, skills } from "../data";
 
 interface SearchResult {
   id: string;
@@ -42,22 +42,34 @@ export default function SearchModal({ isOpen, onClose }: { isOpen: boolean; onCl
       }
     });
 
+    // Search tech stack
+    techStack.forEach((tech) => {
+      if (
+        tech.name.toLowerCase().includes(searchQuery)
+      ) {
+        results.push({
+          id: `tech-${tech.name}`,
+          title: tech.name,
+          description: `Tech Stack • ${tech.level}% proficiency`,
+          type: "skill",
+          href: "#techstack",
+        });
+      }
+    });
+
     // Search skills
-    Object.entries(techStack).forEach(([category, data]) => {
-      data.skills.forEach((skill: { name: string; icon: string }) => {
-        if (
-          skill.name.toLowerCase().includes(searchQuery) ||
-          category.toLowerCase().includes(searchQuery)
-        ) {
-          results.push({
-            id: `skill-${skill.name}`,
-            title: skill.name,
-            description: `Category: ${category}`,
-            type: "skill",
-            href: "#techstack",
-          });
-        }
-      });
+    skills.forEach((skill) => {
+      if (
+        skill.toLowerCase().includes(searchQuery)
+      ) {
+        results.push({
+          id: `skill-${skill}`,
+          title: skill,
+          description: "Skill",
+          type: "skill",
+          href: "#techstack",
+        });
+      }
     });
 
     // Search sections
