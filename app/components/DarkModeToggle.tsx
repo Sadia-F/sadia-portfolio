@@ -42,12 +42,9 @@ export default function DarkModeToggle() {
       className="relative flex items-center gap-3 p-2 rounded-full bg-cream dark:bg-deep-slate border-2 border-warm-brown/30 dark:border-terracotta/30 transition-colors duration-300 shadow-sm"
       aria-label="Toggle dark mode"
     >
-      {/* Sun Icon (Light Mode) */}
       <span className={`text-lg transition-opacity duration-300 ${isDark ? "opacity-40" : "opacity-100"}`}>
         ☀️
       </span>
-
-      {/* Toggle Slider */}
       <div className="relative w-12 h-6 bg-gray-300 dark:bg-gray-600 rounded-full transition-colors duration-300 flex items-center">
         <div
           className={`absolute w-5 h-5 bg-white dark:bg-gray-200 rounded-full shadow-md transition-all duration-300 ${
@@ -55,8 +52,6 @@ export default function DarkModeToggle() {
           }`}
         />
       </div>
-
-      {/* Moon Icon (Dark Mode) */}
       <span className={`text-lg transition-opacity duration-300 ${isDark ? "opacity-100" : "opacity-40"}`}>
         🌙
       </span>
