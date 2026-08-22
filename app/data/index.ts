@@ -220,17 +220,17 @@ export const projects = [
 // ============================================================
 
 export const techStack = [
-  { name: "Python", logo: "/logos/python.svg", level: 85 },
-  { name: "Java", logo: "/logos/java.svg", level: 80 },
-  { name: "TypeScript", logo: "/logos/typescript.svg", level: 60 },
-  { name: "SQL", logo: "/logos/sql.svg", level: 75 },
-  { name: "Flask", logo: "/logos/flask.svg", level: 70 },
-  { name: "FastAPI", logo: "/logos/fastapi.svg", level: 60 },
-  { name: "MongoDB", logo: "/logos/mongodb.svg", level: 70 },
-  { name: "PostgreSQL", logo: "/logos/postgresql.svg", level: 65 },
-  { name: "Git", logo: "/logos/git.svg", level: 85 },
-  { name: "Docker", logo: "/logos/docker.svg", level: 50 },
-  { name: "Vercel", logo: "/logos/vercel.svg", level: 70 },
+  { name: "Python", logo: "/logos/python-svgrepo-com.svg", level: 85 },
+  { name: "Java", logo: "/logos/java-4-svgrepo-com.svg", level: 80 },
+  { name: "TypeScript", logo: "/logos/typescript-icon-svgrepo-com.svg", level: 60 },
+  { name: "SQL", logo: "/logos/sql-database-generic-svgrepo-com.svg", level: 75 },
+  { name: "Flask", logo: "/logos/flask-svgrepo-com.svg", level: 70 },
+  { name: "FastAPI", logo: "/logos/fastapi-svgrepo-com.svg", level: 60 },
+  { name: "MongoDB", logo: "/logos/mongodb-svgrepo-com.svg", level: 70 },
+  { name: "PostgreSQL", logo: "/logos/postgresql-svgrepo-com.svg", level: 65 },
+  { name: "Git", logo: "/logos/git-svgrepo-com.svg", level: 85 },
+  { name: "Docker", logo: "/logos/docker-svgrepo-com.svg", level: 50 },
+  { name: "Vercel", logo: "/logos/vercel-svgrepo-com.svg", level: 70 },
 ];
 
 export const skills = [

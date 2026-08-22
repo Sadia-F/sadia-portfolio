@@ -4,6 +4,21 @@ import { techStack, skills } from "../data";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
+// CDN Logo URLs (reliable sources from devicon)
+const logoURLs: Record<string, string> = {
+  Python: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+  Java: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
+  TypeScript: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+  SQL: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
+  Flask: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg",
+  FastAPI: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg",
+  MongoDB: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
+  PostgreSQL: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
+  Git: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+  Docker: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
+  Vercel: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vercel/vercel-original.svg",
+};
+
 export default function TechStack() {
   return (
     <section id="techstack" className="py-20 px-4 bg-white dark:bg-gray-900">
@@ -35,13 +50,15 @@ export default function TechStack() {
               viewport={{ once: true }}
               className="flex items-center gap-4"
             >
-              {/* Official Logo */}
+              {/* Logo from CDN */}
               <div className="w-8 h-8 relative flex-shrink-0">
                 <Image
-                  src={tech.logo}
+                  src={logoURLs[tech.name] || tech.logo}
                   alt={tech.name}
-                  fill
+                  width={32}
+                  height={32}
                   className="object-contain dark:invert"
+                  unoptimized
                 />
               </div>
               <span className="text-sm font-medium text-gray-700 dark:text-gray-300 w-24">
