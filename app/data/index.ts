@@ -216,7 +216,7 @@ export const projects = [
 ];
 
 // ============================================================
-// TECH STACK & SKILLS — Official Logo Icons
+// TECH STACK & SKILLS
 // ============================================================
 
 export const techStack = [
@@ -233,7 +233,6 @@ export const techStack = [
   { name: "Vercel", logo: "/logos/vercel.svg", level: 70 },
 ];
 
-// SKILLS — Full list
 export const skills = [
   "Backend Development",
   "REST API Design",

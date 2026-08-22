@@ -63,7 +63,7 @@ export default function TechStack() {
           ))}
         </div>
 
-        {/* Skills */}
+        {/* Skills — No Percentages */}
         <div>
           <h3 className="text-2xl font-bold text-dark-brown dark:text-cream mb-4 text-center">
             Skills
