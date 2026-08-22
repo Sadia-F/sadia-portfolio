@@ -24,12 +24,14 @@ import CommandPalette from "./components/CommandPalette";
 import TourGuide from "./components/TourGuide";
 import Now from "./components/Now";
 import FloatingChat from "./components/FloatingChat";
+import ScrollToTop from "./components/ScrollToTop";
 import { motion } from "framer-motion";
 import Typewriter from "typewriter-effect";
 
 export default function Home() {
   return (
     <div>
+      <ScrollToTop />
       <TourGuide />
       <CommandPalette />
       <FloatingBackground />
@@ -104,7 +106,7 @@ export default function Home() {
                 </a>
               </div>
 
-              {/* Stats — Now aligned left */}
+              {/* Stats */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mt-8">
                 <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm p-4 rounded-lg shadow-lg text-center">
                   <p className="text-2xl font-bold text-warm-brown dark:text-terracotta">{stats.projects}</p>
@@ -152,7 +154,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Sections */}
+      {/* All Sections */}
       <AboutSection />
       <Now />
       <Experience />
