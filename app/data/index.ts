@@ -9,7 +9,7 @@ export const personalInfo = {
   phone: "(516) 800-9127",
   location: "New York",
   github: "https://github.com/Sadia-F",
-  linkedin: "https://www.linkedin.com/in/sadiaaferdous/",
+  linkedin: "https://www.linkedin.com/in/sadiaaferdous",
   resume: "/resume.pdf",
   summary: "Computer Science student at NYIT concentrating in AI with hands-on backend development experience building REST APIs and AI-integrated data pipelines. I love solving problems and making everyday life easier.",
   valueProposition: "I build technology that turns everyday friction into flow.",
@@ -395,7 +395,7 @@ export const timelineEvents = [
 ];
 
 // ============================================================
-// CHATBOT DATA — 29 Questions & Answers
+// CHATBOT DATA — 29 Questions & Answers (NO DUPLICATES)
 // ============================================================
 export const chatbotData = {
   welcomeMessage: "Hey there! 👋 I'm Sadia's AI assistant. I know everything about her — work, projects, skills, hobbies, and what she's like as a person. Ask me anything, and I'll point you to the right part of her portfolio to learn more!",
@@ -470,7 +470,7 @@ export const chatbotData = {
     // ============================================================
     // PROJECTS
     // ============================================================
-    projects: {
+    projectList: {
       keywords: ["projects", "built", "made", "created", "developed", "portfolio projects"],
       answer: "I've built 4 main projects! 🚀 My favorite is Campus Slate CMS because I solved a real problem — saving my team $200+ annually and cutting publishing time from days to minutes. I've also built an Online Store Management System (Java, MySQL), a Restaurant Reservation System (Java, Data Structures), and mishti-website (Python). Check out the Projects section below to see all the details and GitHub links!"
     },
@@ -542,7 +542,7 @@ export const chatbotData = {
       keywords: ["career goals", "future", "aspire", "plan", "dream job"],
       answer: "My goal is to become a backend or AI engineer building systems that make a real difference in people's lives. I'm particularly interested in how AI can improve healthcare, education, and everyday workflows. I'm looking for Summer 2027 internships to gain more experience and grow as an engineer. Long-term, I want to lead teams that build meaningful, impactful technology."
     },
-    ai: {
+    aiCareer: {
       keywords: ["work in ai", "ai career", "artificial intelligence", "do you want to work in ai"],
       answer: "Yes! I'm deeply interested in AI and its potential to solve real-world problems. I'm pursuing a concentration in AI and have hands-on experience with LLMs, prompt engineering, and Google Gemini through my work at NutriScan. I believe AI will transform every industry, and I want to be part of building that future — ethically and responsibly."
     },
@@ -552,14 +552,14 @@ export const chatbotData = {
     // ============================================================
     contact: {
       keywords: ["contact", "email", "reach", "message", "connect", "linkedin"],
-      answer: "I'd love to connect! 📬 You can reach me at sadiaferdous003@gmail.com or connect with me on LinkedIn at linkedin.com/in/sadiaferdous. You can also check out my code on GitHub at github.com/Sadia-F. Scroll to the bottom of the page for my Contact section with all my links!"
+      answer: "I'd love to connect! 📬 You can reach me at sadiaferdous003@gmail.com or connect with me on LinkedIn at linkedin.com/in/sadiaaferdous. You can also check out my code on GitHub at github.com/Sadia-F. Scroll to the bottom of the page for my Contact section with all my links!"
     },
     resume: {
       keywords: ["resume", "cv", "download resume", "see resume"],
       answer: "Yes! You can download my resume by clicking the 'Resume' button in the hero section at the top of this page. It's a PDF with all my experience, projects, education, and skills. If you have any questions about it, feel free to ask!"
     },
     internships: {
-      keywords: ["internships", "looking for internships", "intern", "summer 2027", "2027 internships"],
+      keywords: ["looking for internships", "intern", "summer 2027", "2027 internships"],
       answer: "Yes! I'm actively seeking Summer 2027 internships in backend engineering, AI engineering, and software engineering. I'm open to opportunities where I can build meaningful technology and grow as an engineer. If you know of any opportunities, I'd love to hear about them!"
     },
     roles: {
