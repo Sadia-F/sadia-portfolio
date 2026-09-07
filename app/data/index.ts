@@ -125,10 +125,11 @@ export const experience = [
     duration: "July 2026 - Present",
     isHighlighted: true,
     achievements: [
+      "Designed and maintained backend infrastructure and AI-powered features for a health-tech application, delivering production code across APIs, data pipelines, and cloud infrastructure.",
       "Developed and deployed backend REST APIs supporting an AI-powered food recognition platform in a live staging and production environment using Python, MongoDB, and Google Gemini Flash, managing version control with Git.",
       "Enabled real-time health data synchronization across staging and production environments by integrating Apple HealthKit, Dexcom, and FreeStyle Libre third-party APIs."
     ],
-    technologies: ["Python", "MongoDB", "Google Gemini", "REST APIs", "Git"]
+    technologies: ["Python", "MongoDB", "Google Gemini", "REST APIs", "Cloud Infrastructure", "Data Pipelines", "CI/CD", "Git"]
   },
   {
     role: "Software Sales Intern",
@@ -136,9 +137,12 @@ export const experience = [
     duration: "July 2026 - Present",
     isHighlighted: true,
     achievements: [
-      "Qualified 16+ business prospects and maintained lead pipeline through targeted outbound outreach using proprietary CRM."
+      "Conducted outbound cold calls to 100+ prospects, introducing software solutions and IT services to potential business clients.",
+      "Qualified 16+ business prospects and maintained lead pipeline through targeted outreach using proprietary CRM.",
+      "Developed resilience, communication, and relationship-building skills through consistent high-volume outreach and prospect engagement.",
+      "Participated in weekly team meetings to discuss sales strategies, review progress, and refine outreach approaches."
     ],
-    technologies: ["CRM", "Sales", "Lead Management"]
+    technologies: ["CRM", "Cold Calling", "Lead Generation", "Client Outreach", "Pipeline Management", "Business Communication"]
   },
   {
     role: "Tech Coach",
