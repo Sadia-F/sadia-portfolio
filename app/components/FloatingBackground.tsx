@@ -45,32 +45,62 @@ export default function FloatingBackground() {
     }
 
     let animationId: number;
+    let isReducedMotion = false;
+    let isVisible = true;
+
+    if (typeof window !== "undefined") {
+      isReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    }
+
+    const handleVisibilityChange = () => {
+      isVisible = document.visibilityState === "visible";
+    };
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+
+    const renderStaticFrame = () => {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      particles.forEach((p) => {
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(139, 105, 20, ${p.opacity})`;
+        ctx.fill();
+      });
+    };
+
+    if (isReducedMotion) {
+      renderStaticFrame();
+      return () => {
+        document.removeEventListener("visibilitychange", handleVisibilityChange);
+        window.removeEventListener("resize", resizeCanvas);
+      };
+    }
 
     const animate = () => {
+      if (!isVisible) {
+        animationId = requestAnimationFrame(animate);
+        return;
+      }
+
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
       particles.forEach((p) => {
         p.x += p.speedX;
         p.y += p.speedY;
 
-        // Bounce off edges
         if (p.x < 0 || p.x > canvas.width) p.speedX *= -1;
         if (p.y < 0 || p.y > canvas.height) p.speedY *= -1;
 
-        // Draw circle
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
         ctx.fillStyle = `rgba(139, 105, 20, ${p.opacity})`;
         ctx.fill();
 
-        // Glow effect
         ctx.shadowColor = "rgba(232, 116, 26, 0.3)";
         ctx.shadowBlur = 10;
         ctx.fill();
         ctx.shadowBlur = 0;
       });
 
-      // Draw connecting lines between nearby particles
       for (let i = 0; i < particles.length; i++) {
         for (let j = i + 1; j < particles.length; j++) {
           const dx = particles[i].x - particles[j].x;
@@ -94,6 +124,7 @@ export default function FloatingBackground() {
     animate();
 
     return () => {
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
       window.removeEventListener("resize", resizeCanvas);
       cancelAnimationFrame(animationId);
     };

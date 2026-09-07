@@ -2,20 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-
-// Photography data embedded directly
-const photography = {
-  title: "Photography",
-  intro: "I love capturing moments — especially sunsets. For me, photography is about patience, timing, and finding beauty in everyday things. It reminds me a lot of coding: attention to detail, problem-solving, and the joy of creating something meaningful.",
-  photos: [
-    "/images/2.jpeg",
-    "/images/3.jpeg",
-    "/images/4.jpeg",
-    "/images/5.jpeg",
-    "/images/6.jpeg",
-    "/images/7.jpg"
-  ]
-};
+import { photography } from "../data";
 
 export default function Photography() {
   const [selectedPhoto, setSelectedPhoto] = useState<string | null>(null);
@@ -64,9 +51,11 @@ export default function Photography() {
               >
                 <img
                   src={photo}
-                  alt={`Sunset photo ${index + 1}`}
+                  alt={`Sunset photography by Sadia Ferdous — photo ${index + 1}`}
                   className="w-full h-full object-cover"
                   loading="lazy"
+                  width={800}
+                  height={600}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 hover:opacity-100 transition-opacity" />
               </motion.div>
@@ -98,8 +87,10 @@ export default function Photography() {
             >
               <img
                 src={selectedPhoto}
-                alt="Sunset"
+                alt="Sunset photography by Sadia Ferdous"
                 className="w-full h-full object-contain rounded-lg"
+                width={1200}
+                height={900}
               />
               <button
                 onClick={closeLightbox}

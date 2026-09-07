@@ -12,23 +12,45 @@ export const personalInfo = {
   linkedin: "https://www.linkedin.com/in/sadiaaferdous",
   resume: "/resume.pdf",
   valueProposition: "I build technology that turns everyday friction into flow.",
-  about: "I build technology that solves real problems — not just because I can, but because it matters. I'm a Computer Science student at NYIT with an AI concentration, driven by a belief that thoughtful engineering can make everyday life better. When I'm not coding, I'm capturing moments that matter through my camera.",
+  about: "I'm a CS student at NYIT, focused on AI and backend engineering. What I really enjoy is building things people actually use — like the app my badminton team runs every week, or the CMS that got my school paper off a $200/year Wix bill. These days I'm working mostly with Python, Flask, and the occasional LLM. Off the clock, I'm usually chasing sunsets with a camera.",
+  professionalSummary: "Computer Science student at NYIT concentrating in AI with hands-on backend development experience building REST APIs and AI-integrated data pipelines. Seeking 2027 internships in backend and AI engineering.",
   photographyIntro: "Photography is my creative balance. It teaches me patience, perspective, and the art of noticing details — just like coding. I'm drawn to sunsets, light, and the stories that unfold in a single frame.",
   funFacts: [
     "📸 I love photography — especially sunsets",
     "🧩 I'm always looking for problems to solve",
-    "🌅 I believe in finding beauty in doing things I love"
-  ]
+    "🌅 I believe in finding beauty in doing things I love",
+    "🏸 Co-founded the NYIT Badminton Team and built a full-stack team management app",
+    "🌍 Born in Bangladesh, raised on Long Island — cultural perspective shapes my approach to problem-solving"
+  ],
+  githubStats: {
+    repositories: 8,
+    followers: 2,
+    following: 4,
+    contributionGraph: "https://github-readme-stats.vercel.app/api?username=Sadia-F&show_icons=true&theme=radical"
+  },
+  photo: "", // add "/images/headshot.jpg" to show a photo in the About section
+  leetcode: "", // add your LeetCode profile URL here, e.g. "https://leetcode.com/u/yourusername"
+};
+
+// ============================================================
+// CAREER NARRATIVE
+// ============================================================
+export const careerNarrative = {
+  headline: "Backend & AI Engineering, powered by curiosity",
+  body: "Software feels best when it solves something real — for me that's been an app my badminton club relies on weekly and a CMS that saved our paper $200/year. Lately I've been diving deeper into backend systems and AI tooling, and I'm always picking up something new.",
+  seeking: ["Backend Engineering", "AI Engineering", "Software Engineering"],
+  graduation: "May 2027",
 };
 
 // ============================================================
 // VISUAL STATS
 // ============================================================
 export const stats = {
-  projects: 4,
+  projects: 6,
   leadershipRoles: "5+",
-  technologies: "10+",
-  studentsReached: "600+"
+  technologies: "15+",
+  studentsReached: "600+",
+  githubRepos: 8
 };
 
 // ============================================================
@@ -37,8 +59,9 @@ export const stats = {
 export const now = {
   title: "Currently",
   items: [
-    "🚀 Building a RAG-powered chatbot for my portfolio",
-    "💼 Learning to deploy ML models with FastAPI",
+    "🚀 Building AI-powered applications with Python and LLMs",
+    "💼 Backend/AI Engineer Intern at NutriScan — integrating Google Gemini Flash",
+    "🏸 Maintaining the NYIT Badminton Team Manager web app (Flask + SQLite)",
     "📸 Building my photography portfolio — one sunset at a time",
     "🔍 Actively seeking Summer 2027 internships"
   ]
@@ -60,7 +83,8 @@ export const education = [
       "Presidential Honor List (Spring 2026)"
     ],
     certifications: [
-      "NASPA Peer Educator (June 2024)"
+      "NASPA Peer Educator (June 2024)",
+      "Girls Who Code (August 2022)"
     ],
     activities: [
       "Vice President, Bengali Student Association",
@@ -101,8 +125,8 @@ export const experience = [
     duration: "July 2026 - Present",
     isHighlighted: true,
     achievements: [
-      "Accomplished **real-time health data sync**, as measured by **integrating Apple HealthKit, Dexcom, and FreeStyle Libre APIs**, by developing backend REST APIs with Python and MongoDB.",
-      "Accomplished **AI-powered food recognition**, as measured by **integrating Google Gemini Flash**, by building scalable REST APIs."
+      "Developed and deployed backend REST APIs supporting an AI-powered food recognition platform in a live staging and production environment using Python, MongoDB, and Google Gemini Flash, managing version control with Git.",
+      "Enabled real-time health data synchronization across staging and production environments by integrating Apple HealthKit, Dexcom, and FreeStyle Libre third-party APIs."
     ],
     technologies: ["Python", "MongoDB", "Google Gemini", "REST APIs", "Git"]
   },
@@ -112,7 +136,7 @@ export const experience = [
     duration: "July 2026 - Present",
     isHighlighted: true,
     achievements: [
-      "Accomplished **16+ qualified prospects**, as measured by **lead pipeline growth**, by conducting targeted outbound outreach using proprietary CRM."
+      "Qualified 16+ business prospects and maintained lead pipeline through targeted outbound outreach using proprietary CRM."
     ],
     technologies: ["CRM", "Sales", "Lead Management"]
   },
@@ -122,7 +146,7 @@ export const experience = [
     duration: "July 2026",
     isHighlighted: true,
     achievements: [
-      "Accomplished **40 mentored students**, as measured by **successful project completion**, by leading 3 teams per week through full project lifecycles."
+      "Mentored 40 high school students across two intensive one-week programs, leading 3 teams per week through full project lifecycles from concept to final presentation, applying hands-on technical coaching in prototyping and hardware integration."
     ],
     technologies: ["Arduino", "3D Printing", "Soldering", "Circuit Debugging"]
   },
@@ -132,10 +156,10 @@ export const experience = [
     duration: "September 2024 - Present",
     isHighlighted: true,
     isFavorite: true,
-    favoriteReason: "Accomplished **$200+ annual savings**, as measured by **reduced hosting costs**, by building a custom Flask CMS to replace Wix.",
+    favoriteReason: "Built a custom Flask CMS replacing Wix, saving $200+ annually and giving the team full content control.",
     achievements: [
-      "Accomplished **$200+ annual savings**, as measured by **reduced hosting costs**, by building a custom Flask CMS with Supabase and Vercel.",
-      "Accomplished **publishing time cut from days to minutes**, as measured by **admin dashboard adoption**, by creating a password-protected self-publishing system."
+      "Built Flask web app with Supabase and Vercel, replacing Wix to save $200+ annually and give team full content control.",
+      "Created password-protected admin dashboard, cutting publishing time from days to minutes by letting staff self-upload articles and PDFs."
     ],
     technologies: ["Python", "Flask", "Supabase", "PostgreSQL", "Vercel", "GitHub"]
   }
@@ -145,6 +169,29 @@ export const experience = [
 // PROJECTS
 // ============================================================
 export const projects = [
+  {
+    title: "NYIT Badminton Team Manager",
+    description: "Full-stack team management web app with attendance, tournaments, and performance tracking",
+    problem: "The NYIT Badminton Team needed a centralized platform to manage attendance, track player performance, organize tournaments, and coordinate team activities efficiently.",
+    solution: "Built a comprehensive Flask web application with SQLite, PWA features, and real-time roster management. The app handles everything from daily check-ins to tournament brackets and weekly MVP voting.",
+    metrics: [
+      "👥 12 team members managed with role-based access",
+      "📊 30 unit tests covering all features",
+      "🏆 Tournament bracket auto-advancement system",
+      "📱 PWA with offline support and dark mode"
+    ],
+    technologies: ["Python", "Flask", "SQLite", "SQLAlchemy", "Jinja2", "Chart.js", "PWA"],
+    image: "", // add "/images/projects/badminton.png" when you have a screenshot
+    github: "https://github.com/Sadia-F/Badminton-webapp",
+    liveDemo: "", // add your deployed URL here (e.g. Render/Railway), e.g. "https://badminton-webapp.onrender.com"
+    date: "September 2024 - Present",
+    highlights: [
+      "Built full-stack Flask app with 15+ features including attendance, tournaments, performance ratings, and leaderboards",
+      "Implemented real-time roster management with live on-court status tracking",
+      "Created weekly MVP voting system and player performance radar charts",
+      "Developed PWA with service worker for offline support and mobile experience"
+    ]
+  },
   {
     title: "Campus Slate CMS",
     description: "Custom CMS replacing Wix for student publication",
@@ -156,8 +203,9 @@ export const projects = [
       "📈 100% team adoption rate"
     ],
     technologies: ["Python", "Flask", "Supabase", "PostgreSQL", "Vercel"],
+    image: "", // add "/images/projects/campus-slate.png" when available
     github: "https://github.com/Sadia-F/The-Campus-Slate",
-    liveDemo: null,
+    liveDemo: "https://thesadiaslate.vercel.app", // update with the actual live URL
     date: "September 2024 - Present",
     highlights: [
       "Built Flask web app with Supabase and Vercel, replacing Wix to save $200+ annually",
@@ -165,53 +213,65 @@ export const projects = [
     ]
   },
   {
-    title: "Online Store Management System",
-    description: "Full-stack desktop application with three-tier role-based access control",
-    problem: "Small businesses needed a simple, affordable way to manage inventory, users, orders, and coupons without expensive SaaS solutions.",
-    solution: "Built a Java desktop application with MySQL backend and role-based access control.",
-    metrics: [
-      "👥 3 role tiers: Customer, Employee, Admin",
-      "🔄 Real-time inventory management",
-      "💳 Integrated coupon system"
-    ],
-    technologies: ["Java", "MySQL", "Swing", "JDBC"],
-    github: "https://github.com/Sadia-F/OnlineStore",
-    liveDemo: "/videos/online-store-demo.mp4",
-    date: "May 2026",
-    highlights: [
-      "Three-tier role-based access control",
-      "Real-time inventory management",
-      "Order processing with coupon system"
-    ]
-  },
-  {
     title: "Restaurant Reservation System",
     description: "Reservation management system with 5 data structures",
     problem: "Restaurants struggled with booking conflicts, waitlist fairness, and slow customer lookup.",
-    solution: "Built a Java application using 5 different data structures to solve scheduling challenges.",
+    solution: "Solved real-world scheduling challenges including waitlist fairness, duplicate prevention, and fast phone lookup by implementing 5 data structures in Java.",
     metrics: [
       "📊 5 data structures implemented",
-      "⏱️ Fast customer phone lookup",
-      "✅ Fair waitlist system"
+      "⏱️ Fast customer phone lookup in O(log n)",
+      "✅ Fair waitlist system with FIFO processing",
+      "🎁 Rewards program with unique customer tracking"
     ],
     technologies: ["Java", "LinkedList", "TreeMap", "Queue", "HashSet", "BST"],
+    image: "", // add "/images/projects/restaurant.png" when available
     github: "https://github.com/Sadia-F/Restaurant-Reservation-system",
     liveDemo: null,
     date: "December 2024",
     highlights: [
-      "Implemented 5 data structures for scheduling logic",
-      "Waitlist fairness system",
-      "Fast customer phone lookup"
+      "Solved real-world scheduling challenges including waitlist fairness, duplicate prevention, and fast phone lookup",
+      "Implemented LinkedList, TreeMap, Queue, HashSet, and a custom Binary Search Tree in Java"
+    ]
+  },
+  {
+    title: "Online Store Management System",
+    description: "Full-stack desktop application with three-tier role-based access control",
+    problem: "Small businesses needed a simple, affordable way to manage inventory, users, orders, and coupons without expensive SaaS solutions.",
+    solution: "Built a fully functional full-stack desktop application with three-tier role-based access control using Java, MySQL, Swing, and JDBC.",
+    metrics: [
+      "👥 3 role tiers: Customer, Employee, Admin",
+      "🔄 Manages inventory, accounts, orders, and coupons",
+      "💳 Role-based access control"
+    ],
+    technologies: ["Java", "MySQL", "Swing", "JDBC"],
+    image: "", // add "/images/projects/online-store.png" when available
+    github: "https://github.com/Sadia-F/OnlineStore",
+    liveDemo: null,
+    date: "May 2026",
+    highlights: [
+      "Built fully functional full-stack desktop application with three-tier role-based access control",
+      "Manages inventory, user accounts, orders, and coupons using Java, MySQL, Swing, and JDBC"
     ]
   },
   {
     title: "mishti-website",
-    description: "A Python-based website project.",
+    description: "A Python-based website project",
+    problem: "Building a modern web presence with Python-based backend.",
+    solution: "Developed a Python web application for web development practice.",
+    metrics: [
+      "🐍 Python web development practice",
+      "🌐 Web application architecture",
+      "📚 Learning project for web technologies"
+    ],
     technologies: ["Python"],
+    image: "", // add "/images/projects/mishti.png" when available
     github: "https://github.com/Sadia-F/mishti-website",
     liveDemo: null,
     date: "August 2026",
-    highlights: []
+    highlights: [
+      "Python-based web development practice",
+      "Web application architecture learning"
+    ]
   }
 ];
 
@@ -224,37 +284,73 @@ export const techStack = [
   { name: "Java", logo: "/logos/java-4-svgrepo-com.svg", level: 80 },
   { name: "TypeScript", logo: "/logos/typescript-icon-svgrepo-com.svg", level: 60 },
   { name: "SQL", logo: "/logos/sql-database-generic-svgrepo-com.svg", level: 75 },
-  { name: "Flask", logo: "/logos/flask-svgrepo-com.svg", level: 70 },
+  { name: "Flask", logo: "/logos/flask-svgrepo-com.svg", level: 75 },
   { name: "FastAPI", logo: "/logos/fastapi-svgrepo-com.svg", level: 60 },
   { name: "MongoDB", logo: "/logos/mongodb-svgrepo-com.svg", level: 70 },
   { name: "PostgreSQL", logo: "/logos/postgresql-svgrepo-com.svg", level: 65 },
+  { name: "SQLite", logo: "/logos/sql-database-generic-svgrepo-com.svg", level: 70 },
+  { name: "SQLAlchemy", logo: "/logos/python-svgrepo-com.svg", level: 65 },
   { name: "Git", logo: "/logos/git-svgrepo-com.svg", level: 85 },
   { name: "Docker", logo: "/logos/docker-svgrepo-com.svg", level: 50 },
   { name: "Vercel", logo: "/logos/vercel-svgrepo-com.svg", level: 70 },
+  { name: "PWA", logo: "/logos/python-svgrepo-com.svg", level: 60 },
+  { name: "Jinja2", logo: "/logos/python-svgrepo-com.svg", level: 70 },
 ];
 
 export const skills = [
-  "Backend Development",
-  "REST API Design",
-  "AI Integration",
+  "REST API Development",
+  "API Integration",
   "Data Pipelines",
+  "AI Pipeline Development",
+  "Backend Development",
   "System Design",
   "Database Management",
   "Prompt Engineering",
+  "Large Language Models (LLMs)",
+  "Google Gemini",
   "Cloud Deployment",
   "Version Control (Git/GitHub)",
-  "Leadership",
-  "Public Speaking",
-  "Project Management",
-  "Event Coordination",
-  "Peer Mentoring",
+  "Project Coordination",
   "Team Collaboration",
+  "Public Speaking",
+  "Event Planning",
+  "Peer Mentoring",
+  "Leadership",
   "Problem Solving",
   "Critical Thinking",
   "Communication",
   "Adaptability",
   "Photography",
-  "Writing & Editing"
+  "Writing & Editing",
+  "Web Development",
+  "Full-Stack Development",
+  "PWA Development",
+  "Team Management"
+];
+
+// ============================================================
+// TESTIMONIALS (real, from named people)
+// ============================================================
+// Add real quotes here and they'll appear on the site.
+// Structure:
+//   {
+//     quote: "Sadia built our CMS...",
+//     name: "Jane Doe",
+//     title: "Editor-in-Chief",
+//     relationship: "The Campus Slate, NYIT"
+//   }
+export const testimonials: {
+  quote: string;
+  name: string;
+  title: string;
+  relationship: string;
+}[] = [
+  {
+    quote: "This is a placeholder — replace with a real quote, e.g. from a Campus Slate editor, a professor, or a NutriScan teammate.",
+    name: "Your Name Here",
+    title: "Your Title Here",
+    relationship: "Your Organization"
+  }
 ];
 
 // ============================================================
@@ -266,7 +362,7 @@ export const leadership = [
     organization: "Bengali Student Association, NYIT",
     duration: "September 2024 - Present",
     achievements: [
-      "Accomplished **50+ active members**, as measured by **event attendance**, by reviving a dormant organization and executing 20+ events per semester."
+      "Revived a dormant organization by leading a 10-member executive board to execute 20+ cultural and academic events per semester, driving attendance to 50+ active members."
     ]
   },
   {
@@ -274,23 +370,7 @@ export const leadership = [
     organization: "Society of Women Engineers, NYIT",
     duration: "January 2026 - Present",
     achievements: [
-      "Accomplished **5+ engineering career events**, as measured by **event attendance**, by managing a $500/event budget and coordinating procurement for 40+ members."
-    ]
-  },
-  {
-    role: "Peer Advisor",
-    organization: "New York Institute of Technology",
-    duration: "June 2024 - Present",
-    achievements: [
-      "Accomplished **15+ students guided weekly**, as measured by **course planning success**, by providing personalized academic and registration support."
-    ]
-  },
-  {
-    role: "Peer Health Educator",
-    organization: "Counseling & Wellness Office, NYIT",
-    duration: "June 2024 - Present",
-    achievements: [
-      "Accomplished **600+ students reached**, as measured by **workshop attendance**, by facilitating 20+ wellness workshops after completing 12-hour NASPA training."
+      "Delivered 5+ engineering career events on budget for a 40-member chapter by managing per-event budgets of $500 and overseeing expense tracking, procurement, and fund disbursement."
     ]
   },
   {
@@ -298,7 +378,24 @@ export const leadership = [
     organization: "Badminton Team, NYIT",
     duration: "September 2024 - Present",
     achievements: [
-      "Accomplished **consistent team engagement**, as measured by **weekly practice attendance**, by founding the club and managing operations, scheduling, and equipment procurement."
+      "Built a full-stack Flask web application with attendance tracking, tournament brackets, and performance ratings, used by 12 active team members.",
+      "Founded the club and managed operations, scheduling, and equipment procurement, maintaining consistent weekly practice engagement."
+    ]
+  },
+  {
+    role: "Peer Advisor",
+    organization: "New York Institute of Technology",
+    duration: "June 2024 - Present",
+    achievements: [
+      "Guided 15+ students weekly by providing personalized academic and registration support for successful course planning."
+    ]
+  },
+  {
+    role: "Peer Health Educator",
+    organization: "Counseling & Wellness Office, NYIT",
+    duration: "June 2024 - Present",
+    achievements: [
+      "Reached 600+ students across 20+ wellness workshops averaging 30+ attendees per session by facilitating peer health outreach after completing 12-hour NASPA-certified training."
     ]
   },
   {
@@ -306,7 +403,7 @@ export const leadership = [
     organization: "Campus Slate, NYIT",
     duration: "September 2024 - Present",
     achievements: [
-      "Accomplished **$200+ annual savings**, as measured by **reduced hosting costs**, by building a custom Flask CMS to replace Wix."
+      "Built a custom Flask CMS to replace Wix, saving $200+ annually and giving the team full content control."
     ]
   },
   {
@@ -363,13 +460,13 @@ export const timelineEvents = [
   {
     year: "2024",
     title: "First Major Project",
-    description: "Built Restaurant Reservation System using 5 different data structures in Java.",
+    description: "Built Restaurant Reservation System using 5 different data structures in Java, implementing LinkedList, TreeMap, Queue, HashSet, and custom Binary Search Tree.",
     icon: "📊"
   },
   {
     year: "2024",
-    title: "Campus Leadership",
-    description: "Web Developer for Campus Slate (Flask CMS, $200+ annual savings), VP of BSA, Peer Advisor, Peer Health Educator, and Co-Founder of the Badminton Team.",
+    title: "Campus Leadership & Badminton Team",
+    description: "Web Developer for Campus Slate (Flask CMS, $200+ annual savings), VP of BSA, Peer Advisor, Peer Health Educator, and Co-Founder of the Badminton Team. Built full-stack team management web app with Flask and SQLite.",
     icon: "🏫"
   },
   {
@@ -401,6 +498,12 @@ export const timelineEvents = [
     title: "Tech Coach, NYIT",
     description: "Mentored 40 high school students across two intensive one-week programs, teaching Arduino, 3D printing, soldering, and circuit debugging.",
     icon: "🔧"
+  },
+  {
+    year: "2026",
+    title: "Badminton Team Manager Web App",
+    description: "Built full-stack Flask application with 15+ features including attendance tracking, tournament brackets, performance ratings, and PWA support. 30 unit tests, 12 active users.",
+    icon: "🏸"
   },
   {
     year: "2027",
@@ -436,6 +539,12 @@ export const awards = [
     organization: "New York Institute of Technology",
     year: "2026",
     icon: "⭐"
+  },
+  {
+    title: "Girls Who Code Program Completion",
+    organization: "Girls Who Code",
+    year: "2022",
+    icon: "💻"
   }
 ];
 
@@ -468,6 +577,7 @@ export const chatbotData = {
     "What did you do at IQVentory?",
     "What was your role as a Tech Coach?",
     "What's the most rewarding project you've worked on?",
+    "Tell me about the Badminton Team Manager web app",
     "What projects have you built?",
     "Tell me about Campus Slate CMS",
     "Tell me about the Online Store project",
@@ -495,7 +605,7 @@ export const chatbotData = {
     // ABOUT YOU
     who: {
       keywords: ["who are you", "what do you do", "introduce yourself", "tell me about yourself"],
-      answer: "I'm Sadia Ferdous, a Computer Science student at NYIT with an AI concentration. I build backend systems and AI-powered tools that make everyday life easier. I'm passionate about solving real problems through code, leadership, and creativity."
+      answer: "I'm Sadia Ferdous, a Computer Science student at NYIT with an AI concentration. I build backend systems and AI-powered tools that make everyday life easier. I'm passionate about solving real problems through code, leadership, and creativity. I've built 6 projects including a full-stack team management web app for the NYIT Badminton Team!"
     },
     from: {
       keywords: ["where are you from", "born", "location", "hometown"],
@@ -521,13 +631,17 @@ export const chatbotData = {
     },
     rewarding: {
       keywords: ["rewarding", "most rewarding", "best project", "favorite work"],
-      answer: "The most rewarding project I've worked on is Campus Slate CMS. I saw a real problem — my team was paying $200+ annually for a Wix website that limited our control and made publishing slow. I built a custom Flask web app with Supabase and Vercel, replacing Wix entirely. Now we save $200+ a year and publishing time went from days to minutes. Knowing I solved a real problem that made people's work easier is incredibly satisfying."
+      answer: "The most rewarding project I've worked on is the NYIT Badminton Team Manager web app. I co-founded the Badminton Team and needed a way to manage attendance, track performance, and organize tournaments. I built a full-stack Flask application with SQLite that handles everything from daily check-ins to tournament brackets and weekly MVP voting. It's used by 12 team members and has 30 unit tests. It's amazing to see technology solving real team management problems!"
     },
 
     // PROJECTS
     projectList: {
       keywords: ["projects", "built", "made", "created", "developed", "portfolio projects"],
-      answer: "I've built 4 main projects! 🚀 My favorite is Campus Slate CMS because I solved a real problem — saving my team $200+ annually and cutting publishing time from days to minutes. I've also built an Online Store Management System (Java, MySQL), a Restaurant Reservation System (Java, Data Structures), and mishti-website (Python). Check out the Projects section below to see all the details and GitHub links!"
+      answer: "I've built 6 main projects! 🚀 My favorite is the NYIT Badminton Team Manager — a full-stack Flask app with 15+ features including attendance tracking, tournament brackets, performance ratings, and a PWA with offline support. I've also built Campus Slate CMS (saving $200+ annually), Restaurant Reservation System (5 data structures), Online Store Management System (Java), and mishti-website (Python). Check out the Projects section below to see all the details and GitHub links!"
+    },
+    badminton: {
+      keywords: ["badminton", "badminton webapp", "team manager", "team management"],
+      answer: "The NYIT Badminton Team Manager is a full-featured team management web app I built for our badminton club. It includes attendance tracking, match brackets, tournaments, performance ratings, leaderboards, weekly MVP voting, a photo gallery, and live roster management. I built it with Flask, SQLite, and PWA features. It has 30 unit tests and is used by 12 team members. It's been incredible to see how technology can solve real team management challenges!"
     },
     campuseslate: {
       keywords: ["campus slate", "campus slate cms", "cms", "student publication"],
@@ -539,7 +653,7 @@ export const chatbotData = {
     },
     restaurant: {
       keywords: ["restaurant reservation", "reservation system", "booking", "waitlist"],
-      answer: "Restaurant Reservation System is a Java application I built to solve real scheduling challenges. I implemented 5 different data structures: LinkedList, TreeMap, Queue, HashSet, and a custom BST. It handles waitlist fairness, prevents duplicate bookings, and enables fast customer phone lookup. It was a great exercise in applying data structures to real-world problems."
+      answer: "Restaurant Reservation System is a Java application I built to solve real scheduling challenges. I implemented 5 different data structures: LinkedList, TreeMap, Queue, HashSet, and a custom Binary Search Tree. It handles waitlist fairness, prevents duplicate bookings, and enables fast customer phone lookup in O(log n) time. It was a great exercise in applying data structures to real-world problems."
     },
 
     // EDUCATION
@@ -559,15 +673,15 @@ export const chatbotData = {
     },
     frameworks: {
       keywords: ["frameworks", "libraries", "what frameworks", "tools"],
-      answer: "I use Flask and FastAPI for backend development in Python. I've also worked with REST APIs extensively, building and integrating them for various projects. I'm currently learning more about modern frontend frameworks like React and Next.js."
+      answer: "I use Flask and FastAPI for backend development in Python. I've also worked with REST APIs extensively, building and integrating them for various projects. I'm currently learning more about modern frontend frameworks like React and Next.js. I've also worked with SQLAlchemy for database management and PWA technologies for offline support."
     },
     databases: {
       keywords: ["databases", "db", "sql", "nosql", "what databases"],
-      answer: "I've worked with MySQL, MongoDB, PostgreSQL, and Supabase. MySQL and PostgreSQL for relational data, MongoDB for document-based storage, and Supabase for real-time applications. Each has its strengths, and I enjoy learning when to use which."
+      answer: "I've worked with MySQL, MongoDB, PostgreSQL, SQLite, and Supabase. MySQL and PostgreSQL for relational data, MongoDB for document-based storage, SQLite for lightweight applications, and Supabase for real-time applications. I've also used SQLAlchemy as an ORM. Each has its strengths, and I enjoy learning when to use which."
     },
     strongest: {
       keywords: ["strongest skills", "best at", "what are you good at", "strengths"],
-      answer: "My strongest skills are backend development, REST API design, AI integration, and system design. I'm great at taking complex problems and breaking them down into manageable pieces. I also have strong communication and leadership skills from my campus involvement, which helps me work effectively in teams."
+      answer: "My strongest skills are backend development, REST API design, AI integration, and system design. I'm great at taking complex problems and breaking them down into manageable pieces. I've built full-stack applications with Flask, integrated AI tools like Google Gemini Flash, and designed database schemas for various projects. I also have strong communication and leadership skills from my campus involvement."
     },
 
     // LEADERSHIP
@@ -615,7 +729,7 @@ export const chatbotData = {
     },
     testing: {
       keywords: ["testing", "test", "approach to testing", "how do you test"],
-      answer: "I believe testing is essential for building reliable software. I typically write unit tests for individual components, integration tests for how components work together, and end-to-end tests for user flows. I also practice test-driven development (TDD) when appropriate. Good testing gives you confidence to refactor and add new features without breaking existing functionality."
+      answer: "I believe testing is essential for building reliable software. I typically write unit tests for individual components, integration tests for how components work together, and end-to-end tests for user flows. I also practice test-driven development (TDD) when appropriate. Good testing gives you confidence to refactor and add new features without breaking existing functionality. My Badminton Team Manager has 30 unit tests covering all features!"
     },
     advice: {
       keywords: ["advice", "tips", "other cs students", "what advice", "recommend"],

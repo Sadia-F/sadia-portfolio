@@ -20,10 +20,10 @@ export default function CommandPalette() {
     { id: "about", label: "About", icon: "👤", action: () => document.getElementById("about")?.scrollIntoView({ behavior: "smooth" }) },
     { id: "experience", label: "Experience", icon: "💼", action: () => document.getElementById("experience")?.scrollIntoView({ behavior: "smooth" }) },
     { id: "projects", label: "Projects", icon: "📁", action: () => document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" }) },
-    { id: "skills", label: "Skills", icon: "🛠️", action: () => document.getElementById("skills")?.scrollIntoView({ behavior: "smooth" }) },
+    { id: "skills", label: "Skills", icon: "🛠️", action: () => document.getElementById("techstack")?.scrollIntoView({ behavior: "smooth" }) },
     { id: "education", label: "Education", icon: "🎓", action: () => document.getElementById("education")?.scrollIntoView({ behavior: "smooth" }) },
     { id: "photography", label: "Photography", icon: "📸", action: () => document.getElementById("photography")?.scrollIntoView({ behavior: "smooth" }) },
-    { id: "chatbot", label: "Chat with AI", icon: "💬", action: () => document.getElementById("chatbot")?.scrollIntoView({ behavior: "smooth" }) },
+    { id: "chatbot", label: "Chat with AI", icon: "💬", action: () => document.getElementById("chat-section")?.scrollIntoView({ behavior: "smooth" }) },
     { id: "connect", label: "Connect", icon: "📬", action: () => document.getElementById("connect")?.scrollIntoView({ behavior: "smooth" }) },
     { id: "resume", label: "Download Resume", icon: "📄", action: () => window.open("/resume.pdf", "_blank") },
   ];

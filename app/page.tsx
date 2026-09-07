@@ -18,10 +18,10 @@ import ScrollProgress from "./components/ScrollProgress";
 import BackToTop from "./components/BackToTop";
 import Timeline from "./components/Timeline";
 import FeaturedProject from "./components/FeaturedProject";
+import FeaturedBadminton from "./components/FeaturedBadminton";
 import Connect from "./components/Connect";
 import Testimonials from "./components/Testimonials";
 import CommandPalette from "./components/CommandPalette";
-import TourGuide from "./components/TourGuide";
 import Now from "./components/Now";
 import FloatingChat from "./components/FloatingChat";
 import ScrollToTop from "./components/ScrollToTop";
@@ -31,14 +31,20 @@ import Typewriter from "typewriter-effect";
 export default function Home() {
   return (
     <div>
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:bg-warm-brown focus:text-white focus:px-4 focus:py-2 focus:rounded-lg"
+      >
+        Skip to main content
+      </a>
       <ScrollToTop />
-      <TourGuide />
       <CommandPalette />
       <FloatingBackground />
       <ScrollProgress />
       <Navbar />
       <MovingGradient />
 
+      <main id="main-content">
       {/* Hero Section */}
       <section id="hero" className="min-h-screen flex items-center justify-center px-4 py-20 relative">
         <div className="max-w-6xl mx-auto w-full">
@@ -50,6 +56,13 @@ export default function Home() {
               transition={{ duration: 0.8 }}
               className="text-center md:text-left"
             >
+              <div className="inline-flex items-center gap-2 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 px-4 py-2 rounded-full mb-4 text-sm font-medium">
+                <span className="relative flex h-2.5 w-2.5">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-500"></span>
+                </span>
+                Open to Summer 2027 Internships
+              </div>
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-dark-brown dark:text-cream mb-4">
                 Hi, I'm{" "}
                 <span className="text-warm-brown dark:text-terracotta">
@@ -107,7 +120,7 @@ export default function Home() {
               </div>
 
               {/* Stats */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mt-8">
+              <div className="grid grid-cols-2 md:grid-cols-5 gap-4 max-w-3xl mt-8">
                 <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm p-4 rounded-lg shadow-lg text-center">
                   <p className="text-2xl font-bold text-warm-brown dark:text-terracotta">{stats.projects}</p>
                   <p className="text-sm text-gray-600 dark:text-gray-400">Projects</p>
@@ -123,6 +136,10 @@ export default function Home() {
                 <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm p-4 rounded-lg shadow-lg text-center">
                   <p className="text-2xl font-bold text-warm-brown dark:text-terracotta">{stats.studentsReached}</p>
                   <p className="text-sm text-gray-600 dark:text-gray-400">Students Reached</p>
+                </div>
+                <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm p-4 rounded-lg shadow-lg text-center">
+                  <p className="text-2xl font-bold text-warm-brown dark:text-terracotta">{stats.githubRepos}</p>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">GitHub Repos</p>
                 </div>
               </div>
             </motion.div>
@@ -159,6 +176,7 @@ export default function Home() {
       <Now />
       <Experience />
       <FeaturedProject />
+      <FeaturedBadminton />
       <Projects />
       <Leadership />
       <Timeline />
@@ -171,6 +189,7 @@ export default function Home() {
       <Footer />
       <BackToTop />
       <FloatingChat />
+      </main>
     </div>
   );
 }

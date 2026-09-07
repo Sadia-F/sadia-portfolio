@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://sadia-f.github.io/sadia-portfolio/sitemap.xml
