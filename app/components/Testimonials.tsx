@@ -1,7 +1,9 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { testimonials } from "../data";
+import TestimonialForm from "./TestimonialForm";
 
 interface ImpactCard {
   quote: string;
@@ -36,6 +38,8 @@ const realTestimonials = testimonials.filter(
 );
 
 export default function Testimonials() {
+  const [showForm, setShowForm] = useState(false);
+
   return (
     <section id="testimonials" className="py-20 px-4 bg-white dark:bg-gray-900">
       <div className="max-w-5xl mx-auto">
@@ -123,6 +127,47 @@ export default function Testimonials() {
             </div>
           </>
         )}
+
+        {/* Leave a testimonial */}
+        <div className="mt-16 text-center">
+          <p className="text-gray-600 dark:text-gray-400 mb-4">
+            Worked with me? I'd love to hear about it.
+          </p>
+          <button
+            onClick={() => setShowForm((prev) => !prev)}
+            className="px-6 py-3 bg-warm-brown text-white rounded-xl hover:bg-[#6B4F10] transition-colors font-medium inline-flex items-center gap-2"
+          >
+            {showForm ? (
+              <>
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+                Close form
+              </>
+            ) : (
+              <>
+                <span className="text-lg">💬</span>
+                Leave a testimonial
+              </>
+            )}
+          </button>
+
+          <AnimatePresence>
+            {showForm && (
+              <motion.div
+                initial={{ opacity: 0, height: 0 }}
+                animate={{ opacity: 1, height: "auto" }}
+                exit={{ opacity: 0, height: 0 }}
+                transition={{ duration: 0.3 }}
+                className="overflow-hidden"
+              >
+                <div className="mt-6 max-w-2xl mx-auto">
+                  <TestimonialForm />
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </div>
       </div>
     </section>
   );

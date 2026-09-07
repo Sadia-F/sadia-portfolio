@@ -172,17 +172,17 @@ export default function Home() {
       </section>
 
       {/* All Sections */}
-      <AboutSection />
       <Now />
+      <AboutSection />
       <Experience />
       <FeaturedProject />
       <FeaturedBadminton />
       <Projects />
-      <Leadership />
-      <Timeline />
+      <Testimonials />
       <TechStack />
       <Education />
-      <Testimonials />
+      <Leadership />
+      <Timeline />
       <Photography />
       <ChatSection />
       <Connect />

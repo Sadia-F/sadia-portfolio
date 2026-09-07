@@ -734,6 +734,18 @@ export const chatbotData = {
     advice: {
       keywords: ["advice", "tips", "other cs students", "what advice", "recommend"],
       answer: "My advice to other CS students: 1) Build projects outside of class — that's where you really learn, 2) Get involved in campus organizations — leadership skills matter just as much as technical skills, 3) Don't be afraid to ask questions — everyone starts somewhere, 4) Find what you're passionate about and pursue it, 5) Network and connect with others — your network is your net worth. And most importantly, be kind to yourself — learning takes time!"
+    },
+    value: {
+      keywords: ["hire you", "why you", "stand out", "what makes you", "what makes your", "value", "unique", "strengths and", "why should"],
+      answer: "I bring a mix that's hard to find in one person: real shipped software plus leadership and people skills. I've built production Flask apps that organizations actually rely on — a team management app used by 12 badminton players and a CMS that saved my school paper $200+/year. I've also led a 10-person exec board and mentored 40 high school students. So I don't just write code — I understand the people and problems behind it, and I communicate well enough to sell and explain what I build."
+    },
+    academics: {
+      keywords: ["gpa", "grade", "academic", "honor list", "dean's", "presidential", "how are your grades"],
+      answer: "I keep a 3.91 GPA at NYIT. I've made the Dean's Honor List twice (Spring 2024 and Spring 2025) and the Presidential Honor List (Spring 2026). My coursework focuses on AI and systems — from Data Structures and Algorithms to Operating Systems, Computer Networks, Databases, and Artificial Intelligence."
+    },
+    certifications: {
+      keywords: ["certification", "certificate", "certified", "naspa", "girls who code", "peer educator"],
+      answer: "I hold a NASPA Peer Educator certification (June 2024) and completed Girls Who Code (August 2022). I've also been a Peer Advisor and Peer Health Educator at NYIT, which grew out of that interest in mentoring and building supportive communities."
     }
   }
 };

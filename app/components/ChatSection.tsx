@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import { chatbotData } from "../data";
+import { answerFromPortfolio, introLine } from "../lib/chatEngine";
 
 type Message = {
   id: number;
@@ -28,20 +29,7 @@ export default function ChatSection() {
   }, [messages]);
 
   const findAnswer = (question: string): string => {
-    const lowerQuestion = question.toLowerCase();
-
-    // Search through all answers
-    for (const [key, data] of Object.entries(chatbotData.answers)) {
-      const matches = data.keywords.some((keyword: string) =>
-        lowerQuestion.includes(keyword)
-      );
-      if (matches) {
-        return data.answer;
-      }
-    }
-
-    // Default response for questions it doesn't understand
-    return "That's a great question! 😊 I'd recommend checking out the relevant section of my portfolio to learn more. Feel free to ask me about my projects, experience, skills, education, photography, leadership, or what kind of person I am!";
+    return answerFromPortfolio(question);
   };
 
   const handleSend = () => {
