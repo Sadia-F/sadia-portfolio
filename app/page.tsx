@@ -120,26 +120,30 @@ export default function Home() {
               </div>
 
               {/* Stats */}
-              <div className="grid grid-cols-2 md:grid-cols-5 gap-4 max-w-3xl mt-8">
-                <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm p-4 rounded-lg shadow-lg text-center">
-                  <p className="text-2xl font-bold text-warm-brown dark:text-terracotta">{stats.projects}</p>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">Projects</p>
-                </div>
-                <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm p-4 rounded-lg shadow-lg text-center">
-                  <p className="text-2xl font-bold text-warm-brown dark:text-terracotta">{stats.leadershipRoles}</p>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">Leadership Roles</p>
-                </div>
-                <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm p-4 rounded-lg shadow-lg text-center">
-                  <p className="text-2xl font-bold text-warm-brown dark:text-terracotta">{stats.technologies}</p>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">Technologies</p>
-                </div>
-                <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm p-4 rounded-lg shadow-lg text-center">
-                  <p className="text-2xl font-bold text-warm-brown dark:text-terracotta">{stats.studentsReached}</p>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">Students Reached</p>
-                </div>
-                <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm p-4 rounded-lg shadow-lg text-center">
-                  <p className="text-2xl font-bold text-warm-brown dark:text-terracotta">{stats.githubRepos}</p>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">GitHub Repos</p>
+              <div className="max-w-3xl mt-8 rounded-2xl overflow-hidden shadow-lg">
+                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-px bg-gray-200/60 dark:bg-gray-700/60">
+                  {[
+                    { value: stats.projects, label: "Projects", icon: "📁" },
+                    { value: stats.leadershipRoles, label: "Leadership Roles", icon: "🌟" },
+                    { value: stats.technologies, label: "Technologies", icon: "🛠️" },
+                    { value: stats.studentsReached, label: "Students Reached", icon: "🎓" },
+                    { value: stats.githubRepos, label: "GitHub Repos", icon: "🐙" },
+                  ].map((stat) => (
+                    <div
+                      key={stat.label}
+                      className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-md p-4 sm:p-5 text-center min-w-0 flex flex-col items-center justify-center"
+                    >
+                      <span className="text-base sm:text-lg mb-1" aria-hidden="true">
+                        {stat.icon}
+                      </span>
+                      <p className="text-2xl sm:text-3xl font-extrabold bg-gradient-to-r from-warm-brown to-terracotta bg-clip-text text-transparent leading-none">
+                        {stat.value}
+                      </p>
+                      <p className="mt-2 text-[11px] sm:text-xs font-medium uppercase tracking-wide text-gray-500 dark:text-gray-400 leading-tight">
+                        {stat.label}
+                      </p>
+                    </div>
+                  ))}
                 </div>
               </div>
             </motion.div>
