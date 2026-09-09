@@ -2,6 +2,7 @@
 
 import { personalInfo, photography } from "../data";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const highlights = [
   { icon: "🎓", label: "NYIT", value: "B.S. Computer Science, AI Concentration" },
@@ -93,13 +94,13 @@ export default function AboutSection() {
           >
             {personalInfo.photo && (
               <div className="rounded-2xl p-1.5 bg-gradient-to-br from-warm-brown to-sunset shadow-lg">
-                <div className="rounded-xl overflow-hidden">
-                  <img
+                <div className="rounded-xl overflow-hidden relative aspect-square">
+                  <Image
                     src={personalInfo.photo}
                     alt={`${personalInfo.name} — headshot`}
-                    className="w-full object-cover aspect-square"
-                    width={400}
-                    height={400}
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 33vw"
+                    className="object-cover"
                   />
                 </div>
               </div>
@@ -120,11 +121,13 @@ export default function AboutSection() {
               </p>
               <div className="mt-4 grid grid-cols-2 gap-2">
                 {photography.photos.slice(0, 2).map((photo, index) => (
-                  <div key={index} className="rounded-lg overflow-hidden aspect-square group">
-                    <img
+                  <div key={index} className="rounded-lg overflow-hidden aspect-square group relative">
+                    <Image
                       src={photo}
                       alt={`Sunset ${index + 1}`}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      fill
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 16vw, 96px"
+                      className="object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                   </div>
                 ))}

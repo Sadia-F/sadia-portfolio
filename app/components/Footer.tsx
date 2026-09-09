@@ -2,9 +2,11 @@
 
 import { personalInfo } from "../data";
 
-export default function Footer() {
-  const currentYear = new Date().getFullYear();
+// Evaluated once at build time so server render and client hydration match.
+const currentYear = new Date().getFullYear();
+const lastUpdated = new Date().toLocaleDateString();
 
+export default function Footer() {
   return (
     <footer className="bg-gray-100 dark:bg-gray-800 py-6 mt-12">
       <div className="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center gap-4">
@@ -36,7 +38,7 @@ export default function Footer() {
           </a>
         </div>
         <p className="text-gray-400 dark:text-gray-500 text-xs">
-          Last Updated: {new Date().toLocaleDateString()}
+          Last Updated: {lastUpdated}
         </p>
       </div>
     </footer>

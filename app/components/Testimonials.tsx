@@ -55,7 +55,7 @@ export default function Testimonials() {
           </h2>
           <div className="w-16 h-1 bg-gradient-to-r from-warm-brown to-sunset mx-auto rounded-full" />
           <p className="text-gray-500 dark:text-gray-400 mt-4 max-w-2xl mx-auto">
-            Measurable impact across the organizations I've been part of.
+            Measurable impact across the organizations I&apos;ve been part of.
           </p>
         </motion.div>
 
@@ -70,7 +70,7 @@ export default function Testimonials() {
               className="bg-cream dark:bg-deep-slate rounded-xl p-6 shadow-lg relative"
             >
               <span className="text-5xl text-warm-brown dark:text-terracotta opacity-20 absolute top-2 right-4">
-                "
+                &rdquo;
               </span>
               <p className="text-gray-700 dark:text-gray-300 italic mt-2 relative z-10">
                 {testimonial.quote}
@@ -109,7 +109,7 @@ export default function Testimonials() {
                   className="bg-cream dark:bg-deep-slate rounded-xl p-6 shadow-lg relative border border-warm-brown/10 dark:border-terracotta/10"
                 >
                   <span className="text-5xl text-warm-brown dark:text-terracotta opacity-20 absolute top-2 right-4">
-                    "
+                    &rdquo;
                   </span>
                   <p className="text-gray-700 dark:text-gray-300 italic mt-2 relative z-10">
                     “{testimonial.quote}”
@@ -131,7 +131,7 @@ export default function Testimonials() {
         {/* Leave a testimonial */}
         <div className="mt-16 text-center">
           <p className="text-gray-600 dark:text-gray-400 mb-4">
-            Worked with me? I'd love to hear about it.
+            Worked with me? I&apos;d love to hear about it.
           </p>
           <button
             onClick={() => setShowForm((prev) => !prev)}

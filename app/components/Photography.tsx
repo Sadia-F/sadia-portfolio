@@ -1,21 +1,25 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 import { photography } from "../data";
 
 export default function Photography() {
   const [selectedPhoto, setSelectedPhoto] = useState<string | null>(null);
 
-  const openLightbox = (photo: string) => {
-    setSelectedPhoto(photo);
+  useEffect(() => {
+    if (!selectedPhoto) return;
     document.body.style.overflow = "hidden";
-  };
-
-  const closeLightbox = () => {
-    setSelectedPhoto(null);
-    document.body.style.overflow = "auto";
-  };
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setSelectedPhoto(null);
+    };
+    document.addEventListener("keydown", onKeyDown);
+    return () => {
+      document.body.style.overflow = "auto";
+      document.removeEventListener("keydown", onKeyDown);
+    };
+  }, [selectedPhoto]);
 
   return (
     <section id="photography" className="py-20 px-4 bg-cream dark:bg-deep-slate">
@@ -47,15 +51,14 @@ export default function Photography() {
                 viewport={{ once: true }}
                 whileHover={{ scale: 1.03 }}
                 className="relative aspect-[4/3] rounded-lg overflow-hidden cursor-pointer shadow-md hover:shadow-xl transition-shadow"
-                onClick={() => openLightbox(photo)}
+                onClick={() => setSelectedPhoto(photo)}
               >
-                <img
+                <Image
                   src={photo}
                   alt={`Sunset photography by Sadia Ferdous — photo ${index + 1}`}
-                  className="w-full h-full object-cover"
-                  loading="lazy"
-                  width={800}
-                  height={600}
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  className="object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 hover:opacity-100 transition-opacity" />
               </motion.div>
@@ -76,7 +79,10 @@ export default function Photography() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4"
-            onClick={closeLightbox}
+            onClick={() => setSelectedPhoto(null)}
+            role="dialog"
+            aria-modal="true"
+            aria-label="Sunset photography lightbox"
           >
             <motion.div
               initial={{ scale: 0.8, opacity: 0 }}
@@ -85,15 +91,15 @@ export default function Photography() {
               className="relative max-w-4xl w-full max-h-[90vh]"
               onClick={(e) => e.stopPropagation()}
             >
-              <img
+              <Image
                 src={selectedPhoto}
                 alt="Sunset photography by Sadia Ferdous"
-                className="w-full h-full object-contain rounded-lg"
-                width={1200}
-                height={900}
+                fill
+                sizes="(max-width: 1024px) 100vw, 1024px"
+                className="object-contain rounded-lg"
               />
               <button
-                onClick={closeLightbox}
+                onClick={() => setSelectedPhoto(null)}
                 className="absolute top-4 right-4 text-white bg-black/50 hover:bg-black/70 rounded-full p-2 transition-colors"
                 aria-label="Close lightbox"
               >

@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     follow: true,
   },
   icons: {
-    icon: "/favicon.ico",
+    icon: "/icon.svg",
   },
   metadataBase: new URL("https://sadia-f.github.io/sadia-portfolio"),
 };
@@ -72,9 +72,6 @@ export default function RootLayout({
             __html: `(function(){try{var t=localStorage.getItem("theme");if(t==="dark"||(t===null&&window.matchMedia("(prefers-color-scheme: dark)").matches)){document.documentElement.classList.add("dark");}}catch(e){}})();`,
           }}
         />
-        {/* Plausible analytics — replace "your-site.com" with your registered Plausible domain
-            (or your custom subdomain endpoint) to start tracking. Remove once set up elsewhere. */}
-        <script defer data-domain="your-site.com" src="https://plausible.io/js/script.js" />
       </head>
       <body className="bg-cream dark:bg-deep-slate text-dark-brown dark:text-cream transition-colors duration-300">
         {children}

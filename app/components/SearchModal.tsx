@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { projects, techStack, skills } from "../data";
 
@@ -14,13 +14,9 @@ interface SearchResult {
 
 export default function SearchModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
   const [query, setQuery] = useState("");
-  const [results, setResults] = useState<SearchResult[]>([]);
 
-  useEffect(() => {
-    if (!query.trim()) {
-      setResults([]);
-      return;
-    }
+  function computeResults(query: string): SearchResult[] {
+    if (!query.trim()) return [];
 
     const searchQuery = query.toLowerCase();
     const results: SearchResult[] = [];
@@ -96,8 +92,10 @@ export default function SearchModal({ isOpen, onClose }: { isOpen: boolean; onCl
       }
     });
 
-    setResults(results.slice(0, 8));
-  }, [query]);
+    return results.slice(0, 8);
+  }
+
+  const results = useMemo(() => computeResults(query), [query]);
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -135,6 +133,9 @@ export default function SearchModal({ isOpen, onClose }: { isOpen: boolean; onCl
           exit={{ opacity: 0 }}
           className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm flex items-start justify-center pt-20 px-4"
           onClick={onClose}
+          role="dialog"
+          aria-modal="true"
+          aria-label="Search"
         >
           <motion.div
             initial={{ opacity: 0, y: -20, scale: 0.95 }}
@@ -152,6 +153,7 @@ export default function SearchModal({ isOpen, onClose }: { isOpen: boolean; onCl
                 <input
                   type="text"
                   placeholder="Search projects, skills, sections..."
+                  aria-label="Search projects, skills, sections"
                   value={query}
                   onChange={(e) => setQuery(e.target.value)}
                   className="flex-1 bg-transparent outline-none text-gray-800 dark:text-gray-200 text-lg"
@@ -172,7 +174,7 @@ export default function SearchModal({ isOpen, onClose }: { isOpen: boolean; onCl
             <div className="p-4 max-h-[60vh] overflow-y-auto">
               {results.length === 0 && query.length > 0 && (
                 <p className="text-center text-gray-500 dark:text-gray-400 py-8">
-                  No results found for "{query}"
+                  No results found for &quot;{query}&quot;
                 </p>
               )}
               {results.length === 0 && query.length === 0 && (

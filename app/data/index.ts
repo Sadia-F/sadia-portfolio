@@ -22,12 +22,6 @@ export const personalInfo = {
     "🏸 Co-founded the NYIT Badminton Team and built a full-stack team management app",
     "🌍 Born in Bangladesh, raised on Long Island — cultural perspective shapes my approach to problem-solving"
   ],
-  githubStats: {
-    repositories: 8,
-    followers: 2,
-    following: 4,
-    contributionGraph: "https://github-readme-stats.vercel.app/api?username=Sadia-F&show_icons=true&theme=radical"
-  },
   photo: "", // add "/images/headshot.jpg" to show a photo in the About section
   leetcode: "", // add your LeetCode profile URL here, e.g. "https://leetcode.com/u/yourusername"
 };
@@ -458,7 +452,7 @@ export const timelineEvents = [
   {
     year: "2024",
     title: "Academic Excellence",
-    description: "Earned Dean's Honor List (Spring 2024 & Spring 2025) and Presidential Honor List (Spring 2026).",
+    description: "Earned Dean's Honor List (Spring 2024 & Spring 2025).",
     icon: "📚"
   },
   {
@@ -474,7 +468,7 @@ export const timelineEvents = [
     icon: "🏫"
   },
   {
-    year: "2025",
+    year: "2026",
     title: "Treasurer, SWE",
     description: "Managing a $500/event budget and delivering 5+ engineering career events for 40+ members.",
     icon: "👩‍💻"

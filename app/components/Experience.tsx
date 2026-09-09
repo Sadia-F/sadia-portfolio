@@ -15,7 +15,7 @@ export default function Experience() {
           className="text-center mb-12"
         >
           <h2 className="text-4xl font-bold text-dark-brown dark:text-cream mb-4">
-            Experience & Leadership
+            Experience
           </h2>
           <div className="w-16 h-1 bg-gradient-to-r from-warm-brown to-sunset mx-auto rounded-full" />
         </motion.div>

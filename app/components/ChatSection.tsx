@@ -3,7 +3,7 @@
 import { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import { chatbotData } from "../data";
-import { answerFromPortfolio, introLine } from "../lib/chatEngine";
+import { answerFromPortfolio } from "../lib/chatEngine";
 
 type Message = {
   id: number;
@@ -102,7 +102,7 @@ export default function ChatSection() {
           </h2>
           <div className="w-16 h-1 bg-gradient-to-r from-warm-brown to-sunset mx-auto rounded-full" />
           <p className="text-gray-600 dark:text-gray-400 mt-4 max-w-2xl mx-auto">
-            I'm Sadia's AI assistant. Ask me anything about her work, projects, skills, or what she's like as a person!
+            I&apos;m Sadia&apos;s AI assistant. Ask me anything about her work, projects, skills, or what she&apos;s like as a person!
           </p>
         </motion.div>
 

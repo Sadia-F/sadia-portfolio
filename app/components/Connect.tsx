@@ -25,20 +25,12 @@ export default function Connect() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <span className="inline-flex items-center gap-2 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 px-4 py-2 rounded-full mb-4 text-sm font-medium">
-              <span className="relative flex h-2.5 w-2.5">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-500"></span>
-              </span>
-              Available for Summer 2027 Internships
-            </span>
-
             <h2 className="text-4xl font-bold text-dark-brown dark:text-cream mb-4">
-              Let's Build Something Meaningful
+              Let&apos;s Build Something Meaningful
             </h2>
             <div className="w-16 h-1 bg-gradient-to-r from-warm-brown to-sunset mx-auto rounded-full mb-6" />
             <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-8">
-              I'm seeking backend engineering, AI engineering, and software engineering opportunities where thoughtful technology can make a meaningful impact. Currently based in New York, open to relocation and remote roles.
+              I&apos;m seeking backend engineering, AI engineering, and software engineering opportunities where thoughtful technology can make a meaningful impact. Currently based in New York, open to relocation and remote roles.
             </p>
           </motion.div>
         </div>

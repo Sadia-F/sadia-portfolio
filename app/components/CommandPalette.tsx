@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 interface CommandItem {
@@ -32,32 +32,48 @@ export default function CommandPalette() {
     cmd.label.toLowerCase().includes(search.toLowerCase())
   );
 
+  const commandsRef = useRef(filteredCommands);
+  const selectedIndexRef = useRef(selectedIndex);
+  const isOpenRef = useRef(isOpen);
+
+  useEffect(() => {
+    commandsRef.current = filteredCommands;
+    selectedIndexRef.current = selectedIndex;
+    isOpenRef.current = isOpen;
+  });
+
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if ((e.metaKey || e.ctrlKey) && e.key === "k") {
         e.preventDefault();
-        setIsOpen(!isOpen);
+        setIsOpen((prev) => !prev);
         setSearch("");
         setSelectedIndex(0);
+        return;
       }
       if (e.key === "Escape") setIsOpen(false);
-      if (e.key === "ArrowDown" && isOpen) {
+      if (!isOpenRef.current) return;
+
+      const list = commandsRef.current;
+      const index = selectedIndexRef.current;
+
+      if (e.key === "ArrowDown") {
         e.preventDefault();
-        setSelectedIndex((prev) => (prev + 1) % filteredCommands.length);
+        setSelectedIndex((prev) => (list.length ? (prev + 1) % list.length : 0));
       }
-      if (e.key === "ArrowUp" && isOpen) {
+      if (e.key === "ArrowUp") {
         e.preventDefault();
-        setSelectedIndex((prev) => (prev - 1 + filteredCommands.length) % filteredCommands.length);
+        setSelectedIndex((prev) => (list.length ? (prev - 1 + list.length) % list.length : 0));
       }
-      if (e.key === "Enter" && isOpen && filteredCommands[selectedIndex]) {
-        filteredCommands[selectedIndex].action();
+      if (e.key === "Enter" && list[index]) {
+        list[index].action();
         setIsOpen(false);
       }
     };
 
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [isOpen, filteredCommands, selectedIndex]);
+  }, []);
 
   return (
     <AnimatePresence>
@@ -68,6 +84,9 @@ export default function CommandPalette() {
           exit={{ opacity: 0 }}
           className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm flex items-start justify-center pt-20 px-4"
           onClick={() => setIsOpen(false)}
+          role="dialog"
+          aria-modal="true"
+          aria-label="Command palette"
         >
           <motion.div
             initial={{ opacity: 0, y: -20, scale: 0.95 }}
@@ -82,6 +101,7 @@ export default function CommandPalette() {
                 <input
                   type="text"
                   placeholder="Search sections..."
+                  aria-label="Search sections"
                   value={search}
                   onChange={(e) => {
                     setSearch(e.target.value);
