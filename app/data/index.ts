@@ -1,6 +1,9 @@
 // ============================================================
 // PERSONAL INFORMATION
 // ============================================================
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+const staticAsset = (path: string) => `${basePath}${path}`;
+
 export const personalInfo = {
   name: "Sadia Ferdous",
   title: "Computer Science Student @ NYIT",
@@ -10,7 +13,7 @@ export const personalInfo = {
   location: "New York",
   github: "https://github.com/Sadia-F",
   linkedin: "https://www.linkedin.com/in/sadiaaferdous",
-  resume: "/resume.pdf",
+  resume: staticAsset("/resume.pdf"),
   valueProposition: "I build technology that turns everyday friction into flow.",
   about: "I'm a CS student at NYIT, focused on AI and backend engineering. What I really enjoy is building things people actually use — like the app my badminton team runs every week, or the CMS that got my school paper off a $200/year Wix bill. These days I'm working mostly with Python, Flask, and the occasional LLM. Off the clock, I'm usually chasing sunsets with a camera.",
   professionalSummary: "Computer Science student at NYIT concentrating in AI with hands-on backend development experience building REST APIs and AI-integrated data pipelines. Seeking 2027 internships in backend and AI engineering.",
@@ -278,21 +281,21 @@ export const projects = [
 // ============================================================
 
 export const techStack = [
-  { name: "Python", logo: "/logos/python-svgrepo-com.svg", level: 85 },
-  { name: "Java", logo: "/logos/java-4-svgrepo-com.svg", level: 80 },
-  { name: "TypeScript", logo: "/logos/typescript-icon-svgrepo-com.svg", level: 60 },
-  { name: "SQL", logo: "/logos/sql-database-generic-svgrepo-com.svg", level: 75 },
-  { name: "Flask", logo: "/logos/flask-svgrepo-com.svg", level: 75 },
-  { name: "FastAPI", logo: "/logos/fastapi-svgrepo-com.svg", level: 60 },
-  { name: "MongoDB", logo: "/logos/mongodb-svgrepo-com.svg", level: 70 },
-  { name: "PostgreSQL", logo: "/logos/postgresql-svgrepo-com.svg", level: 65 },
-  { name: "SQLite", logo: "/logos/sql-database-generic-svgrepo-com.svg", level: 70 },
-  { name: "SQLAlchemy", logo: "/logos/python-svgrepo-com.svg", level: 65 },
-  { name: "Git", logo: "/logos/git-svgrepo-com.svg", level: 85 },
-  { name: "Docker", logo: "/logos/docker-svgrepo-com.svg", level: 50 },
-  { name: "Vercel", logo: "/logos/vercel-svgrepo-com.svg", level: 70 },
-  { name: "PWA", logo: "/logos/python-svgrepo-com.svg", level: 60 },
-  { name: "Jinja2", logo: "/logos/python-svgrepo-com.svg", level: 70 },
+  { name: "Python", logo: staticAsset("/logos/python-svgrepo-com.svg"), level: 85 },
+  { name: "Java", logo: staticAsset("/logos/java-4-svgrepo-com.svg"), level: 80 },
+  { name: "TypeScript", logo: staticAsset("/logos/typescript-icon-svgrepo-com.svg"), level: 60 },
+  { name: "SQL", logo: staticAsset("/logos/sql-database-generic-svgrepo-com.svg"), level: 75 },
+  { name: "Flask", logo: staticAsset("/logos/flask-svgrepo-com.svg"), level: 75 },
+  { name: "FastAPI", logo: staticAsset("/logos/fastapi-svgrepo-com.svg"), level: 60 },
+  { name: "MongoDB", logo: staticAsset("/logos/mongodb-svgrepo-com.svg"), level: 70 },
+  { name: "PostgreSQL", logo: staticAsset("/logos/postgresql-svgrepo-com.svg"), level: 65 },
+  { name: "SQLite", logo: staticAsset("/logos/sql-database-generic-svgrepo-com.svg"), level: 70 },
+  { name: "SQLAlchemy", logo: staticAsset("/logos/python-svgrepo-com.svg"), level: 65 },
+  { name: "Git", logo: staticAsset("/logos/git-svgrepo-com.svg"), level: 85 },
+  { name: "Docker", logo: staticAsset("/logos/docker-svgrepo-com.svg"), level: 50 },
+  { name: "Vercel", logo: staticAsset("/logos/vercel-svgrepo-com.svg"), level: 70 },
+  { name: "PWA", logo: staticAsset("/logos/python-svgrepo-com.svg"), level: 60 },
+  { name: "Jinja2", logo: staticAsset("/logos/python-svgrepo-com.svg"), level: 70 },
 ];
 
 export const skills = [
@@ -553,12 +556,12 @@ export const photography = {
   title: "Photography",
   intro: "Photography is my creative balance. It teaches me patience, perspective, and the art of noticing details — just like coding. I'm drawn to sunsets, light, and the stories that unfold in a single frame.",
   photos: [
-    "/images/2.jpeg",
-    "/images/3.jpeg",
-    "/images/4.jpeg",
-    "/images/5.jpeg",
-    "/images/6.jpeg",
-    "/images/7.jpg"
+    staticAsset("/images/2.jpeg"),
+    staticAsset("/images/3.jpeg"),
+    staticAsset("/images/4.jpeg"),
+    staticAsset("/images/5.jpeg"),
+    staticAsset("/images/6.jpeg"),
+    staticAsset("/images/7.jpg")
   ]
 };
 

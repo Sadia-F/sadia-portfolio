@@ -48,8 +48,6 @@ yarn start        # preview the production build
 
 ## Deploy to GitHub Pages
 
-```bash
-yarn deploy       # builds and publishes ./out to the gh-pages branch
-```
+The site deploys automatically through GitHub Actions whenever a commit is pushed to `main`.
 
-Requires GitHub Pages on the repo configured to deploy from the `gh-pages` branch.
+In the repository's **Settings → Pages**, set **Source** to **GitHub Actions** once. The published site is available at [https://sadia-f.github.io/sadia-portfolio](https://sadia-f.github.io/sadia-portfolio).

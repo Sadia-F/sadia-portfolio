@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { personalInfo } from "../data";
 
 interface CommandItem {
   id: string;
@@ -25,7 +26,7 @@ export default function CommandPalette() {
     { id: "photography", label: "Photography", icon: "📸", action: () => document.getElementById("photography")?.scrollIntoView({ behavior: "smooth" }) },
     { id: "chatbot", label: "Chat with AI", icon: "💬", action: () => document.getElementById("chat-section")?.scrollIntoView({ behavior: "smooth" }) },
     { id: "connect", label: "Connect", icon: "📬", action: () => document.getElementById("connect")?.scrollIntoView({ behavior: "smooth" }) },
-    { id: "resume", label: "Download Resume", icon: "📄", action: () => window.open("/resume.pdf", "_blank") },
+    { id: "resume", label: "Download Resume", icon: "📄", action: () => window.open(personalInfo.resume, "_blank") },
   ];
 
   const filteredCommands = commands.filter((cmd) =>

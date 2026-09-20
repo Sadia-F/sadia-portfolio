@@ -79,7 +79,7 @@ export default function Connect() {
               </div>
             </a>
             <a
-              href="/resume.pdf"
+              href={personalInfo.resume}
               download
               className="group px-6 py-4 border-2 border-warm-brown dark:border-terracotta text-warm-brown dark:text-terracotta rounded-xl hover:bg-warm-brown hover:text-white dark:hover:bg-terracotta transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center gap-3 w-full sm:w-auto"
             >
