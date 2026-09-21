@@ -33,6 +33,27 @@ const projectAccents = {
   },
 } as const;
 
+const businessStories = {
+  "Campus Slate CMS": {
+    problem: "The Campus Slate needed an online home that was easier to manage and no longer depended on an expensive website service.",
+    result: "I gave the student publication a place where its team can share stories and updates independently, save money each year, and get campus news in front of readers faster.",
+    link: "https://the-campus-slate.vercel.app",
+    linkLabel: "Visit Campus Slate",
+  },
+  "NYIT Badminton Team Manager": {
+    problem: "A growing badminton team needed a simpler way to stay organized between practices, events, and tournaments.",
+    result: "I brought the team's day-to-day coordination into one easy place, making it simpler for members to keep up with attendance, events, and friendly competition.",
+    link: "https://github.com/Sadia-F/Badminton-webapp",
+    linkLabel: "See the project",
+  },
+  "mishti-website": {
+    problem: "Mishti needed a warm, welcoming online presence that could introduce its story and make a strong first impression.",
+    result: "I created a dedicated website that gives the brand a clear, memorable home online for people to explore.",
+    link: "https://mishti-and-mimi-website.vercel.app",
+    linkLabel: "Visit Mishti",
+  },
+} as const;
+
 export default function WebsitesPage() {
   const featuredProjects = featuredProjectNames.map((name) => {
     const project = projects.find((item) => item.title === name);
@@ -88,6 +109,7 @@ export default function WebsitesPage() {
         <div className="grid gap-6 lg:grid-cols-3">
           {featuredProjects.map((project) => {
             const accent = projectAccents[project.title as keyof typeof projectAccents];
+            const story = businessStories[project.title as keyof typeof businessStories];
             return (
               <article key={project.title} className="group overflow-hidden rounded-3xl border border-warm-brown/10 bg-white shadow-sm transition-shadow hover:shadow-xl dark:border-white/10 dark:bg-[#222238]">
                 <div className={`relative min-h-48 overflow-hidden bg-gradient-to-br p-7 text-white ${accent.gradient}`}>
@@ -100,22 +122,13 @@ export default function WebsitesPage() {
                 </div>
                 <div className="p-7">
                   <h3 className="text-xl font-bold">{project.title === "mishti-website" ? "Mishti Website" : project.title}</h3>
-                  <p className="mt-3 min-h-20 leading-relaxed text-gray-600 dark:text-gray-300">{project.solution}</p>
-                  <div className="mt-5 flex flex-wrap gap-2">
-                    {project.technologies.slice(0, 4).map((technology) => (
-                      <span key={technology} className="rounded-full bg-cream px-3 py-1 text-xs font-semibold text-warm-brown dark:bg-deep-slate dark:text-terracotta">
-                        {technology}
-                      </span>
-                    ))}
-                  </div>
-                  <div className="mt-7 flex items-center gap-4">
-                    {project.liveDemo && (
-                      <a href={project.liveDemo} target="_blank" rel="noreferrer" className="font-semibold text-warm-brown hover:text-sunset dark:text-terracotta">
-                        Visit site ↗
-                      </a>
-                    )}
-                    <a href={project.github} target="_blank" rel="noreferrer" className="font-semibold text-gray-600 hover:text-warm-brown dark:text-gray-300 dark:hover:text-terracotta">
-                      View project ↗
+                  <p className="mt-3 text-sm font-bold uppercase tracking-wide text-terracotta">The need</p>
+                  <p className="mt-1 leading-relaxed text-gray-600 dark:text-gray-300">{story.problem}</p>
+                  <p className="mt-5 text-sm font-bold uppercase tracking-wide text-terracotta">How it helped</p>
+                  <p className="mt-1 leading-relaxed text-gray-600 dark:text-gray-300">{story.result}</p>
+                  <div className="mt-7">
+                    <a href={story.link} target="_blank" rel="noreferrer" className="font-semibold text-warm-brown hover:text-sunset dark:text-terracotta">
+                      {story.linkLabel} ↗
                     </a>
                   </div>
                 </div>

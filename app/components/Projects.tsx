@@ -7,20 +7,11 @@ import ProjectImage from "./ProjectImage";
 import TiltCard from "./TiltCard";
 
 const categories = ["All", "Java", "Python"];
-const businessProjectTitles = new Set([
-  "Campus Slate CMS",
-  "NYIT Badminton Team Manager",
-  "mishti-website",
-]);
 
 export default function Projects() {
   const [activeCategory, setActiveCategory] = useState("All");
 
-  const portfolioProjects = projects.filter(
-    (project) => !businessProjectTitles.has(project.title)
-  );
-
-  const filteredProjects = portfolioProjects.filter((project) => {
+  const filteredProjects = projects.filter((project) => {
     if (activeCategory === "All") return true;
     return project.technologies.includes(activeCategory);
   });

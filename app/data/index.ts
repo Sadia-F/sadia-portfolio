@@ -206,7 +206,7 @@ export const projects = [
     technologies: ["Python", "Flask", "Supabase", "PostgreSQL", "Vercel"],
     image: "", // add "/images/projects/campus-slate.png" when available
     github: "https://github.com/Sadia-F/The-Campus-Slate",
-    liveDemo: "https://thesadiaslate.vercel.app", // update with the actual live URL
+    liveDemo: "https://the-campus-slate.vercel.app",
     date: "September 2024 - Present",
     highlights: [
       "Built Flask web app with Supabase and Vercel, replacing Wix to save $200+ annually",
@@ -267,7 +267,7 @@ export const projects = [
     technologies: ["Python"],
     image: "", // add "/images/projects/mishti.png" when available
     github: "https://github.com/Sadia-F/mishti-website",
-    liveDemo: null,
+    liveDemo: "https://mishti-and-mimi-website.vercel.app",
     date: "August 2026",
     highlights: [
       "Python-based web development practice",
