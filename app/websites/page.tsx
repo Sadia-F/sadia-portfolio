@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import type { Metadata } from "next";
 import DarkModeToggle from "../components/DarkModeToggle";
 import { personalInfo, projects } from "../data";
@@ -109,13 +110,25 @@ export default function WebsitesPage() {
             const story = businessStories[project.title as keyof typeof businessStories];
             return (
               <article key={project.title} className="group overflow-hidden rounded-3xl border border-warm-brown/10 bg-white shadow-sm transition-shadow hover:shadow-xl dark:border-white/10 dark:bg-[#222238]">
-                <div className={`relative min-h-48 overflow-hidden bg-gradient-to-br p-7 text-white ${accent.gradient}`}>
-                  <div className="absolute -right-8 -top-8 h-40 w-40 rounded-full border border-white/25" />
-                  <div className="absolute -bottom-16 left-8 h-36 w-36 rounded-full bg-white/10" />
-                  <div className="relative">
-                    <span className="rounded-full bg-white/15 px-3 py-1 text-xs font-semibold uppercase tracking-wider">{accent.label}</span>
+                {project.image ? (
+                  <div className="relative aspect-[16/9] overflow-hidden bg-cream">
+                    <Image
+                      src={project.image}
+                      alt={`${project.title} homepage preview`}
+                      fill
+                      sizes="(max-width: 1024px) 100vw, 33vw"
+                      className="object-cover object-top"
+                    />
                   </div>
-                </div>
+                ) : (
+                  <div className={`relative min-h-48 overflow-hidden bg-gradient-to-br p-7 text-white ${accent.gradient}`}>
+                    <div className="absolute -right-8 -top-8 h-40 w-40 rounded-full border border-white/25" />
+                    <div className="absolute -bottom-16 left-8 h-36 w-36 rounded-full bg-white/10" />
+                    <div className="relative">
+                      <span className="rounded-full bg-white/15 px-3 py-1 text-xs font-semibold uppercase tracking-wider">{accent.label}</span>
+                    </div>
+                  </div>
+                )}
                 <div className="p-7">
                   <h3 className="text-xl font-bold">{project.title === "mishti-website" ? "Mishti Website" : project.title}</h3>
                   <p className="mt-3 text-sm font-bold uppercase tracking-wide text-terracotta">The need</p>
