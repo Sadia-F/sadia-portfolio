@@ -204,7 +204,7 @@ export const projects = [
       "100% team adoption rate"
     ],
     technologies: ["Python", "Flask", "Supabase", "PostgreSQL", "Vercel"],
-    image: "", // add "/images/projects/campus-slate.png" when available
+    image: "https://image.thum.io/get/width/1200/crop/675/https://the-campus-slate.vercel.app",
     github: "https://github.com/Sadia-F/The-Campus-Slate",
     liveDemo: "https://the-campus-slate.vercel.app",
     date: "September 2024 - Present",
@@ -265,7 +265,7 @@ export const projects = [
       "Learning project for web technologies"
     ],
     technologies: ["Python"],
-    image: "", // add "/images/projects/mishti.png" when available
+    image: "https://image.thum.io/get/width/1200/crop/675/https://mishti-and-mimi-website.vercel.app",
     github: "https://github.com/Sadia-F/mishti-website",
     liveDemo: "https://mishti-and-mimi-website.vercel.app",
     date: "August 2026",

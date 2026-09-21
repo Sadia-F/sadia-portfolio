@@ -7,11 +7,13 @@ import ProjectImage from "./ProjectImage";
 import TiltCard from "./TiltCard";
 
 const categories = ["All", "Java", "Python"];
+const featuredProjectTitle = "NYIT Badminton Team Manager";
 
 export default function Projects() {
   const [activeCategory, setActiveCategory] = useState("All");
 
   const filteredProjects = projects.filter((project) => {
+    if (project.title === featuredProjectTitle) return false;
     if (activeCategory === "All") return true;
     return project.technologies.includes(activeCategory);
   });
