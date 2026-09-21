@@ -28,6 +28,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import MagneticButton from "./components/MagneticButton";
 import SectionDivider from "./components/SectionDivider";
 import Typewriter from "typewriter-effect";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -197,6 +198,30 @@ export default function Home() {
       <Leadership />
       <SectionDivider />
       <Timeline />
+      <SectionDivider />
+      <section className="bg-white px-4 py-20 dark:bg-gray-900">
+        <div className="mx-auto max-w-6xl">
+          <div className="mx-auto mb-10 max-w-2xl text-center">
+            <p className="text-sm font-bold uppercase tracking-[0.2em] text-terracotta">Beyond the résumé</p>
+            <h2 className="mt-3 text-3xl font-bold text-dark-brown dark:text-cream">More ways I create</h2>
+            <p className="mt-3 text-gray-600 dark:text-gray-300">Explore the work that brings together my eye for detail, problem-solving, and creativity.</p>
+          </div>
+          <div className="mx-auto grid max-w-4xl gap-6 md:grid-cols-2">
+            <Link href="/photography" className="group rounded-3xl border border-warm-brown/15 bg-cream p-7 transition-all hover:-translate-y-1 hover:shadow-xl dark:border-white/10 dark:bg-deep-slate">
+              <span className="text-4xl">📸</span>
+              <h3 className="mt-5 text-2xl font-bold text-dark-brown dark:text-cream">Photography</h3>
+              <p className="mt-3 leading-relaxed text-gray-600 dark:text-gray-300">A collection of the sunsets, light, and small moments that shape how I see the world.</p>
+              <span className="mt-6 inline-block font-semibold text-warm-brown group-hover:text-sunset dark:text-terracotta">Explore photography →</span>
+            </Link>
+            <Link href="/websites" className="group rounded-3xl border border-warm-brown/15 bg-cream p-7 transition-all hover:-translate-y-1 hover:shadow-xl dark:border-white/10 dark:bg-deep-slate">
+              <span className="text-4xl">✦</span>
+              <h3 className="mt-5 text-2xl font-bold text-dark-brown dark:text-cream">Websites for businesses</h3>
+              <p className="mt-3 leading-relaxed text-gray-600 dark:text-gray-300">See how I help teams and organizations turn everyday needs into useful, welcoming online experiences.</p>
+              <span className="mt-6 inline-block font-semibold text-warm-brown group-hover:text-sunset dark:text-terracotta">Explore business work →</span>
+            </Link>
+          </div>
+        </div>
+      </section>
       <SectionDivider />
       <Photography />
       <SectionDivider />
