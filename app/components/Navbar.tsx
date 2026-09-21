@@ -69,7 +69,6 @@ export default function Navbar() {
               className="p-2 rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors flex items-center gap-2 text-gray-600 dark:text-gray-300"
               aria-label="Search"
             >
-              <span className="text-sm">🔍</span>
               <span className="text-sm">Search</span>
             </button>
             <DarkModeToggle />
@@ -126,7 +125,6 @@ export default function Navbar() {
                 }}
                 className="text-gray-700 dark:text-gray-300 hover:text-[#8B6914] dark:hover:text-[#C07C40] transition-colors flex items-center gap-2"
               >
-                <span>🔍</span>
                 Search
               </button>
               <DarkModeToggle />

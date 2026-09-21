@@ -15,7 +15,7 @@ export default function Education() {
           className="text-center mb-12"
         >
           <h2 className="text-4xl font-bold text-dark-brown dark:text-cream mb-4">
-            🎓 Education & Awards
+            Education & Awards
           </h2>
           <div className="w-16 h-1 bg-gradient-to-r from-warm-brown to-sunset mx-auto rounded-full" />
         </motion.div>
@@ -112,7 +112,7 @@ export default function Education() {
           className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg"
         >
           <h3 className="text-xl font-bold text-dark-brown dark:text-cream mb-4 text-center">
-            🏆 Awards & Recognitions
+            Awards & Recognitions
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {awards.map((award, index) => (
@@ -124,7 +124,6 @@ export default function Education() {
                 viewport={{ once: true }}
                 className="flex items-center gap-3 p-4 bg-cream dark:bg-deep-slate rounded-lg shadow-sm hover:shadow-md transition-shadow"
               >
-                <span className="text-2xl">{award.icon}</span>
                 <div>
                   <p className="font-medium text-dark-brown dark:text-cream text-sm">
                     {award.title}

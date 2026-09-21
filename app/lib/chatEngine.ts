@@ -248,7 +248,7 @@ function scoreEntry(question: string, questionWords: Set<string>, keywords: stri
 // Answer selection --------------------------------------------------------
 
 const FALLBACK =
-  `Hmm, I don't have a direct answer for that one — but I can tell you a lot about my portfolio! 😊 ` +
+  `Hmm, I don't have a direct answer for that one — but I can tell you a lot about my portfolio. ` +
   `Ask me about my projects (like the Badminton Team Manager or Campus Slate CMS), my internships at NutriScan and IQVentory, ` +
   `my education at NYIT, skills and tech stack, leadership roles, awards, photography, or how to contact me. ` +
   `You can also explore the sections of this page — the Projects and Experience cards have all the details.`;
@@ -285,7 +285,7 @@ export function answerFromPortfolio(rawQuestion: string): string {
     const facts = top.map((r) => r.entry.content);
     const sections = [...new Set(top.map((r) => r.entry.section))].filter((s) => s !== "chat");
     return (
-      `Based on my portfolio, here's what I found: 🤖\n\n` +
+      `Based on my portfolio, here's what I found:\n\n` +
       facts.map((f) => `• ${f}`).join("\n\n") +
       (sections.length ? `\n\nYou can find more in the ${sections.join(", ")} section.` : "")
     );

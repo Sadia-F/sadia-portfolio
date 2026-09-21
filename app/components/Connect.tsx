@@ -48,7 +48,6 @@ export default function Connect() {
               href={`mailto:${personalInfo.email}`}
               className="group px-6 py-4 bg-warm-brown text-white rounded-xl hover:bg-[#6B4F10] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center gap-3 w-full sm:w-auto"
             >
-              <span className="text-2xl">📧</span>
               <div className="text-left">
                 <p className="font-medium">Email</p>
                 <p className="text-xs opacity-80">I reply within 24 hours</p>
@@ -60,7 +59,6 @@ export default function Connect() {
               rel="noopener noreferrer"
               className="group px-6 py-4 bg-terracotta text-white rounded-xl hover:bg-[#A06030] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center gap-3 w-full sm:w-auto"
             >
-              <span className="text-2xl">🔗</span>
               <div className="text-left">
                 <p className="font-medium">LinkedIn</p>
                 <p className="text-xs opacity-80">Connect professionally</p>
@@ -72,7 +70,6 @@ export default function Connect() {
               rel="noopener noreferrer"
               className="group px-6 py-4 bg-gray-200 dark:bg-gray-700 text-dark-brown dark:text-cream rounded-xl hover:bg-gray-300 dark:hover:bg-gray-600 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center gap-3 w-full sm:w-auto"
             >
-              <span className="text-2xl">🐙</span>
               <div className="text-left">
                 <p className="font-medium">GitHub</p>
                 <p className="text-xs opacity-80">See my code</p>
@@ -83,7 +80,6 @@ export default function Connect() {
               download
               className="group px-6 py-4 border-2 border-warm-brown dark:border-terracotta text-warm-brown dark:text-terracotta rounded-xl hover:bg-warm-brown hover:text-white dark:hover:bg-terracotta transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center gap-3 w-full sm:w-auto"
             >
-              <span className="text-2xl">📄</span>
               <div className="text-left">
                 <p className="font-medium">Resume</p>
                 <p className="text-xs opacity-80">Download PDF</p>
@@ -96,7 +92,6 @@ export default function Connect() {
                 rel="noopener noreferrer"
                 className="group px-6 py-4 bg-yellow-100 dark:bg-yellow-900/30 text-yellow-800 dark:text-yellow-300 rounded-xl hover:bg-yellow-200 dark:hover:bg-yellow-900/50 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center gap-3 w-full sm:w-auto"
               >
-                <span className="text-2xl">💻</span>
                 <div className="text-left">
                   <p className="font-medium">LeetCode</p>
                   <p className="text-xs opacity-80">Problem solving</p>

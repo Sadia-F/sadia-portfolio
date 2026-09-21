@@ -44,15 +44,12 @@ export default function FeaturedBadminton() {
               </h3>
               <ul className="space-y-2">
                 <li className="flex items-start gap-2 text-gray-600 dark:text-gray-400">
-                  <span className="text-warm-brown dark:text-terracotta font-bold">✓</span>
                   <span>12 active team members organized on one platform</span>
                 </li>
                 <li className="flex items-start gap-2 text-gray-600 dark:text-gray-400">
-                  <span className="text-warm-brown dark:text-terracotta font-bold">✓</span>
                   <span>30 unit tests keeping every feature reliable</span>
                 </li>
                 <li className="flex items-start gap-2 text-gray-600 dark:text-gray-400">
-                  <span className="text-warm-brown dark:text-terracotta font-bold">✓</span>
                   <span>Tournament brackets that auto-advance winners</span>
                 </li>
               </ul>

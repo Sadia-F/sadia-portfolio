@@ -146,7 +146,6 @@ export default function Testimonials() {
               </>
             ) : (
               <>
-                <span className="text-lg">💬</span>
                 Leave a testimonial
               </>
             )}

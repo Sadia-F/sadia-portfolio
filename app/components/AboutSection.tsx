@@ -6,9 +6,9 @@ import Image from "next/image";
 import Link from "next/link";
 
 const highlights = [
-  { icon: "🎓", label: "NYIT", value: "B.S. Computer Science, AI Concentration" },
-  { icon: "📍", label: personalInfo.location, value: "Open to relocation & remote" },
-  { icon: "💡", label: "Focus", value: "Backend, AI & Software Engineering" },
+  { label: "NYIT", value: "B.S. Computer Science, AI Concentration" },
+  { label: personalInfo.location, value: "Open to relocation & remote" },
+  { label: "Focus", value: "Backend, AI & Software Engineering" },
 ];
 
 export default function AboutSection() {
@@ -51,7 +51,6 @@ export default function AboutSection() {
                   key={item.label}
                   className="bg-white dark:bg-gray-800 rounded-xl p-4 shadow-sm border border-gray-100 dark:border-gray-700"
                 >
-                  <p className="text-2xl mb-1">{item.icon}</p>
                   <p className="font-semibold text-dark-brown dark:text-cream text-sm">
                     {item.label}
                   </p>
@@ -77,8 +76,7 @@ export default function AboutSection() {
                     viewport={{ once: true }}
                     className="flex items-center gap-3 bg-white/70 dark:bg-gray-800/70 rounded-xl px-4 py-3 text-gray-700 dark:text-gray-300 text-sm shadow-sm"
                   >
-                    <span className="text-xl shrink-0">{fact.slice(0, 2)}</span>
-                    <span className="leading-snug">{fact.slice(3)}</span>
+                    <span className="leading-snug">{fact}</span>
                   </motion.div>
                 ))}
               </div>

@@ -100,7 +100,6 @@ className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:
                       <div className="mt-2 space-y-1">
                         {project.metrics.map((metric, i) => (
                           <p key={i} className="text-sm text-gray-700 dark:text-gray-300 flex items-start gap-2">
-                            <span className="text-warm-brown dark:text-terracotta">✦</span>
                             {metric}
                           </p>
                         ))}
@@ -122,7 +121,6 @@ className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:
                       <ul className="mt-3 space-y-1">
                         {project.highlights.map((highlight, i) => (
                           <li key={i} className="text-gray-700 dark:text-gray-300 text-xs flex items-start gap-1">
-                            <span className="text-warm-brown dark:text-terracotta">✦</span>
                             {highlight}
                           </li>
                         ))}

@@ -98,7 +98,7 @@ export default function ChatSection() {
           className="text-center mb-8"
         >
           <h2 className="text-4xl font-bold text-dark-brown dark:text-cream mb-4">
-            💬 Ask Me Anything
+            Ask Me Anything
           </h2>
           <div className="w-16 h-1 bg-gradient-to-r from-warm-brown to-sunset mx-auto rounded-full" />
           <p className="text-gray-600 dark:text-gray-400 mt-4 max-w-2xl mx-auto">

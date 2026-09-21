@@ -7,7 +7,6 @@ import { personalInfo } from "../data";
 interface CommandItem {
   id: string;
   label: string;
-  icon: string;
   action: () => void;
 }
 
@@ -17,16 +16,16 @@ export default function CommandPalette() {
   const [selectedIndex, setSelectedIndex] = useState(0);
 
   const commands: CommandItem[] = [
-    { id: "home", label: "Home", icon: "🏠", action: () => window.scrollTo({ top: 0, behavior: "smooth" }) },
-    { id: "about", label: "About", icon: "👤", action: () => document.getElementById("about")?.scrollIntoView({ behavior: "smooth" }) },
-    { id: "experience", label: "Experience", icon: "💼", action: () => document.getElementById("experience")?.scrollIntoView({ behavior: "smooth" }) },
-    { id: "projects", label: "Projects", icon: "📁", action: () => document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" }) },
-    { id: "skills", label: "Skills", icon: "🛠️", action: () => document.getElementById("techstack")?.scrollIntoView({ behavior: "smooth" }) },
-    { id: "education", label: "Education", icon: "🎓", action: () => document.getElementById("education")?.scrollIntoView({ behavior: "smooth" }) },
-    { id: "photography", label: "Photography", icon: "📸", action: () => document.getElementById("photography")?.scrollIntoView({ behavior: "smooth" }) },
-    { id: "chatbot", label: "Chat with AI", icon: "💬", action: () => document.getElementById("chat-section")?.scrollIntoView({ behavior: "smooth" }) },
-    { id: "connect", label: "Connect", icon: "📬", action: () => document.getElementById("connect")?.scrollIntoView({ behavior: "smooth" }) },
-    { id: "resume", label: "Download Resume", icon: "📄", action: () => window.open(personalInfo.resume, "_blank") },
+    { id: "home", label: "Home", action: () => window.scrollTo({ top: 0, behavior: "smooth" }) },
+    { id: "about", label: "About", action: () => document.getElementById("about")?.scrollIntoView({ behavior: "smooth" }) },
+    { id: "experience", label: "Experience", action: () => document.getElementById("experience")?.scrollIntoView({ behavior: "smooth" }) },
+    { id: "projects", label: "Projects", action: () => document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" }) },
+    { id: "skills", label: "Skills", action: () => document.getElementById("techstack")?.scrollIntoView({ behavior: "smooth" }) },
+    { id: "education", label: "Education", action: () => document.getElementById("education")?.scrollIntoView({ behavior: "smooth" }) },
+    { id: "photography", label: "Photography", action: () => window.location.assign(`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/photography/`) },
+    { id: "chatbot", label: "Chat with AI", action: () => document.getElementById("chat-section")?.scrollIntoView({ behavior: "smooth" }) },
+    { id: "connect", label: "Connect", action: () => document.getElementById("connect")?.scrollIntoView({ behavior: "smooth" }) },
+    { id: "resume", label: "Download Resume", action: () => window.open(personalInfo.resume, "_blank") },
   ];
 
   const filteredCommands = commands.filter((cmd) =>
@@ -98,7 +97,6 @@ export default function CommandPalette() {
           >
             <div className="p-4">
               <div className="flex items-center gap-3 border-b border-gray-200 dark:border-gray-700 pb-3">
-                <span className="text-gray-400">🔍</span>
                 <input
                   type="text"
                   placeholder="Search sections..."
@@ -136,7 +134,6 @@ export default function CommandPalette() {
                       }`}
                       onMouseEnter={() => setSelectedIndex(index)}
                     >
-                      <span>{cmd.icon}</span>
                       <span>{cmd.label}</span>
                     </button>
                   ))

@@ -46,8 +46,8 @@ export default function DarkModeToggle() {
       className="relative flex items-center gap-3 p-2 rounded-full bg-cream dark:bg-deep-slate border-2 border-warm-brown/30 dark:border-terracotta/30 transition-colors duration-300 shadow-sm"
       aria-label="Toggle dark mode"
     >
-      <span className={`text-lg transition-opacity duration-300 ${isDark ? "opacity-40" : "opacity-100"}`}>
-        ☀️
+      <span className={`text-xs font-medium transition-opacity duration-300 ${isDark ? "opacity-40" : "opacity-100"}`}>
+        Light
       </span>
       <div className="relative w-12 h-6 bg-gray-300 dark:bg-gray-600 rounded-full transition-colors duration-300 flex items-center">
         <div
@@ -56,8 +56,8 @@ export default function DarkModeToggle() {
           }`}
         />
       </div>
-      <span className={`text-lg transition-opacity duration-300 ${isDark ? "opacity-100" : "opacity-40"}`}>
-        🌙
+      <span className={`text-xs font-medium transition-opacity duration-300 ${isDark ? "opacity-100" : "opacity-40"}`}>
+        Dark
       </span>
     </button>
   );

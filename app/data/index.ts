@@ -19,11 +19,11 @@ export const personalInfo = {
   professionalSummary: "Computer Science student at NYIT concentrating in AI with hands-on backend development experience building REST APIs and AI-integrated data pipelines. Seeking 2027 internships in backend and AI engineering.",
   photographyIntro: "Photography is my creative balance. It teaches me patience, perspective, and the art of noticing details — just like coding. I'm drawn to sunsets, light, and the stories that unfold in a single frame.",
   funFacts: [
-    "📸 I love photography — especially sunsets",
-    "🧩 I'm always looking for problems to solve",
-    "🌅 I believe in finding beauty in doing things I love",
-    "🏸 Co-founded the NYIT Badminton Team and built a full-stack team management app",
-    "🌍 Born in Bangladesh, raised on Long Island — cultural perspective shapes my approach to problem-solving"
+    "I love photography — especially sunsets",
+    "I'm always looking for problems to solve",
+    "I believe in finding beauty in doing things I love",
+    "Co-founded the NYIT Badminton Team and built a full-stack team management app",
+    "Born in Bangladesh, raised on Long Island — cultural perspective shapes my approach to problem-solving"
   ],
   photo: "", // add "/images/headshot.jpg" to show a photo in the About section
   leetcode: "", // add your LeetCode profile URL here, e.g. "https://leetcode.com/u/yourusername"
@@ -56,11 +56,11 @@ export const stats = {
 export const now = {
   title: "Currently",
   items: [
-    "🚀 Building AI-powered applications with Python and LLMs",
-    "💼 Backend/AI Engineer Intern at NutriScan — integrating Google Gemini Flash",
-    "🏸 Maintaining the NYIT Badminton Team Manager web app (Flask + SQLite)",
-    "📸 Building my photography portfolio — one sunset at a time",
-    "🔍 Actively seeking Summer 2027 internships"
+    "Building AI-powered applications with Python and LLMs",
+    "Backend/AI Engineer Intern at NutriScan — integrating Google Gemini Flash",
+    "Maintaining the NYIT Badminton Team Manager web app (Flask + SQLite)",
+    "Building my photography portfolio — one sunset at a time",
+    "Actively seeking Summer 2027 internships"
   ]
 };
 
@@ -176,10 +176,10 @@ export const projects = [
     problem: "The NYIT Badminton Team needed a centralized platform to manage attendance, track player performance, organize tournaments, and coordinate team activities efficiently.",
     solution: "Built a comprehensive Flask web application with SQLite, PWA features, and real-time roster management. The app handles everything from daily check-ins to tournament brackets and weekly MVP voting.",
     metrics: [
-      "👥 12 team members managed with role-based access",
-      "📊 30 unit tests covering all features",
-      "🏆 Tournament bracket auto-advancement system",
-      "📱 PWA with offline support and dark mode"
+      "12 team members managed with role-based access",
+      "30 unit tests covering all features",
+      "Tournament bracket auto-advancement system",
+      "PWA with offline support and dark mode"
     ],
     technologies: ["Python", "Flask", "SQLite", "SQLAlchemy", "Jinja2", "Chart.js", "PWA"],
     image: "", // add "/images/projects/badminton.png" when you have a screenshot
@@ -199,9 +199,9 @@ export const projects = [
     problem: "The Campus Slate was paying $200+ annually for a Wix website that limited content control and made publishing slow and difficult.",
     solution: "Built a custom Flask web app with Supabase and Vercel, giving the team full content control.",
     metrics: [
-      "💰 Saved $200+ annually by replacing Wix",
-      "⚡ Cut publishing time from days to minutes",
-      "📈 100% team adoption rate"
+      "Saved $200+ annually by replacing Wix",
+      "Cut publishing time from days to minutes",
+      "100% team adoption rate"
     ],
     technologies: ["Python", "Flask", "Supabase", "PostgreSQL", "Vercel"],
     image: "", // add "/images/projects/campus-slate.png" when available
@@ -219,10 +219,10 @@ export const projects = [
     problem: "Restaurants struggled with booking conflicts, waitlist fairness, and slow customer lookup.",
     solution: "Solved real-world scheduling challenges including waitlist fairness, duplicate prevention, and fast phone lookup by implementing 5 data structures in Java.",
     metrics: [
-      "📊 5 data structures implemented",
-      "⏱️ Fast customer phone lookup in O(log n)",
-      "✅ Fair waitlist system with FIFO processing",
-      "🎁 Rewards program with unique customer tracking"
+      "5 data structures implemented",
+      "Fast customer phone lookup in O(log n)",
+      "Fair waitlist system with FIFO processing",
+      "Rewards program with unique customer tracking"
     ],
     technologies: ["Java", "LinkedList", "TreeMap", "Queue", "HashSet", "BST"],
     image: "", // add "/images/projects/restaurant.png" when available
@@ -240,9 +240,9 @@ export const projects = [
     problem: "Small businesses needed a simple, affordable way to manage inventory, users, orders, and coupons without expensive SaaS solutions.",
     solution: "Built a fully functional full-stack desktop application with three-tier role-based access control using Java, MySQL, Swing, and JDBC.",
     metrics: [
-      "👥 3 role tiers: Customer, Employee, Admin",
-      "🔄 Manages inventory, accounts, orders, and coupons",
-      "💳 Role-based access control"
+      "3 role tiers: Customer, Employee, Admin",
+      "Manages inventory, accounts, orders, and coupons",
+      "Role-based access control"
     ],
     technologies: ["Java", "MySQL", "Swing", "JDBC"],
     image: "", // add "/images/projects/online-store.png" when available
@@ -260,9 +260,9 @@ export const projects = [
     problem: "Building a modern web presence with Python-based backend.",
     solution: "Developed a Python web application for web development practice.",
     metrics: [
-      "🐍 Python web development practice",
-      "🌐 Web application architecture",
-      "📚 Learning project for web technologies"
+      "Python web development practice",
+      "Web application architecture",
+      "Learning project for web technologies"
     ],
     technologies: ["Python"],
     image: "", // add "/images/projects/mishti.png" when available
@@ -425,92 +425,77 @@ export const timelineEvents = [
   {
     year: "2021",
     title: "First Coding Workshop",
-    description: "Volunteered as a student teacher, facilitating beginner-level programming lessons for elementary, middle, and high school students. This sparked my love for teaching and technology.",
-    icon: "💻"
+    description: "Volunteered as a student teacher, facilitating beginner-level programming lessons for elementary, middle, and high school students. This sparked my love for teaching and technology."
   },
   {
     year: "2021",
     title: "High School Leadership",
-    description: "Founded the Culture Club to foster inclusion across diverse backgrounds. Served as Lieutenant Governor for Key Club, overseeing 12 schools and organizing community service events across Long Island.",
-    icon: "🏛️"
+    description: "Founded the Culture Club to foster inclusion across diverse backgrounds. Served as Lieutenant Governor for Key Club, overseeing 12 schools and organizing community service events across Long Island."
   },
   {
     year: "2021",
     title: "Started Photography",
-    description: "Discovered my love for photography — especially sunsets. It became my creative balance and a way to see the world differently.",
-    icon: "📸"
+    description: "Discovered my love for photography — especially sunsets. It became my creative balance and a way to see the world differently."
   },
   {
     year: "2022",
     title: "Girls Who Code",
-    description: "Completed the Girls Who Code program, building foundational skills in programming and problem-solving while connecting with a community of women in tech.",
-    icon: "💻"
+    description: "Completed the Girls Who Code program, building foundational skills in programming and problem-solving while connecting with a community of women in tech."
   },
   {
     year: "2023",
     title: "Started at NYIT",
-    description: "Began Computer Science degree with a concentration in Artificial Intelligence.",
-    icon: "🎓"
+    description: "Began Computer Science degree with a concentration in Artificial Intelligence."
   },
   {
     year: "2024",
     title: "Academic Excellence",
-    description: "Earned Dean's Honor List (Spring 2024 & Spring 2025).",
-    icon: "📚"
+    description: "Earned Dean's Honor List (Spring 2024 & Spring 2025)."
   },
   {
     year: "2024",
     title: "First Major Project",
-    description: "Built Restaurant Reservation System using 5 different data structures in Java, implementing LinkedList, TreeMap, Queue, HashSet, and custom Binary Search Tree.",
-    icon: "📊"
+    description: "Built Restaurant Reservation System using 5 different data structures in Java, implementing LinkedList, TreeMap, Queue, HashSet, and custom Binary Search Tree."
   },
   {
     year: "2024",
     title: "Campus Leadership & Badminton Team",
-    description: "Web Developer for Campus Slate (Flask CMS, $200+ annual savings), VP of BSA, Peer Advisor, Peer Health Educator, and Co-Founder of the Badminton Team. Built full-stack team management web app with Flask and SQLite.",
-    icon: "🏫"
+    description: "Web Developer for Campus Slate (Flask CMS, $200+ annual savings), VP of BSA, Peer Advisor, Peer Health Educator, and Co-Founder of the Badminton Team. Built full-stack team management web app with Flask and SQLite."
   },
   {
     year: "2026",
     title: "Treasurer, SWE",
-    description: "Managing a $500/event budget and delivering 5+ engineering career events for 40+ members.",
-    icon: "👩‍💻"
+    description: "Managing a $500/event budget and delivering 5+ engineering career events for 40+ members."
   },
   {
     year: "2026",
     title: "Zennabelle Sewell Heart Award",
-    description: "Received the Zennabelle Sewell Heart Award for leadership, service, and meaningful campus contributions.",
-    icon: "❤️"
+    description: "Received the Zennabelle Sewell Heart Award for leadership, service, and meaningful campus contributions."
   },
   {
     year: "2026",
     title: "Backend / AI Engineer Intern, NutriScan",
-    description: "Developed REST APIs, integrated Google Gemini Flash, Apple HealthKit, Dexcom, and FreeStyle Libre APIs for real-time health data sync.",
-    icon: "💼"
+    description: "Developed REST APIs, integrated Google Gemini Flash, Apple HealthKit, Dexcom, and FreeStyle Libre APIs for real-time health data sync."
   },
   {
     year: "2026",
     title: "Software Sales Intern, IQVentory",
-    description: "Qualified 16+ business prospects and maintained lead pipeline through targeted outbound outreach using proprietary CRM.",
-    icon: "📊"
+    description: "Qualified 16+ business prospects and maintained lead pipeline through targeted outbound outreach using proprietary CRM."
   },
   {
     year: "2026",
     title: "Tech Coach, NYIT",
-    description: "Mentored 40 high school students across two intensive one-week programs, teaching Arduino, 3D printing, soldering, and circuit debugging.",
-    icon: "🔧"
+    description: "Mentored 40 high school students across two intensive one-week programs, teaching Arduino, 3D printing, soldering, and circuit debugging."
   },
   {
     year: "2026",
     title: "Badminton Team Manager Web App",
-    description: "Built full-stack Flask application with 15+ features including attendance tracking, tournament brackets, performance ratings, and PWA support. 30 unit tests, 12 active users.",
-    icon: "🏸"
+    description: "Built full-stack Flask application with 15+ features including attendance tracking, tournament brackets, performance ratings, and PWA support. 30 unit tests, 12 active users."
   },
   {
     year: "2027",
     title: "Graduation",
-    description: "B.S. in Computer Science with AI concentration.",
-    icon: "🚀"
+    description: "B.S. in Computer Science with AI concentration."
   }
 ];
 // ============================================================
@@ -520,32 +505,27 @@ export const awards = [
   {
     title: "Presidential Honor List",
     organization: "New York Institute of Technology",
-    year: "Spring 2026",
-    icon: "🏆"
+    year: "Spring 2026"
   },
   {
     title: "Zennabelle Sewell Heart Award",
     organization: "New York Institute of Technology",
-    year: "2026",
-    icon: "❤️"
+    year: "2026"
   },
   {
     title: "Dean's Honor List",
     organization: "New York Institute of Technology",
-    year: "Spring 2024 & Spring 2025",
-    icon: "📚"
+    year: "Spring 2024 & Spring 2025"
   },
   {
     title: "Office of Student Engagement Award",
     organization: "New York Institute of Technology",
-    year: "2026",
-    icon: "⭐"
+    year: "2026"
   },
   {
     title: "Girls Who Code Program Completion",
     organization: "Girls Who Code",
-    year: "2022",
-    icon: "💻"
+    year: "2022"
   }
 ];
 
@@ -569,7 +549,7 @@ export const photography = {
 // CHATBOT DATA
 // ============================================================
 export const chatbotData = {
-  welcomeMessage: "Hey there! 👋 I'm Sadia's AI assistant. I know everything about her — work, projects, skills, hobbies, and what she's like as a person. Ask me anything, and I'll point you to the right part of her portfolio to learn more!",
+  welcomeMessage: "Hi, I'm Sadia's AI assistant. I know about her work, projects, skills, hobbies, and what she's like as a person. Ask me anything, and I'll point you to the right part of her portfolio to learn more.",
   suggestedQuestions: [
     "Who are you and what do you do?",
     "Where are you from?",
@@ -616,7 +596,7 @@ export const chatbotData = {
     // EXPERIENCE
     internships: {
       keywords: ["internships", "intern", "what internships", "internship experience", "worked as"],
-      answer: "I've had some amazing experiences! 🚀 I'm currently a Backend/AI Engineer Intern at NutriScan working with Python, MongoDB, and Google Gemini Flash. I'm also a Software Sales Intern at IQVentory. I've worked as a Tech Coach at NYIT, mentoring 40 high school students. And I'm the Web Developer for The Campus Slate, where I built a Flask CMS. Scroll down to the Experience section to learn more about each role!"
+      answer: "I've had some amazing experiences. I'm currently a Backend/AI Engineer Intern at NutriScan working with Python, MongoDB, and Google Gemini Flash. I'm also a Software Sales Intern at IQVentory. I've worked as a Tech Coach at NYIT, mentoring 40 high school students. And I'm the Web Developer for The Campus Slate, where I built a Flask CMS. Scroll down to the Experience section to learn more about each role."
     },
     nutriclean: {
       keywords: ["nutriscan", "nutri scan", "backend ai engineer"],
@@ -638,7 +618,7 @@ export const chatbotData = {
     // PROJECTS
     projectList: {
       keywords: ["projects", "built", "made", "created", "developed", "portfolio projects"],
-      answer: "I've built 6 main projects! 🚀 My favorite is the NYIT Badminton Team Manager — a full-stack Flask app with 15+ features including attendance tracking, tournament brackets, performance ratings, and a PWA with offline support. I've also built Campus Slate CMS (saving $200+ annually), Restaurant Reservation System (5 data structures), Online Store Management System (Java), and mishti-website (Python). Check out the Projects section below to see all the details and GitHub links!"
+      answer: "I've built 6 main projects. My favorite is the NYIT Badminton Team Manager — a full-stack Flask app with 15+ features including attendance tracking, tournament brackets, performance ratings, and a PWA with offline support. I've also built Campus Slate CMS (saving $200+ annually), Restaurant Reservation System (5 data structures), Online Store Management System (Java), and mishti-website (Python). Check out the Projects section below to see all the details and GitHub links."
     },
     badminton: {
       keywords: ["badminton", "badminton webapp", "team manager", "team management"],
@@ -646,7 +626,7 @@ export const chatbotData = {
     },
     campuseslate: {
       keywords: ["campus slate", "campus slate cms", "cms", "student publication"],
-      answer: "Campus Slate CMS is my favorite project! 📰 The Campus Slate was paying $200+ annually for a Wix website that limited content control and made publishing slow. I built a custom Flask web app with Supabase and Vercel, replacing Wix entirely. I created a password-protected admin dashboard so staff can self-upload articles and PDFs. The result? $200+ annual savings and publishing time cut from days to minutes. I'm really proud of this one."
+      answer: "Campus Slate CMS is my favorite project. The Campus Slate was paying $200+ annually for a Wix website that limited content control and made publishing slow. I built a custom Flask web app with Supabase and Vercel, replacing Wix entirely. I created a password-protected admin dashboard so staff can self-upload articles and PDFs. The result: $200+ annual savings and publishing time cut from days to minutes. I'm really proud of this one."
     },
     onlinestore: {
       keywords: ["online store", "store management", "inventory", "ecommerce"],
@@ -688,7 +668,7 @@ export const chatbotData = {
     // LEADERSHIP
     leadership: {
       keywords: ["leadership roles", "leader", "lead", "president", "vice president", "treasurer"],
-      answer: "I love leadership! 🌟 I'm currently Treasurer of SWE, Vice President of BSA, and Co-Founder of the Badminton Team at NYIT. I'm also a Peer Advisor and Peer Health Educator. In high school, I was President of Key Club, Lieutenant Governor overseeing 12 schools, and Founder of the Culture Club. Check out the Leadership section to see all my roles!"
+      answer: "I love leadership. I'm currently Treasurer of SWE, Vice President of BSA, and Co-Founder of the Badminton Team at NYIT. I'm also a Peer Advisor and Peer Health Educator. In high school, I was President of Key Club, Lieutenant Governor overseeing 12 schools, and Founder of the Culture Club. Check out the Leadership section to see all my roles."
     },
     organizations: {
       keywords: ["organizations", "clubs", "groups", "involved", "campus", "activities"],
@@ -712,7 +692,7 @@ export const chatbotData = {
     // CONTACT
     contact: {
       keywords: ["contact", "email", "reach", "message", "connect", "linkedin"],
-      answer: "I'd love to connect! 📬 You can reach me at sadiaferdous003@gmail.com or connect with me on LinkedIn at linkedin.com/in/sadiaaferdous. You can also check out my code on GitHub at github.com/Sadia-F. Scroll to the bottom of the page for my Contact section with all my links!"
+      answer: "I'd love to connect. You can reach me at sadiaferdous003@gmail.com or connect with me on LinkedIn at linkedin.com/in/sadiaaferdous. You can also check out my code on GitHub at github.com/Sadia-F. Scroll to the bottom of the page for my Contact section with all my links."
     },
     resume: {
       keywords: ["resume", "cv", "download resume", "see resume"],

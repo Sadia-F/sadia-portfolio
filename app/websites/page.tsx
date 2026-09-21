@@ -17,17 +17,14 @@ const featuredProjectNames = [
 
 const projectAccents = {
   "Campus Slate CMS": {
-    icon: "📰",
     label: "Publishing platform",
     gradient: "from-[#182840] via-[#315b87] to-[#d6a64b]",
   },
   "NYIT Badminton Team Manager": {
-    icon: "🏸",
     label: "Community platform",
     gradient: "from-[#174e3b] via-[#2c8d67] to-[#e5b94f]",
   },
   "mishti-website": {
-    icon: "✦",
     label: "Small-business website",
     gradient: "from-[#7e352c] via-[#c9704f] to-[#f3c66c]",
   },
@@ -117,7 +114,6 @@ export default function WebsitesPage() {
                   <div className="absolute -bottom-16 left-8 h-36 w-36 rounded-full bg-white/10" />
                   <div className="relative">
                     <span className="rounded-full bg-white/15 px-3 py-1 text-xs font-semibold uppercase tracking-wider">{accent.label}</span>
-                    <div className="mt-10 text-5xl" aria-hidden="true">{accent.icon}</div>
                   </div>
                 </div>
                 <div className="p-7">
@@ -147,7 +143,7 @@ export default function WebsitesPage() {
           <div className="grid gap-4 sm:grid-cols-2">
             {["A website that looks great on phones", "Menus, services, galleries, and contact forms", "Booking, ordering, maps, and social links", "Custom tools when your workflow needs one"].map((item) => (
               <div key={item} className="flex gap-3 rounded-2xl bg-cream p-4 dark:bg-deep-slate">
-                <span className="text-terracotta">✦</span><p className="font-medium">{item}</p>
+                <p className="font-medium">{item}</p>
               </div>
             ))}
           </div>

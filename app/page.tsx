@@ -124,19 +124,16 @@ export default function Home() {
               <div className="max-w-3xl mt-8 rounded-2xl overflow-hidden shadow-lg">
                 <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-px bg-gray-200/60 dark:bg-gray-700/60">
                   {[
-                    { value: stats.projects, label: "Projects", icon: "📁" },
-                    { value: stats.leadershipRoles, label: "Leadership Roles", icon: "🌟" },
-                    { value: stats.technologies, label: "Technologies", icon: "🛠️" },
-                    { value: stats.studentsReached, label: "Students Reached", icon: "🎓" },
-                    { value: stats.githubRepos, label: "GitHub Repos", icon: "🐙" },
+                    { value: stats.projects, label: "Projects" },
+                    { value: stats.leadershipRoles, label: "Leadership Roles" },
+                    { value: stats.technologies, label: "Technologies" },
+                    { value: stats.studentsReached, label: "Students Reached" },
+                    { value: stats.githubRepos, label: "GitHub Repos" },
                   ].map((stat) => (
                     <div
                       key={stat.label}
                       className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-md p-4 sm:p-5 text-center min-w-0 flex flex-col items-center justify-center"
                     >
-                      <span className="text-base sm:text-lg mb-1" aria-hidden="true">
-                        {stat.icon}
-                      </span>
                       <p className="text-2xl sm:text-3xl font-extrabold bg-gradient-to-r from-warm-brown to-terracotta bg-clip-text text-transparent leading-none">
                         {stat.value}
                       </p>
@@ -213,7 +210,6 @@ export default function Home() {
               <span className="mt-6 inline-block font-semibold text-warm-brown group-hover:text-sunset dark:text-terracotta">Explore photography →</span>
             </Link>
             <Link href="/websites" className="group rounded-3xl border border-warm-brown/15 bg-cream p-7 transition-all hover:-translate-y-1 hover:shadow-xl dark:border-white/10 dark:bg-deep-slate">
-              <span className="text-4xl">✦</span>
               <h3 className="mt-5 text-2xl font-bold text-dark-brown dark:text-cream">Websites for businesses</h3>
               <p className="mt-3 leading-relaxed text-gray-600 dark:text-gray-300">See how I help teams and organizations turn everyday needs into useful, welcoming online experiences.</p>
               <span className="mt-6 inline-block font-semibold text-warm-brown group-hover:text-sunset dark:text-terracotta">Explore business work →</span>

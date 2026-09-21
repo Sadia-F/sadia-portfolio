@@ -2,16 +2,14 @@
 
 import { personalInfo } from "../data";
 
-// Evaluated once at build time so server render and client hydration match.
 const currentYear = new Date().getFullYear();
-const lastUpdated = new Date().toLocaleDateString();
 
 export default function Footer() {
   return (
     <footer className="bg-gray-100 dark:bg-gray-800 py-6 mt-12">
       <div className="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center gap-4">
         <p className="text-gray-600 dark:text-gray-400 text-sm">
-          © {currentYear} {personalInfo.name}. Built with Next.js & TypeScript.
+          © {currentYear} {personalInfo.name}.
         </p>
         <div className="flex gap-4">
           <a
@@ -37,9 +35,6 @@ export default function Footer() {
             Email
           </a>
         </div>
-        <p className="text-gray-400 dark:text-gray-500 text-xs">
-          Last Updated: {lastUpdated}
-        </p>
       </div>
     </footer>
   );
