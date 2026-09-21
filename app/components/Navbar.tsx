@@ -57,6 +57,12 @@ export default function Navbar() {
             >
               For Businesses
             </Link>
+            <Link
+              href="/photography"
+              className="text-gray-700 dark:text-gray-300 hover:text-[#8B6914] dark:hover:text-[#C07C40] transition-colors"
+            >
+              Photography
+            </Link>
             {/* Search Button */}
             <button
               onClick={() => setIsSearchOpen(true)}
@@ -105,6 +111,13 @@ export default function Navbar() {
                 className="text-warm-brown dark:text-terracotta font-medium hover:text-sunset transition-colors"
               >
                 For Businesses
+              </Link>
+              <Link
+                href="/photography"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="text-gray-700 dark:text-gray-300 hover:text-[#8B6914] dark:hover:text-[#C07C40] transition-colors"
+              >
+                Photography
               </Link>
               <button
                 onClick={() => {
