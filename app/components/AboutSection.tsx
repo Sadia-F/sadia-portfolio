@@ -3,6 +3,7 @@
 import { personalInfo, photography } from "../data";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
 const highlights = [
   { icon: "🎓", label: "NYIT", value: "B.S. Computer Science, AI Concentration" },
@@ -132,6 +133,12 @@ export default function AboutSection() {
                   </div>
                 ))}
               </div>
+              <Link
+                href="/photography"
+                className="mt-5 inline-flex items-center gap-2 font-semibold text-warm-brown transition-colors hover:text-sunset dark:text-terracotta"
+              >
+                Explore my photography <span aria-hidden="true">→</span>
+              </Link>
             </div>
           </motion.div>
         </div>

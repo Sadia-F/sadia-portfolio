@@ -6,7 +6,6 @@ import Bitmoji2D from "./components/Bitmoji2D";
 import MovingGradient from "./components/MovingGradient";
 import FloatingBackground from "./components/FloatingBackground";
 import AboutSection from "./components/AboutSection";
-import Photography from "./components/Photography";
 import Experience from "./components/Experience";
 import Projects from "./components/Projects";
 import Leadership from "./components/Leadership";
@@ -222,8 +221,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <SectionDivider />
-      <Photography />
       <SectionDivider />
       <ChatSection />
       <SectionDivider />
