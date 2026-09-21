@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Link from "next/link";
 import DarkModeToggle from "./DarkModeToggle";
 import SearchModal from "./SearchModal";
 
@@ -50,6 +51,12 @@ export default function Navbar() {
                 {link.name}
               </a>
             ))}
+            <Link
+              href="/websites"
+              className="text-warm-brown dark:text-terracotta font-medium hover:text-sunset transition-colors"
+            >
+              For Businesses
+            </Link>
             {/* Search Button */}
             <button
               onClick={() => setIsSearchOpen(true)}
@@ -92,6 +99,13 @@ export default function Navbar() {
                   {link.name}
                 </a>
               ))}
+              <Link
+                href="/websites"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="text-warm-brown dark:text-terracotta font-medium hover:text-sunset transition-colors"
+              >
+                For Businesses
+              </Link>
               <button
                 onClick={() => {
                   setIsSearchOpen(true);
