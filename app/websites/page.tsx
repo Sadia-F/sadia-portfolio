@@ -11,6 +11,7 @@ export const metadata: Metadata = {
 };
 
 const featuredProjectNames = [
+  "forDalia",
   "Gedeon Construction Corp",
   "Campus Slate CMS",
   "NYIT Badminton Team Manager",
@@ -18,6 +19,10 @@ const featuredProjectNames = [
 ];
 
 const projectAccents = {
+  "forDalia": {
+    label: "Event and gifting website",
+    gradient: "from-[#75423f] via-[#b86e68] to-[#727c64]",
+  },
   "Gedeon Construction Corp": {
     label: "Construction website",
     gradient: "from-[#1f382e] via-[#526653] to-[#c9a66b]",
@@ -37,6 +42,12 @@ const projectAccents = {
 } as const;
 
 const businessStories = {
+  "forDalia": {
+    problem: "An event and gifting brand needed an online presence that felt as thoughtful and personal as the gatherings it creates.",
+    result: "I created a warm, editorial website that introduces the brand's offerings, shares its story, and makes it easy for prospective clients to start a conversation.",
+    link: "https://sadia-f.github.io/fordalia__/",
+    linkLabel: "Visit forDalia",
+  },
   "Gedeon Construction Corp": {
     problem: "A local renovation company needed a polished online home that builds trust and makes it simple for homeowners to request an estimate.",
     result: "I created a clear, welcoming website that introduces services, showcases renovation inspiration, and gives prospective customers direct ways to call or email.",

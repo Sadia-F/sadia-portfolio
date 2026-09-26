@@ -43,11 +43,11 @@ export const careerNarrative = {
 // VISUAL STATS
 // ============================================================
 export const stats = {
-  projects: 6,
+  projects: 7,
   leadershipRoles: "5+",
   technologies: "15+",
   studentsReached: "600+",
-  githubRepos: 9
+  githubRepos: 10
 };
 
 // ============================================================
@@ -170,6 +170,27 @@ export const experience = [
 // PROJECTS
 // ============================================================
 export const projects = [
+  {
+    title: "forDalia",
+    description: "Brand website for a New York event styling, gifting, and gathering studio",
+    problem: "forDalia needed a memorable online home that could communicate its faith-centered event offerings and direct prospective clients to inquire on Instagram.",
+    solution: "Built an editorial, mobile-responsive brand website that introduces offerings, tells the brand story, showcases gathering inspiration, and guides visitors toward an inquiry.",
+    metrics: [
+      "Four signature offerings presented clearly",
+      "Direct Instagram inquiry flow for prospective clients",
+      "Designed for New York events, gifting, and gatherings"
+    ],
+    technologies: ["HTML", "CSS", "JavaScript", "GitHub Pages"],
+    image: "https://image.thum.io/get/width/1200/crop/675/https://sadia-f.github.io/fordalia__/",
+    github: "https://github.com/Sadia-F/fordalia__",
+    liveDemo: "https://sadia-f.github.io/fordalia__/",
+    date: "September 2026",
+    highlights: [
+      "Created an editorial visual identity for a faith-centered event and gifting brand",
+      "Designed responsive offerings, story, gallery, and inquiry sections",
+      "Deployed automatically to GitHub Pages from the main branch"
+    ]
+  },
   {
     title: "Gedeon Construction Corp",
     description: "Lead-generation website for a Long Island residential renovation company",
