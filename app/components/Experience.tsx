@@ -23,7 +23,7 @@ export default function Experience() {
             return (
               <motion.article key={`${exp.company}-${exp.role}`} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.45, delay: index * 0.06 }} viewport={{ once: true }} className="min-h-[360px] [perspective:1200px]">
                 <motion.div animate={{ rotateY: isFlipped ? 180 : 0 }} transition={{ duration: 0.55, ease: "easeInOut" }} style={{ transformStyle: "preserve-3d" }} className="relative h-full min-h-[360px]">
-                  <button type="button" onClick={() => setFlippedIndex(isFlipped ? null : index)} aria-label={`Show details for ${exp.role} at ${exp.company}`} className={`absolute inset-0 flex w-full flex-col justify-between overflow-hidden rounded-2xl border-l-4 bg-cream p-7 text-left shadow-md transition-shadow hover:shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-warm-brown dark:bg-deep-slate [backface-visibility:hidden] ${exp.isFavorite ? "border-sunset" : "border-warm-brown"}`}>
+                  <button type="button" onClick={() => setFlippedIndex(isFlipped ? null : index)} aria-label={`Show details for ${exp.role} at ${exp.company}`} style={{ backfaceVisibility: "hidden", WebkitBackfaceVisibility: "hidden" }} className={`absolute inset-0 flex w-full flex-col justify-between overflow-hidden rounded-2xl border-l-4 bg-cream p-7 text-left shadow-md transition-shadow hover:shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-warm-brown dark:bg-deep-slate ${exp.isFavorite ? "border-sunset" : "border-warm-brown"}`}>
                     <span>
                       <span className="block text-2xl font-bold text-dark-brown dark:text-cream">{exp.role}</span>
                       <span className="mt-2 block text-lg font-semibold text-warm-brown dark:text-terracotta">{exp.company}</span>
@@ -32,7 +32,7 @@ export default function Experience() {
                     <span className="text-sm font-semibold uppercase tracking-wide text-warm-brown dark:text-terracotta">View role details</span>
                   </button>
 
-                  <div className={`absolute inset-0 flex flex-col overflow-hidden rounded-2xl border-l-4 bg-cream shadow-md dark:bg-deep-slate [backface-visibility:hidden] [transform:rotateY(180deg)] ${exp.isFavorite ? "border-sunset" : "border-warm-brown"}`}>
+                  <div style={{ backfaceVisibility: "hidden", WebkitBackfaceVisibility: "hidden", transform: "rotateY(180deg)" }} className={`absolute inset-0 flex flex-col overflow-hidden rounded-2xl border-l-4 bg-cream shadow-md dark:bg-deep-slate ${exp.isFavorite ? "border-sunset" : "border-warm-brown"}`}>
                     <div className="flex-1 overflow-y-auto p-6">
                       <p className="text-sm font-bold uppercase tracking-wide text-warm-brown dark:text-terracotta">{exp.role}</p>
                       <ul className="mt-4 space-y-3">
