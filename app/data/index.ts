@@ -47,7 +47,7 @@ export const stats = {
   leadershipRoles: "5+",
   technologies: "15+",
   studentsReached: "600+",
-  githubRepos: 8
+  githubRepos: 9
 };
 
 // ============================================================
@@ -170,6 +170,27 @@ export const experience = [
 // PROJECTS
 // ============================================================
 export const projects = [
+  {
+    title: "Gedeon Construction Corp",
+    description: "Lead-generation website for a Long Island residential renovation company",
+    problem: "Gedeon Construction Corp needed a polished online presence to clearly present its renovation services and make it easy for homeowners to request an estimate.",
+    solution: "Built a responsive marketing website that highlights services, project inspiration, service area, and direct phone and email estimate requests.",
+    metrics: [
+      "Six residential renovation services presented clearly",
+      "Direct phone and email estimate requests",
+      "Built for homeowners across Nassau County and Long Island"
+    ],
+    technologies: ["HTML", "CSS", "GitHub Pages"],
+    image: "https://image.thum.io/get/width/1200/crop/675/https://sadia-f.github.io/gedeon-constuction-corp/",
+    github: "https://github.com/Sadia-F/gedeon-constuction-corp",
+    liveDemo: "https://sadia-f.github.io/gedeon-constuction-corp/",
+    date: "September 2026",
+    highlights: [
+      "Designed a responsive single-page experience for residential renovation services",
+      "Created clear calls to action for phone and email estimate requests",
+      "Deployed automatically to GitHub Pages from the main branch"
+    ]
+  },
   {
     title: "NYIT Badminton Team Manager",
     description: "Full-stack team management web app with attendance, tournaments, and performance tracking",

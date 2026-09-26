@@ -11,12 +11,17 @@ export const metadata: Metadata = {
 };
 
 const featuredProjectNames = [
+  "Gedeon Construction Corp",
   "Campus Slate CMS",
   "NYIT Badminton Team Manager",
   "mishti-website",
 ];
 
 const projectAccents = {
+  "Gedeon Construction Corp": {
+    label: "Construction website",
+    gradient: "from-[#1f382e] via-[#526653] to-[#c9a66b]",
+  },
   "Campus Slate CMS": {
     label: "Publishing platform",
     gradient: "from-[#182840] via-[#315b87] to-[#d6a64b]",
@@ -32,6 +37,12 @@ const projectAccents = {
 } as const;
 
 const businessStories = {
+  "Gedeon Construction Corp": {
+    problem: "A local renovation company needed a polished online home that builds trust and makes it simple for homeowners to request an estimate.",
+    result: "I created a clear, welcoming website that introduces services, showcases renovation inspiration, and gives prospective customers direct ways to call or email.",
+    link: "https://sadia-f.github.io/gedeon-constuction-corp/",
+    linkLabel: "Visit Gedeon Construction",
+  },
   "Campus Slate CMS": {
     problem: "The Campus Slate needed an online home that was easier to manage and no longer depended on an expensive website service.",
     result: "I gave the student publication a place where its team can share stories and updates independently, save money each year, and get campus news in front of readers faster.",
