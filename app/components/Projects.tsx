@@ -32,7 +32,7 @@ export default function Projects() {
             Projects
           </h2>
           <div className="w-16 h-1 bg-gradient-to-r from-warm-brown to-sunset mx-auto rounded-full" />
-          <p className="text-gray-600 dark:text-gray-400 mt-4 max-w-2xl mx-auto">
+          <p className="text-base leading-7 text-gray-600 dark:text-gray-400 mt-4 max-w-2xl mx-auto">
             A collection of projects I&apos;ve built — filter by technology.
           </p>
         </motion.div>
@@ -84,14 +84,14 @@ className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:
                     {/* Problem-Solution */}
                     {project.problem && (
                       <div className="mb-2">
-                        <p className="text-sm text-gray-600 dark:text-gray-400">
+                        <p className="text-base leading-7 text-gray-600 dark:text-gray-400">
                           <span className="font-medium text-warm-brown dark:text-terracotta">Problem:</span> {project.problem}
                         </p>
                       </div>
                     )}
                     {project.solution && (
                       <div className="mb-2">
-                        <p className="text-sm text-gray-600 dark:text-gray-400">
+                        <p className="text-base leading-7 text-gray-600 dark:text-gray-400">
                           <span className="font-medium text-warm-brown dark:text-terracotta">Solution:</span> {project.solution}
                         </p>
                       </div>
@@ -101,7 +101,7 @@ className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:
                     {project.metrics && project.metrics.length > 0 && (
                       <div className="mt-2 space-y-1">
                         {project.metrics.map((metric, i) => (
-                          <p key={i} className="text-sm text-gray-700 dark:text-gray-300 flex items-start gap-2">
+                          <p key={i} className="text-base leading-7 text-gray-700 dark:text-gray-300 flex items-start gap-2">
                             {metric}
                           </p>
                         ))}
@@ -122,7 +122,7 @@ className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:
                     {project.highlights && project.highlights.length > 0 && (
                       <ul className="mt-3 space-y-1">
                         {project.highlights.map((highlight, i) => (
-                          <li key={i} className="text-gray-700 dark:text-gray-300 text-xs flex items-start gap-1">
+                          <li key={i} className="text-gray-700 dark:text-gray-300 text-sm leading-6 flex items-start gap-1">
                             {highlight}
                           </li>
                         ))}

@@ -54,7 +54,7 @@ export default function AboutSection() {
                   <p className="font-semibold text-dark-brown dark:text-cream text-sm">
                     {item.label}
                   </p>
-                  <p className="text-xs text-gray-500 dark:text-gray-400 mt-0.5 leading-snug">
+                  <p className="text-sm text-gray-500 dark:text-gray-400 mt-0.5 leading-snug">
                     {item.value}
                   </p>
                 </div>
@@ -74,7 +74,7 @@ export default function AboutSection() {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.3, delay: index * 0.05 }}
                     viewport={{ once: true }}
-                    className="flex items-center gap-3 bg-white/70 dark:bg-gray-800/70 rounded-xl px-4 py-3 text-gray-700 dark:text-gray-300 text-sm shadow-sm"
+                    className="flex items-center gap-3 bg-white/70 dark:bg-gray-800/70 rounded-xl px-4 py-3 text-gray-700 dark:text-gray-300 text-base shadow-sm"
                   >
                     <span className="leading-snug">{fact}</span>
                   </motion.div>
@@ -112,10 +112,10 @@ export default function AboutSection() {
                   <h3 className="text-xl font-bold text-dark-brown dark:text-cream">
                     Photographer
                   </h3>
-                  <p className="text-xs text-gray-400 dark:text-gray-500">Sunsets, light & stories</p>
+                  <p className="text-sm text-gray-400 dark:text-gray-500">Sunsets, light & stories</p>
                 </div>
               </div>
-              <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-sm">
+              <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-base">
                 {personalInfo.photographyIntro}
               </p>
               <div className="mt-4 grid grid-cols-2 gap-2">

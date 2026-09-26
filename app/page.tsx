@@ -137,7 +137,7 @@ export default function Home() {
                       <p className="text-2xl sm:text-3xl font-extrabold bg-gradient-to-r from-warm-brown to-terracotta bg-clip-text text-transparent leading-none">
                         {stat.value}
                       </p>
-                      <p className="mt-2 text-[11px] sm:text-xs font-medium uppercase tracking-wide text-gray-500 dark:text-gray-400 leading-tight">
+                      <p className="mt-2 text-xs sm:text-sm font-medium uppercase tracking-wide text-gray-500 dark:text-gray-400 leading-tight">
                         {stat.label}
                       </p>
                     </div>
