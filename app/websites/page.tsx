@@ -14,8 +14,6 @@ const featuredProjectNames = [
   "forDalia",
   "Gedeon Construction Corp",
   "Campus Slate CMS",
-  "NYIT Badminton Team Manager",
-  "mishti-website",
 ];
 
 const projectAccents = {
